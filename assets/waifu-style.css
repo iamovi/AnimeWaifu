@@ -41,5 +41,5 @@
       height: 50px;
     }
   #swipe-container.loading #swipe-text {
-  color: pink;
+  display: none;
 }
