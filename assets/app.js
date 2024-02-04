@@ -17,13 +17,9 @@ function getRandomWaifuImage(category) {
   swipeContainer.classList.add('loading');
   isLoading = true;
 
-  if (audioStartTime === 0) {
-    loadingAudio.currentTime = 0;
-    loadingAudio.play();
-  } else {
-    loadingAudio.currentTime = audioStartTime;
-    loadingAudio.play();
-  }
+  // Comment out or remove the audio related lines below
+  // loadingAudio.currentTime = 0;
+  // loadingAudio.play();
 
   const image = new Image();
   image.src = '';
@@ -34,9 +30,10 @@ function getRandomWaifuImage(category) {
     swipeContainer.classList.remove('loading');
     isLoading = false;
 
-    audioStartTime = loadingAudio.currentTime;
-    loadingAudio.pause();
-    loadingAudio.currentTime = 0;
+    // Comment out or remove the audio related lines below
+    // audioStartTime = loadingAudio.currentTime;
+    // loadingAudio.pause();
+    // loadingAudio.currentTime = 0;
   };
 
   fetch(`https://api.waifu.pics/sfw/${category}`)
