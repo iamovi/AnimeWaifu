@@ -1,7 +1,9 @@
 const swipeContainer = document.getElementById('swipe-container');
 const preloader = document.getElementById('preloader');
 const hammer = new Hammer(swipeContainer);
+const loadingAudio = document.getElementById('loadingAudio');
 let isLoading = false;
+let audioStartTime = 0;
 
 hammer.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
 
@@ -15,14 +17,26 @@ function getRandomWaifuImage(category) {
   swipeContainer.classList.add('loading');
   isLoading = true;
 
+  if (audioStartTime === 0) {
+    loadingAudio.currentTime = 0;
+    loadingAudio.play();
+  } else {
+    loadingAudio.currentTime = audioStartTime;
+    loadingAudio.play();
+  }
+
   const image = new Image();
   image.src = '';
 
-  image.onload = function() {
+  image.onload = function () {
     swipeContainer.style.backgroundImage = 'url(' + image.src + ')';
     preloader.style.display = 'none';
     swipeContainer.classList.remove('loading');
     isLoading = false;
+
+    audioStartTime = loadingAudio.currentTime;
+    loadingAudio.pause();
+    loadingAudio.currentTime = 0;
   };
 
   fetch(`https://api.waifu.pics/sfw/${category}`)
@@ -32,6 +46,6 @@ function getRandomWaifuImage(category) {
     });
 }
 
-hammer.on('swipe', function() {
+hammer.on('swipe', function () {
   getRandomWaifuImage('waifu');
 });
