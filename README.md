@@ -21,7 +21,7 @@ Visit [https://iamovi.github.io/AnimeWaifu/](https://iamovi.github.io/AnimeWaifu
 
 [Maruf OVi](https://oviportfo.netlify.app/)
 
-#### _ here's peom about anime waifu 🌛
+#### _ here's poem about anime waifu 🌛
 ```
 Anime waifus are the best
 They always make my heart go doki-doki
