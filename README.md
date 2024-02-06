@@ -1,4 +1,4 @@
-![Random Waifu Image Generator](assets/waifu-preview.jpg)
+![Random Waifu Image Generator](https://iamovi.github.io/AnimeWaifu/assets/waifu-preview.jpg)
 
 This web application allows users to swipe for a random waifu image.
 
