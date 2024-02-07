@@ -25,11 +25,6 @@ function getRandomWaifuImage(category) {
     preloader.style.display = 'none';
     swipeContainer.classList.remove('loading');
     isLoading = false;
-
-    // Comment out or remove the audio related lines below
-    // audioStartTime = loadingAudio.currentTime;
-    // loadingAudio.pause();
-    // loadingAudio.currentTime = 0;
   };
 
   fetch(`https://api.waifu.pics/sfw/${category}`)
