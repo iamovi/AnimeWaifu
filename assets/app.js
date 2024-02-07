@@ -1,9 +1,7 @@
 const swipeContainer = document.getElementById('swipe-container');
 const preloader = document.getElementById('preloader');
 const hammer = new Hammer(swipeContainer);
-const loadingAudio = document.getElementById('loadingAudio');
 let isLoading = false;
-let audioStartTime = 0;
 
 hammer.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
 
