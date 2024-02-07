@@ -17,10 +17,6 @@ function getRandomWaifuImage(category) {
   swipeContainer.classList.add('loading');
   isLoading = true;
 
-  // Comment out or remove the audio related lines below
-  // loadingAudio.currentTime = 0;
-  // loadingAudio.play();
-
   const image = new Image();
   image.src = '';
 
