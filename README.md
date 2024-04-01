@@ -7,6 +7,12 @@ Visit [https://iamovi.github.io/AnimeWaifu/](https://iamovi.github.io/AnimeWaifu
 
 ---
 
+### APK
+
+AnimeWaifu android apk is available!
+
+Download from [here](./andriod/index.html)
+
 ### Dependencies & Credits
 
 - [Hammer.js](https://hammerjs.github.io/): A JavaScript library for handling touch gestures.
