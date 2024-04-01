@@ -11,7 +11,7 @@ Visit [https://iamovi.github.io/AnimeWaifu/](https://iamovi.github.io/AnimeWaifu
 
 AnimeWaifu android apk is available!
 
-Download from [here](./andriod/index.html)
+Download from [here](https://iamovi.github.io/AnimeWaifu/android/)
 
 ### Dependencies & Credits
 
