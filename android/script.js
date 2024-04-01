@@ -15,7 +15,7 @@ document.getElementById("downloadButton").addEventListener("click", function() {
     a.href = downloadLink;
     
     // Set the download attribute to specify the filename
-    a.download = 'your-app-filename';
+    a.download = 'AnimeWaifu';
     
     // Append the anchor element to the body
     document.body.appendChild(a);
