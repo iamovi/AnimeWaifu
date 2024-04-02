@@ -5,13 +5,13 @@ This web application allows users to swipe for a random waifu image.
 ## Website/
 Visit [https://iamovi.github.io/AnimeWaifu/](https://iamovi.github.io/AnimeWaifu/)
 
----
-
-### APK
+## APK
 
 AnimeWaifu android apk is available!
 
 Download from [here](https://iamovi.github.io/AnimeWaifu/android/download.html)
+
+---
 
 ### Dependencies & Credits
 
