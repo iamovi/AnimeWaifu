@@ -11,12 +11,21 @@ body {
     height: 100vh;
     color: black;
 
-    background: url(./waifu.gif) no-repeat center center fixed; 
+    background: url(./wallpaper/Lain.gif) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
+@media only screen and (max-width: 600px) {
+    body {
+        background: url(./wallpaper/waifu-mb.jpg) no-repeat center center fixed; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+  }
 
 .loader {
     position: fixed;
@@ -57,8 +66,13 @@ h1 {
     margin-bottom: 20px;
     color: white;
 }
+@media only screen and (max-width: 600px) {
+    h1 {
+        color: black;
+    }
+  }
 
-.colorful-text {
+/* .colorful-text {
     animation: colorful 5s infinite;
   }
 
@@ -68,7 +82,7 @@ h1 {
     50% { color: green; }
     75% { color: purple; }
     100% { color: orange; }
-  }
+  } */
 
 p {
     font-size: 30px;
@@ -78,7 +92,7 @@ p {
 button {
     padding: 15px 30px;
     font-size: 1.2rem;
-    background-color: #4c00ff;
+    background-color: #150333;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -87,7 +101,7 @@ button {
 }
 
 button:hover {
-    background-color: #150333;
+    background-color: #4c00ff;
 }
 .link {
     color: red;
@@ -107,3 +121,4 @@ body, h1, p, .link {
         text-shadow: 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white; /* Final shadow */
     }
 }
+
