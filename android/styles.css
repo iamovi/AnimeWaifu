@@ -6,15 +6,15 @@ body {
     justify-content: flex-end; /* Align to the right */
     align-items: center;
     height: 100vh;
-    color: black;
-    background: url(./wallpaper/Anime-hot-girl-drinking-water.png) no-repeat center center fixed; 
+    color: white;
+    background: url(./wallpaper//BestWaifu.jfif) no-repeat center center fixed; 
     background-size: cover;
 }
 
 @media only screen and (max-width: 600px) {
     body {
-        background: url(./wallpaper/Hitori-Gotou.png) no-repeat center center fixed; 
-        background-size: cover;
+        /* background: url(./wallpaper/Hitori-Gotou.png) no-repeat center center fixed; 
+        background-size: cover; */
     }
 }
 
@@ -48,7 +48,7 @@ body {
 
 .container {
     text-align: right; /* Align text to the right */
-    color: black;
+    color: white;
     max-width: 600px;
     margin-right: 20px; /* Add margin to push content away from the edge */
     padding: 20px;
@@ -65,16 +65,16 @@ p {
 }
 
 .link {
-    color: #4c00ff;
+    color: orange;
+    text-decoration: underline;
     font-size: 1.2rem;
-    text-decoration: none;
     margin-bottom: 20px;
 }
 
 button {
+    font-family: "Lekton", sans-serif;
     padding: 15px 30px;
     font-size: 1.2rem;
-    background-color: #4c00ff;
     color: white;
     border: none;
     border-radius: 8px;
@@ -82,9 +82,7 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #150333;
-}
+
 
 .icon-links {
     display: flex;
