@@ -6,9 +6,10 @@ body {
     justify-content: flex-end; /* Align to the right */
     align-items: center;
     height: 100vh;
-    color: white;
+    /* color: white; */
     background: url(./wallpaper//BestWaifu.jfif) no-repeat center center fixed; 
     background-size: cover;
+    user-select: none;
 }
 
 @media only screen and (max-width: 600px) {
