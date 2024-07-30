@@ -1,22 +1,23 @@
 ![Random Waifu Image Generator](https://iamovi.github.io/AnimeWaifu/assets/waifu-preview.jpg)
 
-This web application allows users to swipe for a random waifu image.
-
 ## Website/
-Visit [https://iamovi.github.io/AnimeWaifu/](https://iamovi.github.io/AnimeWaifu/)
+
+Check live preview in web,
+
+Visit > [https://iamovi.github.io/AnimeWaifu](https://iamovi.github.io/AnimeWaifu) <
 
 ## APK
 
 AnimeWaifu android apk is available!
 
-Download from [here](https://iamovi.github.io/AnimeWaifu/android/download.html)
+Download from > [https://iamovi.github.io/AnimeWaifu/android/download.html](https://iamovi.github.io/AnimeWaifu/android/download.html) <
 
 ---
 
-### Dependencies & Credits
+### Dependencies
 
-- [Hammer.js](https://hammerjs.github.io/): A JavaScript library for handling touch gestures.
-- Waifu images provided by [Waifu.pics API](https://waifu.pics/).
+- [Hammer.js](https://hammerjs.github.io/)
+- [Waifu.pics API](https://waifu.pics/)
 
 
 ### License
