@@ -4,13 +4,16 @@
 
 Check live preview in web,
 
-Visit > [https://iamovi.github.io/AnimeWaifu](https://iamovi.github.io/AnimeWaifu) <
+Visit: [https://iamovi.github.io/AnimeWaifu](https://iamovi.github.io/AnimeWaifu)
 
 ## APK
 
 AnimeWaifu android apk is available!
 
-Download from > [https://iamovi.github.io/AnimeWaifu/android/download.html](https://iamovi.github.io/AnimeWaifu/android/download.html) <
+Download from: [https://iamovi.github.io/AnimeWaifu/android/download.html](https://iamovi.github.io/AnimeWaifu/android/download.html)
+
+
+Or, Download from Itch.io: [https://iamovi.itch.io/animewaifu](https://iamovi.itch.io/animewaifu)
 
 ---
 
