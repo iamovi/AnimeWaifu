@@ -12,6 +12,7 @@ AnimeWaifu android apk is available!
 
 - Android .apk
 - Windows .exe
+- Linux .deb (soon)
 
 Download from: [Here/](https://iamovi.github.io/AnimeWaifu/install-page/)
 
