@@ -10,10 +10,13 @@ Visit: [https://iamovi.github.io/AnimeWaifu](https://iamovi.github.io/AnimeWaifu
 
 AnimeWaifu android apk is available!
 
-Download from: [https://iamovi.github.io/AnimeWaifu/install-page/](https://iamovi.github.io/AnimeWaifu/install-page/)
+- Android .apk
+- Windows .exe
+
+Download from: [Here/](https://iamovi.github.io/AnimeWaifu/install-page/)
 
 
-Or, Download from Itch.io: [https://iamovi.itch.io/animewaifu](https://iamovi.itch.io/animewaifu)
+Or, Download from Itch.io: [Click Here/](https://iamovi.itch.io/animewaifu)
 
 ---
 
@@ -30,7 +33,7 @@ Or, Download from Itch.io: [https://iamovi.itch.io/animewaifu](https://iamovi.it
 
 ## Author
 
-[Maruf OVi](https://oviportfo.netlify.app/)
+[Maruf Ovi](https://oviportfo.netlify.app/)
 
 #### _ here's poem about anime waifu 🌛
 ```
