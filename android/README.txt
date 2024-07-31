@@ -1,1 +1,0 @@
-this folder contains files of AnimeWaifu apk.
