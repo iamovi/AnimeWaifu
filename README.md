@@ -24,8 +24,8 @@ Or, Download from Itch.io: [Click Here/](https://iamovi.itch.io/animewaifu)
 
 - [Hammer.js](https://hammerjs.github.io/)
 - [Waifu.pics API](https://waifu.pics/)
-- Capacitor.js
-- Electron
+- [Capacitor.js](https://capacitorjs.com/)
+- [Electron](https://www.electronjs.org/)
 
 ### License
 
