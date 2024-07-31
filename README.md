@@ -8,11 +8,11 @@ Visit: [https://iamovi.github.io/AnimeWaifu](https://iamovi.github.io/AnimeWaifu
 
 ## APK
 
-AnimeWaifu android apk is available!
+AnimeWaifu Apps are available!
 
 - Android .apk
 - Windows .exe
-- Linux .deb (soon)
+- Linux .deb
 
 Download from: [Here/](https://iamovi.github.io/AnimeWaifu/install-page/)
 
