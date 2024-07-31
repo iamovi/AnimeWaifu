@@ -127,3 +127,10 @@ button {
     }
   }
   
+  .modal-dialog, .modal-body, .modal-footer {
+    color: black;
+  }
+
+  .linux-btn {
+    padding: 5px 15px;
+  }
