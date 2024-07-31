@@ -10,7 +10,7 @@ Visit: [https://iamovi.github.io/AnimeWaifu](https://iamovi.github.io/AnimeWaifu
 
 AnimeWaifu android apk is available!
 
-Download from: [https://iamovi.github.io/AnimeWaifu/android/download.html](https://iamovi.github.io/AnimeWaifu/android/download.html)
+Download from: [https://iamovi.github.io/AnimeWaifu/install-page/](https://iamovi.github.io/AnimeWaifu/install-page/)
 
 
 Or, Download from Itch.io: [https://iamovi.itch.io/animewaifu](https://iamovi.itch.io/animewaifu)
@@ -21,7 +21,8 @@ Or, Download from Itch.io: [https://iamovi.itch.io/animewaifu](https://iamovi.it
 
 - [Hammer.js](https://hammerjs.github.io/)
 - [Waifu.pics API](https://waifu.pics/)
-
+- Capacitor.js
+- Electron
 
 ### License
 

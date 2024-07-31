@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.getElementById("downloadButton").addEventListener("click", function() {
-    const downloadLink = '../android/main/AnimeWaifu.apk';
+    const downloadLink = '';
     const a = document.createElement('a');
     a.href = downloadLink;
     a.download = 'AnimeWaifu';
@@ -17,7 +17,7 @@ document.getElementById("downloadButton").addEventListener("click", function() {
   });
 
   document.getElementById("downloadButton2").addEventListener("click", function() {
-    const downloadLink = '../windows/dist/app/AnimeWaifuSetup.exe';
+    const downloadLink = '';
     const a = document.createElement('a');
     a.href = downloadLink;
     a.download = 'AnimeWaifuSetup';
