@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AnimeWaifu | App</title>
+  <title>AnimeWaifu | Apps</title>
 
   <!-- disabled_click CDN -->
 
@@ -59,9 +59,34 @@
 
         <li class="dropdown-item" id="downloadButton2"><img src="./icons/windows.png" alt="Windows" width="35"> .exe</li>
 
-        <li class="dropdown-item" id="downloadButton3"><img src="./icons/linux.png" alt="Linux" width="33"> .deb</li>
+        <li data-bs-toggle="modal" data-bs-target="#exampleModal" class="dropdown-item">
+  <img src="./icons/linux.png" alt="Linux" width="33"> .deb /.rpm
+</li>
+
       </ul>
     </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Install for Linux Distros.</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        For: - Debian - Ubuntu - Linux Mint - Elementary OS - Kali Linux - Zorin OS - MX Linux - Pop!_OS - Deepin
+        <br>
+        <button id="downloadButton3" class="ani-btn-y linux-btn">.deb</button>
+        <hr>
+        For: - Fedora- Red Hat Enterprise Linux (RHEL) - CentOS - openSUSE - Mageia - PCLinuxOS - Scientific Linux
+        <br>
+        <button id="downloadButton4" class="ani-btn-y linux-btn">.rpm</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <br /><br>
     <p>Or, download from:</p>
