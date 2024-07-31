@@ -35,3 +35,13 @@ document.getElementById("downloadButton").addEventListener("click", function() {
     a.click();
     document.body.removeChild(a);
   });
+
+  document.getElementById("downloadButton4").addEventListener("click", function() {
+    const downloadLink = 'https://github.com/iamovi/AnimeWaifu/releases/download/waifuapps/AnimeWaifu-1.0.0.x86_64.rpm';
+    const a = document.createElement('a');
+    a.href = downloadLink;
+    a.download = 'AnimeWaifu-1.0.0.x86_64';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  });
