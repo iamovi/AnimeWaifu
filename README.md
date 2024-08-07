@@ -21,7 +21,7 @@ Or, Download from Itch.io: [Click Here/](https://iamovi.itch.io/animewaifu)
 
 Or, Install on Windows with powershell:
 
-- Download [install.ps1](./install-page/Install.ps1) file.
+- Download [install.ps1](https://github.com/iamovi/AnimeWaifu/releases/download/waifuapps/Install.ps1) file.
 
 - Run powershell as administrator.
 
