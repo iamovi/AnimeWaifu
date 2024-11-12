@@ -21,15 +21,20 @@ AnimeWaifu Apps are available!
 
 ***Or, Install on Windows with powershell:***
 
-- Download [install.ps1](https://github.com/iamovi/AnimeWaifu/releases/download/waifuapps/Install.ps1) file.
-
 - Run powershell as administrator.
+
+```bash
+powershell -c "irm https://iamovi.github.io/AnimeWaifu/Install.ps1 | iex"
+```
+- Wait for the installation to complete.
+
+#### Or Install manually:
+
+- Download [install.ps1](https://github.com/iamovi/AnimeWaifu/releases/download/waifuapps/Install.ps1) file.
 
 ```bash
 .\install.ps1
 ```
-
-- Wait for the installation to complete.
 
 ---
 
