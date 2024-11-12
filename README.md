@@ -24,7 +24,7 @@ AnimeWaifu Apps are available!
 - Run powershell as administrator.
 
 ```bash
-powershell -c "irm https://iamovi.github.io/AnimeWaifu/Install.ps1 | iex"
+powershell -c "irm iamovi.github.io/AnimeWaifu/Install.ps1 | iex"
 ```
 - Wait for the installation to complete.
 
