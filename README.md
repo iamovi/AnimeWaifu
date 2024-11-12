@@ -36,6 +36,14 @@ powershell -c "irm iamovi.github.io/AnimeWaifu/Install.ps1 | iex"
 .\install.ps1
 ```
 
+# 🎉 Project - momose
+
+### Check out another project, ***Animewaifu on your Terminal***
+
+![momose preview](https://cdn.jsdelivr.net/gh/iamovi/momose/preview.png)
+
+***https://github.com/iamovi/momose***
+
 ---
 
 ### Dependencies
