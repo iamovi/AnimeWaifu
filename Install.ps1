@@ -1,5 +1,5 @@
 #!/usr/bin/env pwsh
-# Script to download, execute, and delete the AnimeWaifuPS1.exe from GitHub releases
+# Script to download, execute, and optionally delete the AnimeWaifuPS1.exe from GitHub releases
 
 $ErrorActionPreference = 'Stop'
 
@@ -15,19 +15,42 @@ if (-not (Test-Admin)) {
     exit
 }
 
-# Define the download URL
+# Define the download URL and paths
 $DownloadUrl = "https://github.com/iamovi/AnimeWaifu/releases/download/waifuapps/AnimeWaifuPS1.exe"
-
-# Define the path where the .exe will be downloaded
 $DownloadPath = "${env:USERPROFILE}\Downloads\AnimeWaifuPS1.exe"
 
 # Download the .exe file
-curl.exe -Lo $DownloadPath $DownloadUrl
+Write-Output "Starting download from $DownloadUrl..."
+try {
+    Invoke-WebRequest -Uri $DownloadUrl -OutFile $DownloadPath -UseBasicParsing
+    Write-Output "Downloaded AnimeWaifuPS1.exe to $DownloadPath"
+} catch {
+    Write-Output "Error: Download failed. Please check your internet connection or the URL."
+    exit
+}
 
 # Execute the downloaded .exe file
-Start-Process -FilePath $DownloadPath -NoNewWindow -Wait
+Write-Output "Executing AnimeWaifuPS1.exe..."
+try {
+    Start-Process -FilePath $DownloadPath -NoNewWindow -Wait
+    Write-Output "AnimeWaifu executed successfully."
+} catch {
+    Write-Output "Error: Failed to execute AnimeWaifuPS1.exe."
+    exit
+}
 
-# Delete the downloaded .exe file
-Remove-Item -Path $DownloadPath -Force
+# Confirm deletion
+Write-Output "Would you like to delete the downloaded file? (Y/N)"
+$confirmation = Read-Host
+if ($confirmation -match '^[Yy]$') {
+    try {
+        Remove-Item -Path $DownloadPath -Force
+        Write-Output "Downloaded file deleted successfully."
+    } catch {
+        Write-Output "Error: Failed to delete the downloaded file."
+    }
+} else {
+    Write-Output "Downloaded file kept at $DownloadPath."
+}
 
-Write-Output "AnimeWaifu was downloaded, executed successfully from ${DownloadUrl}"
+Write-Output "Process completed."
