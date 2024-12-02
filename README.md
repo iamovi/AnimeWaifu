@@ -14,10 +14,12 @@ AnimeWaifu Apps are available!
 - Windows .exe
 - Linux .deb / .rpm
 
-***Download from: [Here/](https://iamovi.github.io/AnimeWaifu/install-page/)***
+***Download from: [Here/](https://iamovi.github.io/AnimeWaifu/install/)***
 
 
 ***Or, Download from Itch.io: [Click Here/](https://iamovi.itch.io/animewaifu)***
+
+- On Itch.io v1 available, AnimeWaifu v2 will be uploaded soon.
 
 ***Or, Install on Windows with powershell:***
 
@@ -30,7 +32,7 @@ powershell -c "irm iamovi.github.io/AnimeWaifu/Install.ps1 | iex"
 
 #### Or Install manually:
 
-- Download [install.ps1](https://github.com/iamovi/AnimeWaifu/releases/download/waifuapps/Install.ps1) file.
+- Download [install.ps1](https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/Install.ps1) file.
 
 ```bash
 .\install.ps1

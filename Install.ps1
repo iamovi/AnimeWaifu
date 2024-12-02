@@ -16,7 +16,7 @@ if (-not (Test-Admin)) {
 }
 
 # Define the download URL
-$DownloadUrl = "https://github.com/iamovi/AnimeWaifu/releases/download/waifuapps/AnimeWaifuPS1.exe"
+$DownloadUrl = "https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/AnimeWaifuPS1.exe"
 
 # Define the path where the .exe will be downloaded
 $DownloadPath = "${env:USERPROFILE}\Downloads\AnimeWaifuPS1.exe"
