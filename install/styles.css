@@ -149,7 +149,11 @@ button {
   }
 
   .linux-btn {
-    padding: 5px 15px;
+    padding: 5px 5px;
+    border: 1px solid black;
+    color: black;
+    margin-top: 10px;
+    border-radius: 0px;
   }
 
 
@@ -160,3 +164,38 @@ button {
 .ani-btn-z {
     padding: 10px 15px;
 }
+
+.dropdown-item:focus, .dropdown-item:active {
+    background-color: transparent !important;
+    color: inherit !important;  
+    box-shadow: none !important; 
+}
+
+.btn-close:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  .modal-content {
+    border-radius: 0 !important;  
+    border: none !important;      
+  }
+
+  .ani-btn-z {
+    border-radius: 0;
+  }
+
+.dropdown-toggle {
+    border-radius: 0 !important;  
+  }
+  
+
+  .dropdown-menu {
+    border-radius: 0 !important;  
+    border: none !important;      
+  }
+  
+  .dropdown-item {
+    border-radius: 0 !important;  
+  }
+  
