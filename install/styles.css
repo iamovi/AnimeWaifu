@@ -203,3 +203,16 @@ button {
     border-radius: 0 !important;  
   }
   
+  /*****************/
+
+  .d2 {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    #hideVideoButton {
+      display: none;
+    }
+  }
