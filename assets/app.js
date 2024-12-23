@@ -105,8 +105,8 @@ currentImgLinkButton.addEventListener('click', function () {
     noImageMessage.style.bottom = '10px';
     noImageMessage.style.left = '50%';
     noImageMessage.style.transform = 'translateX(-50%)';
-    noImageMessage.style.backgroundColor = '#6a1b9a';  // Dark Purple
-    noImageMessage.style.color = '#f48fb1';  // Light Pink
+    noImageMessage.style.backgroundColor = 'black';  // Dark Purple
+    noImageMessage.style.color = 'red';  // Light Pink
     noImageMessage.style.padding = '10px';
     noImageMessage.style.borderRadius = '5px';
     noImageMessage.style.fontSize = '16px';
