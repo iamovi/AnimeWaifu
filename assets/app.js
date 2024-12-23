@@ -3,12 +3,15 @@ const preloader = document.getElementById('preloader');
 const swipeText = document.getElementById('swipe-text');
 const nsfwToggle = document.getElementById('nsfw-toggle');
 const currentImgLinkButton = document.getElementById('current-img-link');
+const undoButton = document.getElementById('undo-button');
+const shareButton = document.getElementById('share-me');
 const hammer = new Hammer(swipeContainer);
 
 let isLoading = false;
 let hasSwiped = false;
 let currentCategory = 'sfw';
 let currentImageUrl = ''; // Variable to store the current image URL
+let imageHistory = []; // Stack to keep track of image history
 
 hammer.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
 
@@ -28,31 +31,29 @@ function getRandomWaifuImage() {
   // Introduce a 0.5 second delay before showing the image
   setTimeout(() => {
     const image = new Image();
-    
-    // Set a temporary fallback image or the loading animation
-    image.src = ''; 
 
-    // Preload the image in the background
     image.onload = function () {
-      // When the image is fully loaded, set the background image
+      // Push the current image URL to history before updating
+      if (currentImageUrl) {
+        imageHistory.push(currentImageUrl);
+      }
+
       swipeContainer.style.backgroundImage = 'url(' + image.src + ')';
-      currentImageUrl = image.src; // Save the image URL
-      currentImgLinkButton.style.pointerEvents = 'auto'; // Enable the button once the image is loaded
+      currentImageUrl = image.src; // Save the new image URL
+      currentImgLinkButton.style.pointerEvents = 'auto'; // Enable the button
       preloader.style.display = 'none'; // Hide preloader
       swipeContainer.classList.remove('loading'); // Remove loading class
       isLoading = false;
     };
 
-    // Start fetching the image URL
     fetch(`https://api.waifu.pics/${currentCategory}/waifu`)
       .then(response => response.json())
       .then(data => {
-        // Set the image source to the fetched URL
         image.src = data.url;
       })
       .catch(err => {
         console.error('Error fetching image:', err);
-        preloader.style.display = 'none'; // Hide preloader on error
+        preloader.style.display = 'none';
         swipeContainer.classList.remove('loading');
         isLoading = false;
       });
@@ -105,8 +106,8 @@ currentImgLinkButton.addEventListener('click', function () {
     noImageMessage.style.bottom = '10px';
     noImageMessage.style.left = '50%';
     noImageMessage.style.transform = 'translateX(-50%)';
-    noImageMessage.style.backgroundColor = 'black';  // Dark Purple
-    noImageMessage.style.color = 'red';  // Light Pink
+    noImageMessage.style.backgroundColor = '#6a1b9a';  // Dark Purple
+    noImageMessage.style.color = '#f48fb1';  // Light Pink
     noImageMessage.style.padding = '10px';
     noImageMessage.style.borderRadius = '5px';
     noImageMessage.style.fontSize = '16px';
@@ -122,8 +123,37 @@ currentImgLinkButton.addEventListener('click', function () {
   }
 });
 
+// Handle Undo button click
+undoButton.addEventListener('click', function () {
+  if (imageHistory.length > 0) {
+    const previousImageUrl = imageHistory.pop(); // Get the last image URL
+    swipeContainer.style.backgroundImage = 'url(' + previousImageUrl + ')';
+    currentImageUrl = previousImageUrl; // Update the current image URL
+  } else {
+    // Show a message if there's no previous image
+    const noUndoMessage = document.createElement('div');
+    noUndoMessage.style.position = 'fixed';
+    noUndoMessage.style.bottom = '10px';
+    noUndoMessage.style.left = '50%';
+    noUndoMessage.style.transform = 'translateX(-50%)';
+    noUndoMessage.style.backgroundColor = '#ff1744'; // Red background
+    noUndoMessage.style.color = '#fff';
+    noUndoMessage.style.padding = '10px';
+    noUndoMessage.style.borderRadius = '5px';
+    noUndoMessage.style.fontSize = '16px';
+    noUndoMessage.style.zIndex = '999';
+    noUndoMessage.innerHTML = 'No previous image to undo!';
 
-//
+    document.body.appendChild(noUndoMessage);
+
+    // Hide the message after 3 seconds
+    setTimeout(function () {
+      noUndoMessage.style.display = 'none';
+    }, 3000);
+  }
+});
+
+// Water ripple effect
 const imgContainer = document.querySelector('.img-water-effect');
 
 imgContainer.addEventListener('mousemove', (e) => {
@@ -141,4 +171,42 @@ imgContainer.addEventListener('mousemove', (e) => {
   setTimeout(() => {
     ripple.remove();
   }, 1000); // Matches the animation duration
+});
+
+// Share button functionality
+shareButton.addEventListener('click', function () {
+  const websiteUrl = 'https://iamovi.github.io/AnimeWaifu';
+
+  if (navigator.share) {
+    navigator.share({
+      title: 'AnimeWaifu App',
+      text: 'Check out this amazing AnimeWaifu app!',
+      url: websiteUrl,
+    })
+      .then(() => console.log('Content shared successfully!'))
+      .catch((error) => console.error('Error sharing:', error));
+  } else {
+    navigator.clipboard.writeText(websiteUrl)
+      .then(() => {
+        const copiedMessage = document.createElement('div');
+        copiedMessage.style.position = 'fixed';
+        copiedMessage.style.bottom = '10px';
+        copiedMessage.style.left = '50%';
+        copiedMessage.style.transform = 'translateX(-50%)';
+        copiedMessage.style.backgroundColor = '#4caf50'; // Green background
+        copiedMessage.style.color = '#fff';
+        copiedMessage.style.padding = '10px';
+        copiedMessage.style.borderRadius = '5px';
+        copiedMessage.style.fontSize = '16px';
+        copiedMessage.style.zIndex = '999';
+        copiedMessage.innerHTML = 'Link copied to clipboard! Share it with your friends.';
+
+        document.body.appendChild(copiedMessage);
+
+        setTimeout(() => {
+          copiedMessage.style.display = 'none';
+        }, 3000);
+      })
+      .catch((error) => console.error('Error copying link:', error));
+  }
 });
