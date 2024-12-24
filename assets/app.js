@@ -210,3 +210,44 @@ shareButton.addEventListener('click', function () {
       .catch((error) => console.error('Error copying link:', error));
   }
 });
+
+//
+
+// Handle the "Refresh" button click
+refresh.addEventListener('click', function () {
+  location.reload(); // This will refresh the entire page
+});
+
+// 
+
+
+const dropdown = document.getElementById('main_menu');
+let isDropdownVisible = true; // To keep track of the dropdown's visibility
+
+// Function to toggle the dropdown visibility
+function toggleDropdownVisibility() {
+  if (isDropdownVisible) {
+    dropdown.style.display = 'none'; // Hide the dropdown
+  } else {
+    dropdown.style.display = 'block'; // Show the dropdown
+  }
+  isDropdownVisible = !isDropdownVisible; // Toggle the state
+}
+
+// Add double-click event listener to the entire document
+document.addEventListener('dblclick', function (e) {
+  // Only toggle dropdown if the click is not inside the dropdown
+  if (!dropdown.contains(e.target)) {
+    toggleDropdownVisibility();
+  }
+});
+
+// Add spacebar event listener to toggle visibility
+document.addEventListener('keydown', function (e) {
+  // Check if the spacebar (key code 32) is pressed
+  if (e.code === 'Space') {
+    e.preventDefault(); // Prevent default action for spacebar (e.g., scrolling)
+    toggleDropdownVisibility();
+  }
+});
+

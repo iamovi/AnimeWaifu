@@ -1,104 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AnimeWaifu</title>
-    <link href="./animewaifu.png" rel="icon" />
 
-    <meta property="og:title" content="AnimeWaifu" />
-    <meta
-      property="og:description"
-      content="Swipe to get a random anime waifu."
-    />
-    <meta property="og:image" content="./assets/waifu-preview.jpg" />
-    <meta property="og:url" content="https://iamovi.github.io/AnimeWaifu/" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnimeWaifu</title>
+  <link href="./animewaifu.png" rel="icon" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta property="og:title" content="AnimeWaifu" />
+  <meta property="og:description" content="Swipe to get a random anime waifu." />
+  <meta property="og:image" content="./assets/waifu-preview.jpg" />
+  <meta property="og:url" content="https://iamovi.github.io/AnimeWaifu/" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<link href="https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
 
-<!-- <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet" />
 
-<link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap" rel="stylesheet">
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"> -->
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-      integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD"
-      crossorigin="anonymous"
-    />
+  <link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
 
-    <link href="assets/waifu-style.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 
-    <!-- Preload the GIF -->
-    <link rel="preload" href="./assets/waifu_wait.gif" as="image" />
-  </head>
-  <body>
-    
-    <div class="dropdown">
-      <button
-        class="btn btn-secondary"
-        type="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        <i class="bi bi-egg-fried"></i>
-      </button>
-      <ul class="dropdown-menu">
-        <li class="text-center fw-bold ani_menu">AnimeWaifu Menu,</li>
-        <div class="img-water-effect">
-          <img class="dropdown-item yolo" src="./animewaifu.png" alt="">
-        </div>        
-        <li class="dropdown-item nsfw" id="nsfw-toggle">
-          Switch to NSFW.
-          <img width="35" src="./assets/banana.png" alt="" />
-        </li>
-        <li style="cursor: pointer;" class="dropdown-item" id="current-img-link">Current Img Link <i class="bi bi-link-45deg"></i></li>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
 
-        <li style="cursor: pointer;" id="undo-button" class="dropdown-item">Undo <i class="bi bi-arrow-left"></i></li>
+  <link href="assets/waifu-style.css" rel="stylesheet" />
 
-        <hr>
-        <li class="dropdown-item">
-          <a class="text-decoration-none text-danger" href="https://iamovi.github.io/AnimeWaifu/install" target="_blank">Download App <i class="bi bi-box-arrow-up-left"></i></a>
-        </li>
+  <!-- Preload the GIF -->
+  <link rel="preload" href="./assets/waifu_wait.gif" as="image" />
+</head>
 
-        <li style="cursor: pointer;" class="dropdown-item text-success" id="share-me">Share This App! <i class="bi bi-emoji-heart-eyes-fill"></i></li>
-        
-      </ul>
-    </div>
+<body>
 
-    <div id="swipe-container">
-      <div id="preloader">
-        <img src="flower.gif" alt="Loading..." />
+  <div class="dropdown" id="main_menu">
+    <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-egg-fried"></i>
+    </button>
+    <ul class="dropdown-menu">
+      <li class="text-center fw-bold ani_menu">AnimeWaifu Menu,</li>
+      <div class="img-water-effect">
+        <img class="dropdown-item yolo" src="./animewaifu.png" alt="">
       </div>
-      <div id="swipe-text">Swipe for a random Anime Waifu.</div>
-      <div id="preloader">
-        <img src="flower.gif" alt="Loading..." />
+      <li class="dropdown-item nsfw" id="nsfw-toggle">
+        Switch to NSFW.
+        <img width="35" src="./assets/banana.png" alt="" />
+      </li>
+      <li style="cursor: pointer;" class="dropdown-item" id="current-img-link">Current Img Link <i
+          class="bi bi-link-45deg"></i></li>
+
+      <li style="cursor: pointer;" id="undo-button" class="dropdown-item">Undo <i class="bi bi-arrow-left"></i></li>
+
+      <li style="cursor: pointer;" id="refresh" class="dropdown-item">Refresh <i class="bi bi-arrow-clockwise"></i></li>
+
+      <li data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="cursor: pointer;" class="dropdown-item">About
+        Menu. <i class="bi bi-egg-fried"></i></li>
+
+      <hr>
+      <li class="dropdown-item">
+        <a class="text-decoration-none text-danger" href="https://iamovi.github.io/AnimeWaifu/install"
+          target="_blank">Download App <i class="bi bi-box-arrow-up-left"></i></a>
+      </li>
+
+      <li style="cursor: pointer;" class="dropdown-item text-success" id="share-me">Share This App! <i class="bi bi-egg-fill"></i></li>
+
+    </ul>
+  </div>
+
+  <div id="swipe-container">
+    <div id="preloader">
+      <img src="flower.gif" alt="Loading..." />
+    </div>
+    <div id="swipe-text">hi, Swipe for a Anime Waifu.</div>
+    <div id="preloader">
+      <img src="flower.gif" alt="Loading..." />
+    </div>
+  </div>
+
+  <!-- Menu Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">About AnimeWaifu Menu.</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Press SpaceBar <i class="bi bi-align-bottom"></i> Or, Double click <i class="bi bi-circle"></i> anywhere to
+          hide or unhide Menu Bar.
+          <br>
+          <div class="pro_info">
+            <p>Project: AnimeWaifu</p>
+            <p>Created by <a href="https://github.com/iamovi" target="_blank">Maruf Ovi.</a></p>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
 
-    <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+  <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 
-    <script src="assets/app.js"></script>
-  </body>
+  <script src="assets/app.js"></script>
+</body>
+
 </html>

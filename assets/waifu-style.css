@@ -27,6 +27,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+  font-family: "Bungee Spice", serif;
+
 }
 
 #preloader {
@@ -74,7 +76,6 @@ body {
   position: fixed;
   top: 10px;
   right: 10px;
-
   font-family: "Shantell Sans", serif;
 
 }
@@ -180,4 +181,32 @@ body {
   background-color: transparent !important; /* Remove background change on hover */
 }
 
+.modal {
+  font-family: "Stick", serif;
+}
+.modal-body {
+  font-family: "Shantell Sans", serif;
+  font-size: 3em;
+}
 
+/* Remove the focus border from the close button */
+button.btn-close:focus {
+  outline: none; /* Removes the focus outline (blue border) */
+  box-shadow: none; /* Removes any box shadow if it appears */
+}
+button.btn-close {
+  border: 0.5px solid black;
+  border-radius: 0;
+}
+.modal-content {
+  border-radius: 0 !important; /* Set border-radius to 0 */
+}
+
+.pro_info {
+  font-size: 20px;
+}
+
+.pro_info a {
+
+  color: red;
+}
