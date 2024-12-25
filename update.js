@@ -3,10 +3,11 @@ const currentVersion = "2.1"; // app's current version.
 // Function to check for updates
 async function checkForUpdates() {
     try {
-        // Fetch version.json from your server
-        const response = await fetch("https://iamovi.github.io/AnimeWaifu/version.json");
+        // Append a unique query parameter to prevent caching
+        const cacheBuster = `?t=${Date.now()}`;
+        const response = await fetch(`https://iamovi.github.io/AnimeWaifu/version.json${cacheBuster}`);
         const data = await response.json();
-        
+
         // Compare the current app version with the one from version.json
         if (data.version !== currentVersion) {
             const updateMessage = `
@@ -42,3 +43,6 @@ async function checkForUpdates() {
         document.getElementById("update-message").style.display = "block";
     }
 }
+
+// Call the function to check for updates when the page loads or user clicks the update button
+checkForUpdates();
