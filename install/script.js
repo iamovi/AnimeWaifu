@@ -119,3 +119,5 @@ document.getElementById("playAnimeButton").addEventListener("click", function ()
   // Exit full-screen when the video ends
   video.addEventListener("ended", () => document.body.removeChild(fullScreenContainer));
 });
+
+// .

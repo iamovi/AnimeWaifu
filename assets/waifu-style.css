@@ -31,7 +31,7 @@ body {
 
 }
 
-#preloader {
+#preloader, #preloaderX {
   position: absolute;
   top: 10%;
   left: 50%;
@@ -42,6 +42,14 @@ body {
 #preloader img {
   width: 50px;
   height: 50px;
+}
+
+#preloaderX {
+  margin-top: 5%;
+}
+
+#preloaderX img {
+  width: 100%;
 }
 
 #swipe-container.loading #swipe-text {
@@ -186,7 +194,7 @@ body {
 }
 .modal-body {
   font-family: "Shantell Sans", serif;
-  font-size: 3em;
+  font-size: 2em;
 }
 
 /* Remove the focus border from the close button */
@@ -210,3 +218,40 @@ button.btn-close {
 
   color: red;
 }
+
+#animewaifu-talks {
+  animation: colorAnimation 4s infinite alternate; /* Apply color animation */
+}
+
+@keyframes colorAnimation {
+  0% {
+    color: #ff4081; /* Start color */
+    text-shadow: 2px 2px 4px rgba(255, 64, 129, 0.7); /* Color shadow */
+  }
+  25% {
+    color: #00bcd4; /* Second color */
+    text-shadow: 2px 2px 4px rgba(0, 188, 212, 0.7); /* Color shadow */
+  }
+  50% {
+    color: #4caf50; /* Third color */
+    text-shadow: 2px 2px 4px rgba(76, 175, 80, 0.7); /* Color shadow */
+  }
+  75% {
+    color: #ff9800; /* Fourth color */
+    text-shadow: 2px 2px 4px rgba(255, 152, 0, 0.7); /* Color shadow */
+  }
+  100% {
+    color: #9c27b0; /* Final color */
+    text-shadow: 2px 2px 4px rgba(156, 39, 176, 0.7); /* Color shadow */
+  }
+}
+
+
+.update_btn {
+  width: 40%;
+  display: block;
+  margin: 20px auto;
+  font-size: 15px;
+}
+
+/* . */

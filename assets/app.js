@@ -251,3 +251,46 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
+
+//
+
+function showFullscreen(imgElement) {
+  const fullscreenDiv = document.createElement('div');
+  fullscreenDiv.style.position = 'fixed';
+  fullscreenDiv.style.top = '0';
+  fullscreenDiv.style.left = '0';
+  fullscreenDiv.style.width = '100vw';
+  fullscreenDiv.style.height = '100vh';
+  fullscreenDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+  fullscreenDiv.style.display = 'flex';
+  fullscreenDiv.style.justifyContent = 'center';
+  fullscreenDiv.style.alignItems = 'center';
+  fullscreenDiv.style.zIndex = '1100';
+
+  const fullscreenImg = document.createElement('img');
+  fullscreenImg.src = imgElement.src;
+  fullscreenImg.style.maxWidth = '100%';
+  fullscreenImg.style.maxHeight = '100%';
+
+  // Close button
+  const closeButton = document.createElement('div');
+  closeButton.innerHTML = '&times;';
+  closeButton.style.position = 'absolute';
+  closeButton.style.top = '20px';
+  closeButton.style.left = '50%';
+  closeButton.style.transform = 'translateX(-50%)'; // Center horizontally
+  closeButton.style.fontSize = '30px';
+  closeButton.style.color = 'white';
+  closeButton.style.cursor = 'pointer';
+  closeButton.style.zIndex = '1200'; // Ensure it is above the image
+
+  closeButton.onclick = () => {
+    document.body.removeChild(fullscreenDiv);
+  };
+
+  fullscreenDiv.appendChild(fullscreenImg);
+  fullscreenDiv.appendChild(closeButton);
+  document.body.appendChild(fullscreenDiv);
+}
+
+// .
