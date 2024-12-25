@@ -2,7 +2,7 @@ const currentVersion = "2.0"; // Replace with your app's current version
 
 async function checkForUpdates() {
     try {
-        const response = await fetch("https://iamovi.github.io/AnimeWaifu/version.json");
+        const response = await fetch("https://example.com/version.json");
         const data = await response.json();
 
         if (data.version !== currentVersion) {
@@ -22,5 +22,3 @@ async function checkForUpdates() {
 
 // Call this function when the app starts
 checkForUpdates();
-
-// .

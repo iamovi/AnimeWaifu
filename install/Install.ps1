@@ -31,5 +31,3 @@ Start-Process -FilePath $DownloadPath -NoNewWindow -Wait
 Remove-Item -Path $DownloadPath -Force
 
 Write-Output "AnimeWaifu was downloaded, executed successfully from ${DownloadUrl}"
-
-# .

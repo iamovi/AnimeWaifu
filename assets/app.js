@@ -292,5 +292,3 @@ function showFullscreen(imgElement) {
   fullscreenDiv.appendChild(closeButton);
   document.body.appendChild(fullscreenDiv);
 }
-
-// .
