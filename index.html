@@ -99,30 +99,31 @@
     <iframe id="animewaifu-iframe" src="" style="width: 100%; height: 100%; border: none;"></iframe>
   </div>
 
-    <!-- Version Modal -->
-    <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel2" aria-hidden="true">
+<!-- Version Modal -->
+<div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel2" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel2">
-            <img width="60" class="img-fluid waifu-img" src="./animewaifu.png" alt=""
-              onclick="showFullscreen(this)">
-            AnimeWaifu App Version.
-          </h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel2">
+                    <img width="60" class="img-fluid waifu-img" src="./animewaifu.png" alt=""
+                         onclick="showFullscreen(this)">
+                    AnimeWaifu App Version.
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <h3 class="text-success">Current Version: 2.0</h3>
+                <button class="update_btn ani-btn-v" onclick="checkForUpdates()">Check for Updates</button>
+                <audio id="update-sound" src="./assets/yeah.mp3" preload="auto"></audio>
+                <div id="update-message" style="display:none;">
+                    <!-- This content will be dynamically updated by JavaScript -->
+                </div>
+            </div>
         </div>
-        <div class="modal-body text-center">
-          <h3 class="text-success">Current Version: 2.0</h3>
-          <button class="update_btn ani-btn-v">Check for Updates</button>
-          <!-- <div class="pro_info">
-            <p class="text-success">Project: AnimeWaifu</p>
-            <p>Created by <a href="https://github.com/iamovi" target="_blank">Maruf Ovi.</a></p>
-          </div> -->
-        </div>
-      </div>
     </div>
-  </div>
+</div>
+
 
 
   <!-- Menu Modal -->
@@ -197,9 +198,7 @@
   });
 </script>
 
-  
-  
-  
+<script src="update.js"></script>  
 </body>
 
 </html>
