@@ -5,7 +5,7 @@ async function checkForUpdates() {
     try {
         // Append a unique query parameter to prevent caching
         const cacheBuster = `?t=${Date.now()}`;
-        const response = await fetch(`./version.json${cacheBuster}`);
+        const response = await fetch(`https://iamovi.github.io/AnimeWaifu/version.json${cacheBuster}`);
         const data = await response.json();
 
         // Compare the current app version with the one from version.json
