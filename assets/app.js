@@ -309,18 +309,30 @@ function showFullscreen(imgElement) {
   fullscreenDiv.style.display = 'flex';
   fullscreenDiv.style.justifyContent = 'center';
   fullscreenDiv.style.alignItems = 'center';
-  fullscreenDiv.style.zIndex = '1000';
+  fullscreenDiv.style.zIndex = '1100';
 
-  const fullscreenImage = document.createElement('img');
-  fullscreenImage.src = imgElement.src;
-  fullscreenImage.style.maxWidth = '90%';
-  fullscreenImage.style.maxHeight = '90%';
-  fullscreenImage.style.objectFit = 'contain';
-  fullscreenDiv.appendChild(fullscreenImage);
+  const fullscreenImg = document.createElement('img');
+  fullscreenImg.src = imgElement.src;
+  fullscreenImg.style.maxWidth = '100%';
+  fullscreenImg.style.maxHeight = '100%';
 
-  fullscreenDiv.addEventListener('click', () => {
-    fullscreenDiv.remove(); // Remove the fullscreen view on click
-  });
+  // Close button
+  const closeButton = document.createElement('div');
+  closeButton.innerHTML = '&times;';
+  closeButton.style.position = 'absolute';
+  closeButton.style.top = '20px';
+  closeButton.style.left = '50%';
+  closeButton.style.transform = 'translateX(-50%)'; // Center horizontally
+  closeButton.style.fontSize = '30px';
+  closeButton.style.color = 'white';
+  closeButton.style.cursor = 'pointer';
+  closeButton.style.zIndex = '1200'; // Ensure it is above the image
 
+  closeButton.onclick = () => {
+    document.body.removeChild(fullscreenDiv);
+  };
+
+  fullscreenDiv.appendChild(fullscreenImg);
+  fullscreenDiv.appendChild(closeButton);
   document.body.appendChild(fullscreenDiv);
 }
