@@ -12,6 +12,7 @@ let hasSwiped = false;
 let currentCategory = 'sfw';
 let currentImageUrl = ''; // Variable to store the current image URL
 let imageHistory = []; // Stack to keep track of image history
+let retryCount = 0; // Track the number of retries
 
 hammer.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
 
@@ -28,42 +29,81 @@ function getRandomWaifuImage() {
   swipeContainer.classList.add('loading');
   isLoading = true;
 
-  // Introduce a 0.5 second delay before showing the image
-  setTimeout(() => {
-    const image = new Image();
+  const fetchImage = () => {
+    // Introduce a 0.5 second delay before showing the image
+    setTimeout(() => {
+      const image = new Image();
 
-    image.onload = function () {
-      // Push the current image URL to history before updating
-      if (currentImageUrl) {
-        imageHistory.push(currentImageUrl);
-      }
+      image.onload = function () {
+        // Push the current image URL to history before updating
+        if (currentImageUrl) {
+          imageHistory.push(currentImageUrl);
+        }
 
-      swipeContainer.style.backgroundImage = 'url(' + image.src + ')';
-      currentImageUrl = image.src; // Save the new image URL
-      currentImgLinkButton.style.pointerEvents = 'auto'; // Enable the button
-      preloader.style.display = 'none'; // Hide preloader
-      swipeContainer.classList.remove('loading'); // Remove loading class
-      isLoading = false;
-    };
-
-    fetch(`https://api.waifu.pics/${currentCategory}/waifu`)
-      .then(response => response.json())
-      .then(data => {
-        image.src = data.url;
-      })
-      .catch(err => {
-        console.error('Error fetching image:', err);
-        preloader.style.display = 'none';
-        swipeContainer.classList.remove('loading');
+        swipeContainer.style.backgroundImage = 'url(' + image.src + ')';
+        currentImageUrl = image.src; // Save the new image URL
+        currentImgLinkButton.style.pointerEvents = 'auto'; // Enable the button
+        preloader.style.display = 'none'; // Hide preloader
+        swipeContainer.classList.remove('loading'); // Remove loading class
         isLoading = false;
-      });
-  }, 500); // Delay for 500ms (0.5 seconds)
+        retryCount = 0; // Reset retry count on success
+      };
+
+      fetch(`https://api.waifu.pics/${currentCategory}/waifu`)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          if (data && data.url) {
+            image.src = data.url;
+          } else {
+            throw new Error('No image URL returned from API');
+          }
+        })
+        .catch(err => {
+          console.error('Error fetching image:', err);
+          // Retry the image fetching up to 3 times
+          if (retryCount < 3) {
+            retryCount++;
+            console.log(`Retrying... (${retryCount})`);
+            fetchImage(); // Retry fetching the image
+          } else {
+            // If after 3 retries it still fails, show error
+            preloader.style.display = 'none';
+            swipeContainer.classList.remove('loading');
+            isLoading = false;
+            const errorMessage = document.createElement('div');
+            errorMessage.style.position = 'fixed';
+            errorMessage.style.bottom = '10px';
+            errorMessage.style.left = '50%';
+            errorMessage.style.transform = 'translateX(-50%)';
+            errorMessage.style.backgroundColor = '#ff1744'; // Red background
+            errorMessage.style.color = '#fff';
+            errorMessage.style.padding = '10px';
+            errorMessage.style.borderRadius = '5px';
+            errorMessage.style.fontSize = '16px';
+            errorMessage.style.zIndex = '999';
+            errorMessage.innerHTML = 'Failed to load image after multiple attempts. Please try again later.';
+            document.body.appendChild(errorMessage);
+            setTimeout(() => {
+              errorMessage.style.display = 'none';
+            }, 3000);
+          }
+        });
+    }, 500); // Delay for 500ms (0.5 seconds)
+  };
+
+  fetchImage(); // Initial image fetch
 }
 
 hammer.on('swipe', function () {
   getRandomWaifuImage();
 });
 
+// Handle the "NSFW Toggle" button click
 nsfwToggle.addEventListener('click', function () {
   const toggleMessage = document.createElement('div');
   toggleMessage.style.position = 'fixed';
@@ -132,7 +172,6 @@ currentImgLinkButton.addEventListener('click', function () {
   }
 });
 
-
 // Handle Undo button click
 undoButton.addEventListener('click', function () {
   if (imageHistory.length > 0) {
@@ -161,26 +200,6 @@ undoButton.addEventListener('click', function () {
       noUndoMessage.style.display = 'none';
     }, 3000);
   }
-});
-
-// Water ripple effect
-const imgContainer = document.querySelector('.img-water-effect');
-
-imgContainer.addEventListener('mousemove', (e) => {
-  const rect = imgContainer.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
-
-  const ripple = document.createElement('div');
-  ripple.className = 'ripple';
-  ripple.style.left = `${x - 75}px`; // Center the ripple
-  ripple.style.top = `${y - 75}px`; // Center the ripple
-  imgContainer.appendChild(ripple);
-
-  // Remove the ripple after animation ends
-  setTimeout(() => {
-    ripple.remove();
-  }, 1000); // Matches the animation duration
 });
 
 // Share button functionality
@@ -221,16 +240,33 @@ shareButton.addEventListener('click', function () {
   }
 });
 
-//
-
 // Handle the "Refresh" button click
+const refresh = document.getElementById('refresh');
 refresh.addEventListener('click', function () {
   location.reload(); // This will refresh the entire page
 });
 
-// 
+// Water ripple effect
+const imgContainer = document.querySelector('.img-water-effect');
 
+imgContainer.addEventListener('mousemove', (e) => {
+  const rect = imgContainer.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
 
+  const ripple = document.createElement('div');
+  ripple.className = 'ripple';
+  ripple.style.left = `${x - 75}px`; // Center the ripple
+  ripple.style.top = `${y - 75}px`; // Center the ripple
+  imgContainer.appendChild(ripple);
+
+  // Remove the ripple after animation ends
+  setTimeout(() => {
+    ripple.remove();
+  }, 1000); // Matches the animation duration
+});
+
+// Handle dropdown menu visibility
 const dropdown = document.getElementById('main_menu');
 let isDropdownVisible = true; // To keep track of the dropdown's visibility
 
@@ -261,9 +297,7 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-
-//
-
+// Fullscreen function for images
 function showFullscreen(imgElement) {
   const fullscreenDiv = document.createElement('div');
   fullscreenDiv.style.position = 'fixed';
@@ -275,30 +309,18 @@ function showFullscreen(imgElement) {
   fullscreenDiv.style.display = 'flex';
   fullscreenDiv.style.justifyContent = 'center';
   fullscreenDiv.style.alignItems = 'center';
-  fullscreenDiv.style.zIndex = '1100';
+  fullscreenDiv.style.zIndex = '1000';
 
-  const fullscreenImg = document.createElement('img');
-  fullscreenImg.src = imgElement.src;
-  fullscreenImg.style.maxWidth = '100%';
-  fullscreenImg.style.maxHeight = '100%';
+  const fullscreenImage = document.createElement('img');
+  fullscreenImage.src = imgElement.src;
+  fullscreenImage.style.maxWidth = '90%';
+  fullscreenImage.style.maxHeight = '90%';
+  fullscreenImage.style.objectFit = 'contain';
+  fullscreenDiv.appendChild(fullscreenImage);
 
-  // Close button
-  const closeButton = document.createElement('div');
-  closeButton.innerHTML = '&times;';
-  closeButton.style.position = 'absolute';
-  closeButton.style.top = '20px';
-  closeButton.style.left = '50%';
-  closeButton.style.transform = 'translateX(-50%)'; // Center horizontally
-  closeButton.style.fontSize = '30px';
-  closeButton.style.color = 'white';
-  closeButton.style.cursor = 'pointer';
-  closeButton.style.zIndex = '1200'; // Ensure it is above the image
+  fullscreenDiv.addEventListener('click', () => {
+    fullscreenDiv.remove(); // Remove the fullscreen view on click
+  });
 
-  closeButton.onclick = () => {
-    document.body.removeChild(fullscreenDiv);
-  };
-
-  fullscreenDiv.appendChild(fullscreenImg);
-  fullscreenDiv.appendChild(closeButton);
   document.body.appendChild(fullscreenDiv);
 }
