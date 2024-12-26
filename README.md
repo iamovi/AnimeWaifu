@@ -29,13 +29,6 @@ powershell -c "irm iamovi.github.io/AnimeWaifu/Install.ps1 | iex"
 ```
 - Wait for the installation to complete.
 
-#### Or Install manually:
-
-- Download [install.ps1](https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/Install.ps1) file.
-
-```bash
-.\install.ps1
-```
 
 # 🎉 Project - momose
 
@@ -46,13 +39,6 @@ powershell -c "irm iamovi.github.io/AnimeWaifu/Install.ps1 | iex"
 ***https://github.com/iamovi/momose***
 
 ---
-
-### Dependencies
-
-- [Hammer.js](https://hammerjs.github.io/)
-- [Waifu.pics API](https://waifu.pics/)
-- [Capacitor.js](https://capacitorjs.com/)
-- [Electron](https://www.electronjs.org/)
 
 ### License
 
