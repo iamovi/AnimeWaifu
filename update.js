@@ -54,7 +54,6 @@ style.textContent = `
   border: none;
   transform: rotate(5deg);
   transform-origin: center;
-  font-family: "Gochi Hand", cursive;
   text-decoration: none;
   font-size: 15px;
   cursor: pointer;
@@ -63,6 +62,8 @@ style.textContent = `
   box-shadow: 0 2px 0 #494a4b;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   background-color: #5cdb95;
+    font-family: "Stick", serif;
+    font-weight: bold;
 }
 
 .proceed span {
