@@ -35,7 +35,15 @@ body {
 
 }
 
-#preloader, #preloaderX {
+#preloader {
+  position: fixed; 
+  bottom: -40%;       
+  left: 50%;      
+  transform: translateX(-50%); 
+  display: none;    
+}
+
+#preloaderX {
   position: absolute;
   top: 10%;
   left: 50%;
