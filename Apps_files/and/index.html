@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnimeWaifu</title>
+  <link href="./animewaifu.png" rel="icon" />
+
+  <meta property="og:title" content="AnimeWaifu" />
+  <meta property="og:description" content="Swipe to get a random anime waifu." />
+  <meta property="og:image" content="./assets/waifu-preview.jpg" />
+  <meta property="og:url" content="https://iamovi.github.io/AnimeWaifu/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap" rel="stylesheet">
+
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"> -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" />
+
+    <!-- ani.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ani.css@1.0.2/dist/css/ani.min.css">
+
+
+  <link href="assets/waifu-style.css" rel="stylesheet" />
+
+  <!-- Preload the GIF -->
+  <link rel="preload" href="./assets/waifu_wait.gif" as="image" />
+
+  <script src="offline.js"></script>
+</head>
+
+<body>
+
+  <div class="dropdown" id="main_menu">
+    <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-egg-fried"></i>
+    </button>
+    <ul class="dropdown-menu">
+      <li class="text-center fw-bold ani_menu">AnimeWaifu Menu,</li>
+      <div class="img-water-effect">
+        <img class="dropdown-item yolo" src="./animewaifu.png" alt="">
+      </div>
+      <li class="dropdown-item nsfw" id="nsfw-toggle">
+        Switch to NSFW.
+        <img width="35" src="./assets/banana.png" alt="" />
+      </li>
+      <li style="cursor: pointer;" class="dropdown-item" id="current-img-link">Current Img Link <i
+          class="bi bi-link-45deg"></i></li>
+
+      <li style="cursor: pointer;" id="undo-button" class="dropdown-item">Undo <i class="bi bi-arrow-left"></i></li>
+
+      <li style="cursor: pointer;" id="refresh" class="dropdown-item">Refresh <i class="bi bi-arrow-clockwise"></i></li>
+
+      <li data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="cursor: pointer;" class="dropdown-item">About
+        Menu <i class="bi bi-egg-fried"></i></li>
+
+      <li style="cursor: pointer;" class="dropdown-item" id="animewaifu-talks">AnimeWaifu Talks <i class="bi bi-chat-square-heart-fill"></i></li>
+
+
+      <hr>
+      <li style="cursor: pointer;" class="dropdown-item text-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Check App Version <i class="bi bi-app"></i></li>
+
+      <li style="cursor: pointer;" class="dropdown-item text-success" id="share-me">Share This App! <i
+          class="bi bi-egg-fill"></i></li>
+
+          <li id="hmmm" style="cursor: pointer;" class="dropdown-item">
+            Play Hmmm <i class="bi bi-play-fill"></i>
+        </li>
+    </ul>
+  </div>
+
+  <div id="swipe-container">
+    <div id="preloader">
+      <img src="flower.gif" alt="Loading..." />
+    </div>
+    <div id="swipe-text">hi, Swipe for Anime Waifu.</div>
+    <div id="preloaderX">
+      <img src="./assets/anime.gif" alt="Loading..." />
+    </div>
+  </div>
+
+  <!-- Fullscreen iframe container, hidden by default -->
+  <div id="iframe-container"
+    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;  z-index: 999;">
+
+    <button id="close-iframe" class="fw-bold"
+      style="position: absolute; top: 20px; right: 20px; color: black; border: none; padding: 10px;"><i class="bi bi-x-lg"></i></button>
+
+    <iframe id="animewaifu-iframe" src="" style="width: 100%; height: 100%; border: none;"></iframe>
+  </div>
+
+<!-- Version Modal -->
+<div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel2">
+                    <img width="60" class="img-fluid waifu-img" src="./animewaifu.png" alt=""
+                         onclick="showFullscreen(this)">
+                    AnimeWaifu App Version.
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center" style="  font-family: Iceland";>
+                <h3 class="text-dark">Current Version: 2.2.1</h3>
+                
+                <!-- <button class="update_btn ani-btn-v" onclick="checkForUpdates()">Check for Updates</button> -->
+
+                <button class="button" onclick="checkForUpdates()">
+                  Check for
+                  <span class="button-span"> ─ Updates</span>
+                </button>
+                
+
+                <audio id="update-sound" src="./assets/yeah.mp3" preload="auto"></audio>
+                <div id="update-message" style="display:none;">
+                    <!-- This content will be dynamically updated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+  <!-- Menu Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">
+            <img width="60" class="img-fluid waifu-img" src="./assets/waifu-preview.jpg" alt=""
+              onclick="showFullscreen(this)">
+            About AnimeWaifu Menu.
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Press SpaceBar <i class="bi bi-align-bottom"></i> Or, Double click <i class="bi bi-circle"></i> anywhere to
+          hide or unhide Menu Bar.
+          <br>
+          <div class="pro_info">
+            <p class="text-success">Project: AnimeWaifu</p>
+            <p>Created by <a href="https://github.com/iamovi" target="_blank">Maruf Ovi.</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Current Image Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true" data-bs-backdrop="static">
+  <div class="modal-dialog modal-dialog-top">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="imageModalLabel">Current AnimeWaifu Image.</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <!-- Image with img-fluid class for responsiveness -->
+        <img id="modalImage" class="img-fluid w-50" alt="Current Waifu Image" />
+        <p class="mt-2">
+          <!-- <a id="modalImageLink" href="#" target="_blank" class="btn btn-primary">Open Image in New Tab to Download.</a> -->
+          <p class="current_text mb-0">Open Image in New Tab to Download.</p>
+          <a id="modalImageLink" href="#" target="_blank" class="btn-shine mt-0">Click Here.</a>
+
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="assets/app.js"></script>
+
+  <!-- AnimeWaifu Talks -->
+<script>
+  document.getElementById("animewaifu-talks").addEventListener("click", function () {
+    const iframeContainer = document.getElementById("iframe-container");
+    const iframe = document.getElementById("animewaifu-iframe");
+    const preloaderX = document.getElementById("preloaderX"); 
+    const loadingText = document.getElementById("loading-text"); 
+
+    // Set iframe source to start loading
+    iframe.src = "https://animewaifutalks.up.railway.app";
+    iframeContainer.style.display = "block";
+    preloaderX.style.display = "block"; 
+
+    // Show loading text
+    loadingText.style.display = "block";
+    loadingText.innerText = "Loading, please wait..."; 
+
+    // Hide preloaderX and loading text once the iframe has finished loading
+    iframe.addEventListener("load", function () {
+      preloaderX.style.display = "none"; 
+      loadingText.style.display = "none"; 
+    });
+  });
+
+  document.getElementById("close-iframe").addEventListener("click", function () {
+    const iframeContainer = document.getElementById("iframe-container");
+    const iframe = document.getElementById("animewaifu-iframe");
+    const preloaderX = document.getElementById("preloaderX");
+    const loadingText = document.getElementById("loading-text");
+
+    iframeContainer.style.display = "none";
+    iframe.src = "";
+    preloaderX.style.display = "none"; 
+    loadingText.style.display = "none"; 
+  });
+</script>
+
+<script src="update.js"></script>  
+<script src="play.js"></script>
+</body>
+
+</html>
