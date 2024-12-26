@@ -219,3 +219,9 @@ button {
       display: none;
     }
   }
+
+  .current {
+    font-family: "Concert One", serif;
+    color: red;
+    font-size: 18px;
+  }
