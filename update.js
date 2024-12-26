@@ -1,6 +1,5 @@
-const currentVersion = "2.2"; // app's current version.
+const currentVersion = "2.2.1"; // app's current version.
 
-// Function to check for updates
 async function checkForUpdates() {
     try {
         // Append a unique query parameter to prevent caching
@@ -14,8 +13,14 @@ async function checkForUpdates() {
             <hr>
                 <h4 class="text-danger mt-3">New version ${data.version} is available!</h4>
                 <button id="update-btn" class="proceed">
-                    <span>Proceed.</span>
+                    <span>Install</span>
                 </button>
+                <div id="whats-new">
+                    <h5>What's New:</h5>
+                    <ul>
+                        ${data.whats_new.map(change => `<li>${change}</li>`).join('')}
+                    </ul>
+                </div>
             `;
             document.getElementById("update-message").innerHTML = updateMessage;
             document.getElementById("update-message").style.display = "block";
@@ -45,7 +50,7 @@ async function checkForUpdates() {
     }
 }
 
-// Add dynamic styles for the button
+// Add dynamic styles for the button and the "What's New" section
 const style = document.createElement("style");
 style.textContent = `
 .proceed {
@@ -78,6 +83,21 @@ style.textContent = `
   transform: translateY(5px);
   padding-bottom: 0px;
   outline: 0;
+}
+
+#whats-new {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+#whats-new ul {
+  list-style-type: none; 
+  margin-left: 0;       
+  padding-left: 0;       
+}
+
+#whats-new li {
+  margin-bottom: 5px;
 }
 `;
 document.head.appendChild(style);

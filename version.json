@@ -1,4 +1,9 @@
 {
-  "version": "2.2",
-  "update_url": "https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/AnimeWaifu.apk"
+  "version": "2.2.1",
+  "update_url": "https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/AnimeWaifu.apk",
+  "whats_new": [
+    "Added Hmmm music for refreshing mood.",
+    "Fixed bugs related to image loading.",
+    "Improved performance and unknown "
+  ]
 }
