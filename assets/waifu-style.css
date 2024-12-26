@@ -1,3 +1,7 @@
+*{
+  user-select: none;
+}
+
 body {
   overflow: hidden;
   margin: 0;
@@ -248,9 +252,62 @@ button.btn-close {
 }
 
 
-.update_btn {
-  width: 40%;
-  display: block;
-  margin: 20px auto;
-  font-size: 15px;
+/* update button  */
+
+
+.button {
+  /* padding: 15px 20px; */
+  border: none;
+  outline: none;
+  background-color: #151515;
+  color: #eee;
+  /* border-radius: 7px; */
+  /* font-weight: 600; */
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.button-span {
+  color: #aaa;
+}
+
+/* current img */
+
+/* From Uiverse.io by barisdogansutcu */ 
+.btn-shine {
+  font-family: inherit;
+  border: none;
+  outline: 1px dotted rgb(37, 37, 37);
+  outline-offset: -4px;
+  cursor: pointer;
+  background: hsl(0deg 0% 75%);
+  box-shadow:
+    inset -1px -1px #292929,
+    inset 1px 1px #fff,
+    inset -2px -2px rgb(158, 158, 158),
+    inset 2px 2px #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 5px 30px;
+  text-decoration: none;
+  color: black;
+}
+
+.btn-shine:active {
+  box-shadow:
+    inset -1px -1px #fff,
+    inset 1px 1px #292929,
+    inset -2px -2px #ffffff,
+    inset 2px 2px rgb(158, 158, 158);
+}
+
+.current_text {
+  font-size: 20px;
 }

@@ -98,7 +98,16 @@ nsfwToggle.addEventListener('click', function () {
 // Handle the "Current Img Link" button click
 currentImgLinkButton.addEventListener('click', function () {
   if (currentImageUrl) {
-    window.open(currentImageUrl, '_blank'); // Open the image in a new tab
+    // Update modal content
+    const modalImage = document.getElementById('modalImage');
+    const modalImageLink = document.getElementById('modalImageLink');
+
+    modalImage.src = currentImageUrl; // Set image source
+    modalImageLink.href = currentImageUrl; // Set link href
+
+    // Show the modal
+    const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+    imageModal.show();
   } else {
     // Create a message indicating no image is loaded
     const noImageMessage = document.createElement('div');
@@ -106,14 +115,14 @@ currentImgLinkButton.addEventListener('click', function () {
     noImageMessage.style.bottom = '10px';
     noImageMessage.style.left = '50%';
     noImageMessage.style.transform = 'translateX(-50%)';
-    noImageMessage.style.backgroundColor = '#6a1b9a';  // Dark Purple
-    noImageMessage.style.color = '#f48fb1';  // Light Pink
+    noImageMessage.style.backgroundColor = '#6a1b9a'; // Dark Purple
+    noImageMessage.style.color = '#f48fb1'; // Light Pink
     noImageMessage.style.padding = '10px';
     noImageMessage.style.borderRadius = '5px';
     noImageMessage.style.fontSize = '16px';
     noImageMessage.style.zIndex = '999';
     noImageMessage.innerHTML = 'No image loaded yet! Please swipe to get an image.';
-    
+
     document.body.appendChild(noImageMessage);
 
     // Hide the message after 3 seconds
@@ -122,6 +131,7 @@ currentImgLinkButton.addEventListener('click', function () {
     }, 3000);
   }
 });
+
 
 // Handle Undo button click
 undoButton.addEventListener('click', function () {

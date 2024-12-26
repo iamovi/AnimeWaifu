@@ -5,21 +5,22 @@ async function checkForUpdates() {
     try {
         // Append a unique query parameter to prevent caching
         const cacheBuster = `?t=${Date.now()}`;
-        const response = await fetch(`https://iamovi.github.io/AnimeWaifu/version.json${cacheBuster}`);
+        const response = await fetch(`./version.json${cacheBuster}`);
         const data = await response.json();
 
         // Compare the current app version with the one from version.json
         if (data.version !== currentVersion) {
             const updateMessage = `
-                <h4 class="text-warning">New version ${data.version} is available!</h4>
-                <button id="update-btn" class="btn btn-primary" style="background-color: #28a745; border-color: #28a745; color: white; font-size: 15px; padding: 10px 15px; border-radius: 0px; cursor: pointer; transition: none; transform: none; box-shadow: none;">
-                    Click here to update
+            <hr>
+                <h4 class="text-danger mt-3">New version ${data.version} is available!</h4>
+                <button id="update-btn" class="proceed">
+                    <span>Proceed.</span>
                 </button>
             `;
             document.getElementById("update-message").innerHTML = updateMessage;
             document.getElementById("update-message").style.display = "block";
 
-            // Play the sound when an update is detected (same sound for both scenarios)
+            // Play the sound when an update is detected
             const updateSound = document.getElementById("update-sound");
             updateSound.play();
 
@@ -28,7 +29,7 @@ async function checkForUpdates() {
                 window.open(data.update_url, "_blank");
             };
         } else {
-            const upToDateMessage = `<p class="text-success">You are already on the latest version!</p>`;
+            const upToDateMessage = `<hr> <p class="text-success">You are already on the latest version! <i class="bi bi-check-all"></i></p>`;
             document.getElementById("update-message").innerHTML = upToDateMessage;
             document.getElementById("update-message").style.display = "block";
 
@@ -44,5 +45,41 @@ async function checkForUpdates() {
     }
 }
 
-// Call the function to check for updates when the page loads or user clicks the update button
-checkForUpdates();
+// Add dynamic styles for the button
+const style = document.createElement("style");
+style.textContent = `
+.proceed {
+  width: 150px;
+  padding: 0;
+  border: none;
+  transform: rotate(5deg);
+  transform-origin: center;
+  font-family: "Gochi Hand", cursive;
+  text-decoration: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  box-shadow: 0 2px 0 #494a4b;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: #5cdb95;
+}
+
+.proceed span {
+  background: #f1f5f8;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 2px solid #494a4b;
+}
+
+.proceed:active {
+  transform: translateY(5px);
+  padding-bottom: 0px;
+  outline: 0;
+}
+`;
+document.head.appendChild(style);
+
+// Add event listener to the "Check for Updates" button
+document.getElementById("check-updates-btn").addEventListener("click", checkForUpdates);
