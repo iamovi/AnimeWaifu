@@ -43,6 +43,8 @@
   <link rel="preload" href="./assets/waifu_wait.gif" as="image" />
 
   <script src="offline.js"></script>
+
+  <link rel="stylesheet" href="./animewaifutalks.css">
 </head>
 
 <body>
@@ -197,42 +199,10 @@
 
   <script src="assets/app.js"></script>
 
-  <!-- AnimeWaifu Talks -->
-<script>
-  document.getElementById("animewaifu-talks").addEventListener("click", function () {
-    const iframeContainer = document.getElementById("iframe-container");
-    const iframe = document.getElementById("animewaifu-iframe");
-    const preloaderX = document.getElementById("preloaderX"); 
-    const loadingText = document.getElementById("loading-text"); 
+<!-- AnimeWaifuTalks -->
+<!-- <script src="https://iamovi.github.io/AnimeWaifu/animewaifutalks.js"></script> -->
 
-    // Set iframe source to start loading
-    iframe.src = "https://animewaifutalks.up.railway.app";
-    iframeContainer.style.display = "block";
-    preloaderX.style.display = "block"; 
-
-    // Show loading text
-    loadingText.style.display = "block";
-    loadingText.innerText = "Loading, please wait..."; 
-
-    // Hide preloaderX and loading text once the iframe has finished loading
-    iframe.addEventListener("load", function () {
-      preloaderX.style.display = "none"; 
-      loadingText.style.display = "none"; 
-    });
-  });
-
-  document.getElementById("close-iframe").addEventListener("click", function () {
-    const iframeContainer = document.getElementById("iframe-container");
-    const iframe = document.getElementById("animewaifu-iframe");
-    const preloaderX = document.getElementById("preloaderX");
-    const loadingText = document.getElementById("loading-text");
-
-    iframeContainer.style.display = "none";
-    iframe.src = "";
-    preloaderX.style.display = "none"; 
-    loadingText.style.display = "none"; 
-  });
-</script>
+<script src="./animewaifutalks.js"></script>
 
 <script src="update.js"></script>  
 <script src="play.js"></script>
