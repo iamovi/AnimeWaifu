@@ -1,6 +1,6 @@
 // AnimeWaifu Talks
 
-const animeWaifuURL = "https://www.chitchat.gg";
+const animeWaifuURL = "https://animewaifutalks.up.railway.app";
 
 document
   .getElementById("animewaifu-talks")
