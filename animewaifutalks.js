@@ -1,26 +1,30 @@
 // AnimeWaifu Talks
 
-// Import the URL from the external file
-import { animewaifutalksURL } from './talksurl/url.js';
+const animeWaifuURL = "https://animewaifutalks.up.railway.app";
 
-document.getElementById("animewaifu-talks").addEventListener("click", function () {
-  const iframeContainer = document.getElementById("iframe-container");
-  const iframe = document.getElementById("animewaifu-iframe");
-  const preloaderX = document.getElementById("preloaderX");
-  const loadingText = document.getElementById("loading-text");
+document
+  .getElementById("animewaifu-talks")
+  .addEventListener("click", function () {
+    const iframeContainer = document.getElementById("iframe-container");
+    const iframe = document.getElementById("animewaifu-iframe");
+    const preloaderX = document.getElementById("preloaderX");
+    const loadingText = document.getElementById("loading-text");
 
-  iframe.src = animeWaifutalksURL;
-  iframeContainer.style.display = "block";
-  preloaderX.style.display = "block";
+    // Append a timestamp to the URL to avoid caching
+    const noCacheURL = animeWaifuURL + "?t=" + new Date().getTime();
+    iframe.src = noCacheURL;
 
-  loadingText.style.display = "block";
-  loadingText.innerText = "Loading, please wait...";
+    iframeContainer.style.display = "block";
+    preloaderX.style.display = "block";
 
-  iframe.addEventListener("load", function () {
-    preloaderX.style.display = "none";
-    loadingText.style.display = "none";
+    loadingText.style.display = "block";
+    loadingText.innerText = "Loading, please wait...";
+
+    iframe.addEventListener("load", function () {
+      preloaderX.style.display = "none";
+      loadingText.style.display = "none";
+    });
   });
-});
 
 document.getElementById("close-iframe").addEventListener("click", function () {
   const iframeContainer = document.getElementById("iframe-container");
