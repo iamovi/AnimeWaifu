@@ -16,17 +16,8 @@ let retryCount = 0; // Track the number of retries
 
 hammer.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
 
-// Function to toggle UI elements during image load
-function toggleUIElements(shouldDisable) {
-  nsfwToggle.disabled = shouldDisable;
-  currentImgLinkButton.disabled = shouldDisable;
-  undoButton.disabled = shouldDisable;
-  shareButton.disabled = shouldDisable;
-}
-
 function getRandomWaifuImage() {
-  if (isLoading) return; // Prevent re-fetching while loading
-  toggleUIElements(true); // Disable UI elements during image load
+  if (isLoading) return;
 
   if (!hasSwiped) {
     swipeText.style.display = 'none';
@@ -39,10 +30,12 @@ function getRandomWaifuImage() {
   isLoading = true;
 
   const fetchImage = () => {
+    // Introduce a 0.5 second delay before showing the image
     setTimeout(() => {
       const image = new Image();
 
       image.onload = function () {
+        // Push the current image URL to history before updating
         if (currentImageUrl) {
           imageHistory.push(currentImageUrl);
         }
@@ -54,7 +47,6 @@ function getRandomWaifuImage() {
         swipeContainer.classList.remove('loading'); // Remove loading class
         isLoading = false;
         retryCount = 0; // Reset retry count on success
-        toggleUIElements(false); // Re-enable UI elements after loading completes
       };
 
       fetch(`https://api.waifu.pics/${currentCategory}/waifu`)
@@ -73,43 +65,38 @@ function getRandomWaifuImage() {
         })
         .catch(err => {
           console.error('Error fetching image:', err);
+          // Retry the image fetching up to 3 times
           if (retryCount < 3) {
             retryCount++;
             console.log(`Retrying... (${retryCount})`);
             fetchImage(); // Retry fetching the image
           } else {
+            // If after 3 retries it still fails, show error
             preloader.style.display = 'none';
             swipeContainer.classList.remove('loading');
             isLoading = false;
-            showErrorMessage('Failed to load image after multiple attempts.');
-            toggleUIElements(false); // Re-enable UI elements after failure
+            const errorMessage = document.createElement('div');
+            errorMessage.style.position = 'fixed';
+            errorMessage.style.bottom = '10px';
+            errorMessage.style.left = '50%';
+            errorMessage.style.transform = 'translateX(-50%)';
+            errorMessage.style.backgroundColor = '#ff1744'; // Red background
+            errorMessage.style.color = '#fff';
+            errorMessage.style.padding = '10px';
+            errorMessage.style.borderRadius = '5px';
+            errorMessage.style.fontSize = '16px';
+            errorMessage.style.zIndex = '999';
+            errorMessage.innerHTML = 'Failed to load image after multiple attempts. Please try again later.';
+            document.body.appendChild(errorMessage);
+            setTimeout(() => {
+              errorMessage.style.display = 'none';
+            }, 3000);
           }
         });
     }, 500); // Delay for 500ms (0.5 seconds)
   };
 
   fetchImage(); // Initial image fetch
-}
-
-// Helper function to show error messages
-function showErrorMessage(message) {
-  const errorMessage = document.createElement('div');
-  errorMessage.style.position = 'fixed';
-  errorMessage.style.bottom = '10px';
-  errorMessage.style.left = '50%';
-  errorMessage.style.transform = 'translateX(-50%)';
-  errorMessage.style.backgroundColor = '#ff1744'; 
-  errorMessage.style.color = '#fff';
-  errorMessage.style.padding = '10px';
-  errorMessage.style.borderRadius = '5px';
-  errorMessage.style.fontSize = '16px';
-  errorMessage.style.zIndex = '999';
-  errorMessage.innerHTML = message;
-  document.body.appendChild(errorMessage);
-
-  setTimeout(() => {
-    errorMessage.style.display = 'none';
-  }, 3000);
 }
 
 hammer.on('swipe', function () {
@@ -141,11 +128,11 @@ nsfwToggle.addEventListener('click', function () {
   }
 
   document.body.appendChild(toggleMessage);
+
+  // Hide the message after 5 seconds
   setTimeout(function () {
     toggleMessage.style.display = 'none';
   }, 1000);
-
-  getRandomWaifuImage(); // Fetch new image immediately after category switch
 });
 
 // Handle the "Current Img Link" button click
@@ -162,6 +149,7 @@ currentImgLinkButton.addEventListener('click', function () {
     const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
     imageModal.show();
   } else {
+    // Create a message indicating no image is loaded
     const noImageMessage = document.createElement('div');
     noImageMessage.style.position = 'fixed';
     noImageMessage.style.bottom = '10px';
@@ -177,6 +165,7 @@ currentImgLinkButton.addEventListener('click', function () {
 
     document.body.appendChild(noImageMessage);
 
+    // Hide the message after 3 seconds
     setTimeout(function () {
       noImageMessage.style.display = 'none';
     }, 3000);
@@ -190,6 +179,7 @@ undoButton.addEventListener('click', function () {
     swipeContainer.style.backgroundImage = 'url(' + previousImageUrl + ')';
     currentImageUrl = previousImageUrl; // Update the current image URL
   } else {
+    // Show a message if there's no previous image
     const noUndoMessage = document.createElement('div');
     noUndoMessage.style.position = 'fixed';
     noUndoMessage.style.bottom = '10px';
@@ -205,6 +195,7 @@ undoButton.addEventListener('click', function () {
 
     document.body.appendChild(noUndoMessage);
 
+    // Hide the message after 3 seconds
     setTimeout(function () {
       noUndoMessage.style.display = 'none';
     }, 3000);
@@ -254,3 +245,94 @@ const refresh = document.getElementById('refresh');
 refresh.addEventListener('click', function () {
   location.reload(); // This will refresh the entire page
 });
+
+// Water ripple effect
+const imgContainer = document.querySelector('.img-water-effect');
+
+imgContainer.addEventListener('mousemove', (e) => {
+  const rect = imgContainer.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  const ripple = document.createElement('div');
+  ripple.className = 'ripple';
+  ripple.style.left = `${x - 75}px`; // Center the ripple
+  ripple.style.top = `${y - 75}px`; // Center the ripple
+  imgContainer.appendChild(ripple);
+
+  // Remove the ripple after animation ends
+  setTimeout(() => {
+    ripple.remove();
+  }, 1000); // Matches the animation duration
+});
+
+// Handle dropdown menu visibility
+const dropdown = document.getElementById('main_menu');
+let isDropdownVisible = true; // To keep track of the dropdown's visibility
+
+// Function to toggle the dropdown visibility
+function toggleDropdownVisibility() {
+  if (isDropdownVisible) {
+    dropdown.style.display = 'none'; // Hide the dropdown
+  } else {
+    dropdown.style.display = 'block'; // Show the dropdown
+  }
+  isDropdownVisible = !isDropdownVisible; // Toggle the state
+}
+
+// Add double-click event listener to the entire document
+document.addEventListener('dblclick', function (e) {
+  // Only toggle dropdown if the click is not inside the dropdown
+  if (!dropdown.contains(e.target)) {
+    toggleDropdownVisibility();
+  }
+});
+
+// Add spacebar event listener to toggle visibility
+document.addEventListener('keydown', function (e) {
+  // Check if the spacebar (key code 32) is pressed
+  if (e.code === 'Space') {
+    e.preventDefault(); // Prevent default action for spacebar (e.g., scrolling)
+    toggleDropdownVisibility();
+  }
+});
+
+// Fullscreen function for images
+function showFullscreen(imgElement) {
+  const fullscreenDiv = document.createElement('div');
+  fullscreenDiv.style.position = 'fixed';
+  fullscreenDiv.style.top = '0';
+  fullscreenDiv.style.left = '0';
+  fullscreenDiv.style.width = '100vw';
+  fullscreenDiv.style.height = '100vh';
+  fullscreenDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+  fullscreenDiv.style.display = 'flex';
+  fullscreenDiv.style.justifyContent = 'center';
+  fullscreenDiv.style.alignItems = 'center';
+  fullscreenDiv.style.zIndex = '1100';
+
+  const fullscreenImg = document.createElement('img');
+  fullscreenImg.src = imgElement.src;
+  fullscreenImg.style.maxWidth = '100%';
+  fullscreenImg.style.maxHeight = '100%';
+
+  // Close button
+  const closeButton = document.createElement('div');
+  closeButton.innerHTML = '&times;';
+  closeButton.style.position = 'absolute';
+  closeButton.style.top = '20px';
+  closeButton.style.left = '50%';
+  closeButton.style.transform = 'translateX(-50%)'; // Center horizontally
+  closeButton.style.fontSize = '30px';
+  closeButton.style.color = 'white';
+  closeButton.style.cursor = 'pointer';
+  closeButton.style.zIndex = '1200'; // Ensure it is above the image
+
+  closeButton.onclick = () => {
+    document.body.removeChild(fullscreenDiv);
+  };
+
+  fullscreenDiv.appendChild(fullscreenImg);
+  fullscreenDiv.appendChild(closeButton);
+  document.body.appendChild(fullscreenDiv);
+}
