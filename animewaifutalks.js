@@ -1,6 +1,6 @@
 // AnimeWaifu Talks
 
-const animeWaifuURL = "https://chatguys-letschat.netlify.app";
+const animeWaifuURL = "https://www.chitchat.gg";
 
 document
   .getElementById("animewaifu-talks")
