@@ -43,6 +43,8 @@
   <link rel="preload" href="./assets/waifu_wait.gif" as="image" />
 
   <script src="offline.js"></script>
+
+  <link rel="stylesheet" href="./animewaifutalks.css">
 </head>
 
 <body>
@@ -198,58 +200,7 @@
 
   <script src="assets/app.js"></script>
 
-  <!-- AnimeWaifu Talks -->
-<script>
-  document.getElementById("animewaifu-talks").addEventListener("click", function () {
-    const iframeContainer = document.getElementById("iframe-container");
-    const iframe = document.getElementById("animewaifu-iframe");
-    const preloaderX = document.getElementById("preloaderX"); 
-    const loadingText = document.getElementById("loading-text"); 
-
-    // Show loading text
-    loadingText.style.display = "block";
-    loadingText.innerText = "Loading, please wait..."; 
-
-    // Fetch the JSON file to get the iframe URL
-    fetch('https://iamovi.github.io/AnimeWaifu/animewaifutalks.json')
-        .then(response => response.json())
-        .then(data => {
-            const iframeURL = data.url; // Assuming your JSON file has a 'url' key
-            if (iframeURL) {
-                // Set iframe source to the URL from the JSON
-                iframe.src = iframeURL;
-                iframeContainer.style.display = "block";
-                preloaderX.style.display = "block"; 
-
-                // Hide preloaderX and loading text once the iframe has finished loading
-                iframe.addEventListener("load", function () {
-                    preloaderX.style.display = "none"; 
-                    loadingText.style.display = "none"; 
-                });
-            } else {
-                loadingText.innerText = "Error: URL not found in the JSON.";
-            }
-        })
-        .catch(error => {
-            console.error('Error fetching the JSON file:', error);
-            loadingText.innerText = "Error loading data.";
-        });
-});
-
-document.getElementById("close-iframe").addEventListener("click", function () {
-    const iframeContainer = document.getElementById("iframe-container");
-    const iframe = document.getElementById("animewaifu-iframe");
-    const preloaderX = document.getElementById("preloaderX");
-    const loadingText = document.getElementById("loading-text");
-
-    iframeContainer.style.display = "none";
-    iframe.src = "";
-    preloaderX.style.display = "none"; 
-    loadingText.style.display = "none"; 
-});
-
-</script>
-
+<script src="./animewaifutalks.js"></script>
 <script src="update.js"></script>  
 <script src="play.js"></script>
 </body>
