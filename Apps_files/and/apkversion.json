@@ -1,9 +1,8 @@
 {
-    "version": "2.2.2",
+    "version": "2.2.3",
     "update_url": "https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/AnimeWaifu.apk",
     "whats_new": [
-      "Moved share app button to version modal.",
-      "add store button om version modal."
+      "update AnimeWaifu talks url. for better linking."
     ]
   }
   
