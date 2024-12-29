@@ -124,7 +124,7 @@
       </div>
       <hr>
       <div class="modal-body text-center" style="font-family: Iceland;">
-        <h3 class="text-dark">Current Version: 2.2.3</h3>
+        <h3 class="text-dark">Current Version: 2.2.4</h3>
 
         <button class="button" onclick="checkForUpdates()">
           Check for
@@ -200,7 +200,11 @@
   <script src="assets/app.js"></script>
 
 <!-- AnimeWaifuTalks -->
-<script src="https://iamovi.github.io/AnimeWaifu/animewaifutalks.js"></script>
+<script>
+  const script = document.createElement("script");
+  script.src = "https://iamovi.github.io/AnimeWaifu/animewaifutalks.js?t=" + new Date().getTime();
+  document.head.appendChild(script);
+</script>
 
 <script src="update.js"></script>  
 <script src="play.js"></script>

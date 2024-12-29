@@ -1,5 +1,5 @@
 Android Studio //
 
-Current VersionCode: 6
+Current VersionCode: 7
 
-Version 2.2.3
+Version 2.2.4
