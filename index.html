@@ -201,7 +201,11 @@
   <script src="assets/app.js"></script>
 
 <!-- AnimeWaifuTalks -->
-<script src="https://iamovi.github.io/AnimeWaifu/animewaifutalks.js"></script>
+<script>
+  const script = document.createElement("script");
+  script.src = "https://iamovi.github.io/AnimeWaifu/animewaifutalks.js?t=" + new Date().getTime();
+  document.head.appendChild(script);
+</script>
 
 <script src="update.js"></script>  
 <script src="play.js"></script>
