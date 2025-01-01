@@ -38,6 +38,7 @@
     <!-- ani.css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ani.css@1.0.2/dist/css/ani.min.css">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link href="assets/waifu-style.css" rel="stylesheet" />
 
@@ -85,6 +86,10 @@
 
           <li id="hmmm" style="cursor: pointer;" class="dropdown-item">
             Play Hmmm <i class="bi bi-play-fill"></i>
+        </li>
+        
+        <li id="memes" style="cursor: pointer;" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#staticBackdropMemes">
+            Memes Room! <i class="fa-solid fa-carrot"></i>
         </li>
     </ul>
   </div>
@@ -179,6 +184,42 @@
     </div>
   </div>
 
+<!-- Memes Modal -->
+<div class="modal fade" id="staticBackdropMemes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content custom-modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                    <img width="60" class="img-fluid waifu-img" src="./assets/mememan.gif" alt=""
+                        onclick="showFullscreen(this)">
+                    Memes Room!
+                </h1>
+                <button type="button" class="custom-btn-close meme-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-brands fa-mixer"></i></button>
+            </div>
+            <div class="modal-body custom-modal-body">
+                <div class="container-memes">
+                    <label class="switch custom-switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider custom-slider"></span>
+                    </label>
+                    <button class="memes-btn custom-memes-btn" id="generate-meme-btn">Get Meme <i class="fa-brands fa-space-awesome"></i></button>
+                    <div id="meme-container">
+                        <!-- Preloader (GIF) -->
+                        <div id="preloader-unique" class="preloader custom-preloader" style="display:none; text-align: center;">
+                            <img src="assets/meme-preloader.gif" alt="Loading..." class="preloader-gif img-fluid">
+                        </div>
+                        <!-- Meme Image -->
+                        <img id="meme-img-unique" class="img-fluid mt-2 text-center" src="" alt="Random Meme" style="display:none;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
   <!-- Current Image Modal -->
 <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true" data-bs-backdrop="static">
   <div class="modal-dialog modal-dialog-top">
@@ -218,6 +259,7 @@
   document.head.appendChild(script);
 </script>
 
+<script src="./memes.js"></script>
 <script src="update.js"></script>  
 <script src="play.js"></script>
 </body>

@@ -311,3 +311,114 @@ button.btn-close {
 .current_text {
   font-size: 20px;
 }
+
+.memes-btn {
+  margin: auto;
+  display: block;
+  width: 50%;
+  font-size: 15px;
+  border: 0.5px solid black;
+  padding: 5px;
+}
+
+/* From Uiverse.io by martinval9 */ 
+/* The switch - the box around the slider */
+.switch {
+ font-size: 11px;
+ position: relative;
+ display: inline-block;
+ width: 3.5em;
+ height: 1em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+ opacity: 0;
+ width: 0;
+ height: 0;
+}
+
+/* The slider */
+.slider {
+ position: absolute;
+ cursor: pointer;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: #ccc;
+ border: 2px solid #000;
+ transition: .4s;
+ border-radius: 1px;
+ text-align: center;
+}
+
+.slider:before {
+ position: absolute;
+ content: "";
+ height: 1.3em;
+ width: 1.2em;
+ border-radius: 2px;
+ left: 0.2em;
+ bottom: 0.3em;
+ background-color: #fff;
+ border: 2px solid #000;
+ transition: 0.1s;
+}
+
+input:checked + .slider {
+ background-color: #000;
+}
+
+input:focus + .slider {
+ box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+ transform: translateX(1.3em);
+}
+
+/* Dark Mode Styles */
+.dark-mode.custom-modal-content {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode.custom-modal-content .modal-header {
+    background-color: black;
+}
+
+.dark-mode.custom-modal-content .custom-btn-close {
+    color: white;
+}
+
+
+
+/* Additional Styles for Switch */
+.custom-switch input:checked + .custom-slider {
+    background-color: green;
+}
+
+.custom-switch input:checked + .custom-slider:before {
+    transform: translateX(26px);
+}
+
+.dark-mode.custom-modal-content .meme-close {
+  color: white;
+  border: 0.5px solid white;
+background: black;
+
+}
+
+.meme-close {
+  position: absolute;
+  padding: 5px 10px;
+  right: 10px;
+  border: 0.5px solid black;
+}
+
+.dark-mode.custom-modal-content .custom-memes-btn {
+  background-color: #333;
+  color: white;
+  border: 0.5px solid white;
+}
