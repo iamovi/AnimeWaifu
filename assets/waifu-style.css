@@ -58,23 +58,22 @@ body {
 
 #preloader {
   position: fixed; 
-  bottom: -35%;       
-  left: 50%;      
-  transform: translateX(-50%); 
+  top: -36%;       
+  right: 9px;      
   display: none;    
 }
 
 #preloaderX {
   position: absolute;
-  top: 10%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
 }
 
 #preloader img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 #preloaderX {
