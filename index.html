@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AnimeWaifu</title>
   <link href="./animewaifu.png" rel="icon" />
+  
+  <link rel="preload" href="./assets/init-waifu.mp4" as="video" type="video/mp4" />
 
   <meta property="og:title" content="AnimeWaifu" />
   <meta property="og:description" content="Swipe to get a random anime waifu." />
@@ -92,6 +94,15 @@
       <img src="flower.gif" alt="Loading..." />
     </div>
     <div id="swipe-text">hi, Swipe for Anime Waifu.</div>
+    
+    <div id="video-container">
+    <video id="background-video" autoplay muted loop preload="auto">
+      <source src="./assets/init-waifu.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+    
     <div id="preloaderX">
       <img src="./assets/anime.gif" alt="Loading..." />
     </div>
