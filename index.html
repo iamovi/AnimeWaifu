@@ -7,6 +7,9 @@
   <title>AnimeWaifu</title>
   <link href="./animewaifu.png" rel="icon" />
   
+  <!-- Preload poster image -->
+  <link rel="preload" href="./assets/init-poster.jpg" as="image" />
+  
   <link rel="preload" href="./assets/init-waifu.mp4" as="video" type="video/mp4" />
 
   <meta property="og:title" content="AnimeWaifu" />
@@ -98,10 +101,11 @@
     <div id="swipe-text">hi, Swipe for Anime Waifu.</div>
     
     <div id="video-container">
-    <video id="background-video" autoplay muted loop preload="auto">
-      <source src="./assets/init-waifu.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+ <video id="background-video" autoplay muted loop preload="auto" poster="./assets/init-poster.jpg">
+   <source src="./assets/init-waifu.mp4" type="video/mp4" />
+   Your browser does not support the video tag.
+</video>
+
   </div>
 
     
