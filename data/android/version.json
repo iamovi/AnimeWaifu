@@ -1,9 +1,9 @@
 {
-    "version": "2.4.4",
+    "version": "2.4.5",
     "update_url": "https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/AnimeWaifu.apk",
     "whats_new": [
-      "add hentai gifs.",
-      "add unknown improvements."
+      "bug fixes",
+      "removed hentai gifs."
     ]
   }
   
