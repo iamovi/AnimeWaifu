@@ -312,13 +312,20 @@ button.btn-close {
   font-size: 20px;
 }
 
-.memes-btn {
+.memes-btn, .jokes-btn {
   margin: auto;
-  display: block;
+  display: inline;
   width: 50%;
   font-size: 15px;
   border: 0.5px solid black;
   padding: 5px;
+  float: right;
+  margin-top: 9px;
+}
+
+.jokes-btn {
+  float: none;
+  display: block;
 }
 
 /* From Uiverse.io by martinval9 */ 
@@ -421,4 +428,10 @@ background: black;
   background-color: #333;
   color: white;
   border: 0.5px solid white;
+}
+
+#joke-container {
+  font-family: "Jersey 15", serif;
+  text-align: center;
+  margin-top: 10px;
 }
