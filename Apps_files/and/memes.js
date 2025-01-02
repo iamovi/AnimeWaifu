@@ -16,11 +16,11 @@ function fetchMeme() {
     generateButton.innerHTML = 'Loading...';
 
     // Show preloader before starting the fetch
-    preloader.style.display = 'block'; // Show preloader GIF
-    memeImg.style.display = 'none'; // Hide the image initially
+    preloader.style.display = 'block'; 
+    memeImg.style.display = 'none'; 
 
     // Fetch memes from a variety of popular subreddits for more variety
-    fetch('https://meme-api.com/gimme/memes+dankmemes+me_irl+AdviceAnimals+MemeEconomy+ComedyCemetery+terriblefacebookmemes+funny+wholesomememes+PrequelMemes+The10thDentist+2meirl4meirl')
+    fetch('https://meme-api.com/gimme')
         .then(response => response.json())
         .then(data => {
             const memeUrl = data.url; // Get the meme image URL
@@ -39,30 +39,16 @@ function fetchMeme() {
                     memeImg.style.display = 'block';
 
                     // Countdown in the button after the meme is loaded
-                    countdownToEnableButton(generateButton);
+                    countdownToEnableButton(generateButton, 'Get Meme');
                 };
             }
         })
         .catch(error => {
             console.error('Error fetching meme:', error);
-            preloader.style.display = 'none'; // Hide preloader in case of error
-            generateButton.disabled = false; // Re-enable the button in case of error
-            generateButton.innerHTML = 'Generate Meme';
+            preloader.style.display = 'none';
+            generateButton.disabled = false;
+            generateButton.innerHTML = 'Get Meme <i class="fa-brands fa-space-awesome"></i>';
         });
-}
-
-function countdownToEnableButton(button) {
-    let countdown = 3;
-    const countdownInterval = setInterval(() => {
-        button.innerHTML = `Try again in ${countdown}s`;
-        countdown--;
-
-        if (countdown < 0) {
-            clearInterval(countdownInterval);
-            button.innerHTML = 'Generate Meme <i class="fa-brands fa-space-awesome"></i>';
-            button.disabled = false; // Re-enable the button
-        }
-    }, 1000); // Update every second
 }
 
 // Dark mode toggle
@@ -73,9 +59,24 @@ document.getElementById('darkModeToggle').addEventListener('change', function() 
 
     if (this.checked) {
         modalContent.classList.add('dark-mode');
-        memePreloaderGif.src = 'assets/meme-preloader-black.gif'; // Change preloader image to black version
+        memePreloaderGif.src = 'assets/meme-preloader-black.gif'; 
     } else {
         modalContent.classList.remove('dark-mode');
-        memePreloaderGif.src = 'assets/meme-preloader.gif'; // Revert preloader image to default
+        memePreloaderGif.src = 'assets/meme-preloader.gif';
     }
 });
+
+// Countdown function
+function countdownToEnableButton(button, defaultText) {
+    let countdown = 3;
+    const countdownInterval = setInterval(() => {
+        button.innerHTML = `Try again in ${countdown}s`;
+        countdown--;
+
+        if (countdown < 0) {
+            clearInterval(countdownInterval);
+            button.innerHTML = `${defaultText} <i class="fa-brands fa-space-awesome"></i>`;
+            button.disabled = false;
+        }
+    }, 1000); 
+}

@@ -1,7 +1,5 @@
-// Store the last displayed joke to prevent repetition
 let lastJoke = null;
 
-// Event listener for generating a joke when the button is clicked
 document.getElementById('generate-joke-btn').addEventListener('click', function() {
     fetchRandomJoke();
 });
@@ -16,8 +14,8 @@ function fetchRandomJoke() {
     generateButton.innerHTML = 'Loading...';
 
     // Show the preloader
-    preloader.style.display = 'block';  // Show preloader
-    jokeContainer.innerHTML = ''; // Clear previous joke
+    preloader.style.display = 'block';  
+    jokeContainer.innerHTML = ''; 
     
     // JokeAPI endpoint for fetching a random joke
     const url = 'https://v2.jokeapi.dev/joke/Any';
@@ -38,32 +36,24 @@ function fetchRandomJoke() {
 
             // If the joke is the same as the last one, fetch another joke
             if (jokeText === lastJoke) {
-                fetchRandomJoke(); // Recursively fetch a new joke
+                fetchRandomJoke(); 
             } else {
-                // Hide the preloader once the joke is loaded
-                preloader.style.display = 'none';  // Hide preloader
-
-                // Display the new joke
+                preloader.style.display = 'none'; 
                 jokeContainer.innerHTML = `<p>${jokeText}</p>`;
-
-                // Store the current joke as the last one
                 lastJoke = jokeText;
-
-                // Countdown in the button after the joke is loaded
-                countdownToEnableButton(generateButton);
+                countdownToEnableButton(generateButton, 'Get Joke');
             }
         })
         .catch(error => {
             console.error('Error fetching joke:', error);
-            // Hide preloader in case of error
-            preloader.style.display = 'none';  // Hide preloader
-            // Re-enable the button in case of error
+            preloader.style.display = 'none';  
             generateButton.disabled = false;
-            generateButton.innerHTML = 'Generate Joke';
+            generateButton.innerHTML = 'Get Joke <i class="fa-brands fa-space-awesome"></i>';
         });
 }
 
-function countdownToEnableButton(button) {
+// Countdown function
+function countdownToEnableButton(button, defaultText) {
     let countdown = 3;
     const countdownInterval = setInterval(() => {
         button.innerHTML = `Try again in ${countdown}s`;
@@ -71,8 +61,8 @@ function countdownToEnableButton(button) {
 
         if (countdown < 0) {
             clearInterval(countdownInterval);
-            button.innerHTML = 'Generate Joke <i class="fa-brands fa-space-awesome"></i>';
-            button.disabled = false; // Re-enable the button
+            button.innerHTML = `${defaultText} <i class="fa-brands fa-space-awesome"></i>`;
+            button.disabled = false;
         }
-    }, 1000); // Update every second
+    }, 1000); 
 }
