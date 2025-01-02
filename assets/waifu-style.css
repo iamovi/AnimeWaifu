@@ -435,3 +435,9 @@ background: black;
   text-align: center;
   margin-top: 10px;
 }
+
+.stuff-item {
+  padding: 5px;
+  border: 0.5px solid black;
+  font-size: 15px;
+}

@@ -89,12 +89,8 @@
           <li id="hmmm" style="cursor: pointer;" class="dropdown-item">
             Play Hmmm <i class="bi bi-play-fill"></i>
         </li>
-        
-        <li id="memes" style="cursor: pointer;" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#staticBackdropMemes">
-            Memes, Room! <i class="fa-solid fa-lungs"></i>
             
-            <li id="jokes" style="cursor: pointer;" class="dropdown-item" data-bs-toggle="modal" data-bs-target="#staticBackdropJokes">
-            Jokes, Room! <i class="fa-solid fa-fish"></i></li>
+            <li style="cursor: pointer;" class="dropdown-item fw-bold" data-bs-toggle="modal" data-bs-target="#staticBackdropStuff">MORE STUFF! <i class="fa-solid fa-bomb"></i></li>
     </ul>
   </div>
 
@@ -187,6 +183,37 @@
       </div>
     </div>
   </div>
+  
+  <!-- More Stuff Modal -->
+<div class="modal fade" id="staticBackdropStuff" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content custom-modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" id="staticBackdropLabel">
+                    <img width="60" class="img-fluid waifu-img" src="./assets/stuff.jpg" alt=""
+                        onclick="showFullscreen(this)">
+                    MORE STUFF !!!
+                </h2>
+                <button type="button" class="custom-btn-close meme-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-brands fa-mixer"></i></button>
+            </div>
+            <div class="modal-body custom-modal-body">
+              <h2>Not Anime related but  enjoyable.</h2>
+                <div class="container-stuff">
+                  
+                       <button id="memes" style="cursor: pointer;" class="stuff-item" data-bs-toggle="modal" data-bs-target="#staticBackdropMemes">
+            Memes, Room! <i class="fa-solid fa-lungs"></i></button>
+            
+            <button id="jokes" style="cursor: pointer;" class="stuff-item" data-bs-toggle="modal" data-bs-target="#staticBackdropJokes">
+            Jokes, Room! <i class="fa-solid fa-fish"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
 
 <!-- Memes Modal -->
 <div class="modal fade" id="staticBackdropMemes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
