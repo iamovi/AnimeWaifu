@@ -20,9 +20,11 @@ function getRandomWaifuImage() {
   if (isLoading) return;
 
   if (!hasSwiped) {
-    swipeText.style.display = 'none';
-    hasSwiped = true;
-  }
+  swipeText.style.display = 'none';
+  const videoContainer = document.getElementById('video-container');
+  videoContainer.style.display = 'none';
+  hasSwiped = true;
+}
 
   preloader.style.display = 'block';
   swipeContainer.style.backgroundImage = 'url(./assets/waifu_wait.gif)';

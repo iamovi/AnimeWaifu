@@ -1,9 +1,0 @@
-{
-    "version": "2.2.4",
-    "update_url": "https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/AnimeWaifu.apk",
-    "whats_new": [
-      "update AnimeWaifu talks url. for better linking.",
-      "fix cache bugs."
-    ]
-  }
-  

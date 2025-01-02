@@ -35,25 +35,45 @@ body {
 
 }
 
+#video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Send it to the background */
+}
+
+#background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+
 #preloader {
   position: fixed; 
-  bottom: -35%;       
-  left: 50%;      
-  transform: translateX(-50%); 
+  top: -36%;       
+  right: 9px;      
   display: none;    
 }
 
 #preloaderX {
   position: absolute;
-  top: 10%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
 }
 
 #preloader img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
 }
 
 #preloaderX {
@@ -258,6 +278,21 @@ button.btn-close {
   color: #aaa;
 }
 
+/* /// */
+
+.inv-btn {
+  width: auto;
+  margin: 10px;
+  border: 0.5px solid black;
+  padding: 5px 10px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
 /* current img */
 
 .btn-shine {
@@ -292,17 +327,132 @@ button.btn-close {
   font-size: 20px;
 }
 
-/* /// */
-
-.inv-btn {
-  width: auto;
-  margin: 10px;
+.memes-btn, .jokes-btn {
+  margin: auto;
+  display: inline;
+  width: 50%;
+  font-size: 15px;
   border: 0.5px solid black;
-  padding: 5px 10px;
+  padding: 5px;
+  float: right;
+  margin-top: 9px;
 }
 
-.button-group {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 15px;
+.jokes-btn {
+  float: none;
+  display: block;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+ font-size: 11px;
+ position: relative;
+ display: inline-block;
+ width: 3.5em;
+ height: 1em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+ opacity: 0;
+ width: 0;
+ height: 0;
+}
+
+/* The slider */
+.slider {
+ position: absolute;
+ cursor: pointer;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: #ccc;
+ border: 2px solid #000;
+ transition: .4s;
+ border-radius: 1px;
+ text-align: center;
+}
+
+.slider:before {
+ position: absolute;
+ content: "";
+ height: 1.3em;
+ width: 1.2em;
+ border-radius: 2px;
+ left: 0.2em;
+ bottom: 0.3em;
+ background-color: #fff;
+ border: 2px solid #000;
+ transition: 0.1s;
+}
+
+input:checked + .slider {
+ background-color: #000;
+}
+
+input:focus + .slider {
+ box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+ transform: translateX(1.3em);
+}
+
+/* Dark Mode Styles */
+.dark-mode.custom-modal-content {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode.custom-modal-content .modal-header {
+    background-color: black;
+}
+
+.dark-mode.custom-modal-content .custom-btn-close {
+    color: white;
+}
+
+
+
+/* Additional Styles for Switch */
+.custom-switch input:checked + .custom-slider {
+    background-color: green;
+}
+
+.custom-switch input:checked + .custom-slider:before {
+    transform: translateX(26px);
+}
+
+.dark-mode.custom-modal-content .meme-close {
+  color: white;
+  border: 0.5px solid white;
+background: black;
+
+}
+
+.meme-close {
+  position: absolute;
+  padding: 5px 10px;
+  right: 10px;
+  border: 0.5px solid black;
+}
+
+.dark-mode.custom-modal-content .custom-memes-btn {
+  background-color: #333;
+  color: white;
+  border: 0.5px solid white;
+}
+
+#joke-container {
+  font-family: "Jersey 15", serif;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.stuff-item {
+  padding: 5px;
+  border: 0.5px solid black;
+  font-size: 15px;
 }

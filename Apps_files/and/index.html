@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AnimeWaifu</title>
   <link href="./animewaifu.png" rel="icon" />
+  
+  <link rel="preload" href="./assets/init-waifu.mp4" as="video" type="video/mp4" />
 
   <meta property="og:title" content="AnimeWaifu" />
   <meta property="og:description" content="Swipe to get a random anime waifu." />
@@ -24,6 +26,8 @@
   <!-- <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet"> -->
 
   <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+15&display=swap" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
 
@@ -36,6 +40,7 @@
     <!-- ani.css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ani.css@1.0.2/dist/css/ani.min.css">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link href="assets/waifu-style.css" rel="stylesheet" />
 
@@ -69,19 +74,17 @@
 
       <li style="cursor: pointer;" id="refresh" class="dropdown-item">Refresh <i class="bi bi-arrow-clockwise"></i></li>
 
-      <li data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="cursor: pointer;" class="dropdown-item">About
-        Menu <i class="bi bi-egg-fried"></i></li>
-
-      <li style="cursor: pointer;" class="dropdown-item" id="animewaifu-talks">AnimeWaifu Talks <i class="bi bi-chat-square-heart-fill"></i></li>
+      <li style="cursor: pointer;" class="dropdown-item" id="animewaifu-talks">AnimeWaifu Talks <i class="fa-solid fa-champagne-glasses"></i></li>
 
 
       <hr>
       <li style="cursor: pointer;" class="dropdown-item text-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Check App Version <i class="bi bi-app"></i></li>
 
-
           <li id="hmmm" style="cursor: pointer;" class="dropdown-item">
             Play Hmmm <i class="bi bi-play-fill"></i>
         </li>
+            
+            <li style="cursor: pointer;" class="dropdown-item fw-bold" data-bs-toggle="modal" data-bs-target="#staticBackdropStuff">MORE STUFF! <i class="fa-solid fa-bomb"></i></li>
     </ul>
   </div>
 
@@ -90,6 +93,15 @@
       <img src="flower.gif" alt="Loading..." />
     </div>
     <div id="swipe-text">hi, Swipe for Anime Waifu.</div>
+    
+    <div id="video-container">
+    <video id="background-video" autoplay muted loop preload="auto">
+      <source src="./assets/init-waifu.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+    
     <div id="preloaderX">
       <img src="./assets/anime.gif" alt="Loading..." />
     </div>
@@ -100,7 +112,7 @@
     style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;  z-index: 999;">
 
     <button id="close-iframe" class="fw-bold"
-      style="position: absolute; top: 20px; right: 20px; color: black; border: none; padding: 10px;"><i class="bi bi-x-lg"></i></button>
+      style="position: absolute; top: 75px; right: 15px; color: black; border: none; padding: 5px;"><i class="bi bi-arrow-90deg-right"></i></button>
 
     <iframe id="animewaifu-iframe" src="" style="width: 100%; height: 100%; border: none;"></iframe>
   </div>
@@ -141,7 +153,8 @@
 </div>
 
 
-  <!-- Menu Modal -->
+
+   <!-- Menu Modal -->
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -157,15 +170,139 @@
         <div class="modal-body">
           Press SpaceBar <i class="bi bi-align-bottom"></i> Or, Double click <i class="bi bi-circle"></i> anywhere to
           hide or unhide Menu Bar.
-          <br>
+          <br><br>
           <div class="pro_info">
             <p class="text-success">Project: AnimeWaifu</p>
-            <p>Created by <a href="https://github.com/iamovi" target="_blank">Maruf Ovi.</a></p>
           </div>
         </div>
       </div>
     </div>
   </div>
+  
+  <!-- More Stuff Modal -->
+<div class="modal fade" id="staticBackdropStuff" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content custom-modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" id="staticBackdropLabel">
+                    <img width="60" class="img-fluid waifu-img" src="./assets/stuff.jpg" alt=""
+                        onclick="showFullscreen(this)">
+                    MORE STUFF !!!
+                </h2>
+                <button type="button" class="custom-btn-close meme-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-brands fa-mixer"></i></button>
+            </div>
+            <div class="modal-body custom-modal-body">
+              <h2>Not Anime related but  enjoyable AF.</h2>
+                <div class="container-stuff">
+                  
+                       <button id="memes" style="cursor: pointer;" class="stuff-item" data-bs-toggle="modal" data-bs-target="#staticBackdropMemes">
+            Memes, Room! <i class="fa-solid fa-lungs"></i></button>
+            
+            <button id="jokes" style="cursor: pointer;" class="stuff-item" data-bs-toggle="modal" data-bs-target="#staticBackdropJokes">
+            Jokes, Room! <i class="fa-solid fa-fish"></i></button>
+            
+            <button id="QC" style="cursor: pointer;" class="stuff-item" data-bs-toggle="modal" data-bs-target="#staticBackdropQC">
+            Quick Chat <i class="fa-solid fa-bolt"></i></button>
+
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="cursor: pointer;" class="stuff-item">About
+              Menu <i class="bi bi-egg-fried"></i></button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- QC Modal -->
+<div class="modal fade" id="staticBackdropQC" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content custom-modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" id="staticBackdropLabel">
+                    <img width="60" class="img-fluid waifu-img" src="./assets/qc.jpg" alt=""
+                        onclick="showFullscreen(this)">
+                    Chat Anonymously.
+                </h2>
+                <button type="button" class="custom-btn-close meme-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-brands fa-mixer"></i></button>
+            </div>
+            <div class="modal-body custom-modal-body">
+                <!-- Embed the iframe -->
+                <iframe id="qcIframe" width="100%" height="450px" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Memes Modal -->
+<div class="modal fade" id="staticBackdropMemes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content custom-modal-content memes-modal-dark">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                    <img width="60" class="img-fluid waifu-img" src="./assets/mememan.gif" alt=""
+                        onclick="showFullscreen(this)">
+                    Memes, Room!
+                </h1>
+                <button type="button" class="custom-btn-close meme-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-brands fa-mixer"></i></button>
+            </div>
+            <div class="modal-body custom-modal-body">
+                <div class="container-memes">
+                    <label class="switch custom-switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider custom-slider"></span>
+                    </label>
+                    <button class="memes-btn custom-memes-btn" id="generate-meme-btn">Get Meme <i class="fa-brands fa-space-awesome"></i></button>
+                    <div id="meme-container">
+                        <!-- Preloader (GIF) -->
+                        <div id="preloader-unique" class="preloader custom-preloader" style="display:none; text-align: center;">
+                            <img src="assets/meme-preloader.gif" alt="Loading..." class="preloader-gif img-fluid">
+                        </div>
+                        <!-- Meme Image -->
+                        <img id="meme-img-unique" class="img-fluid mt-2 text-center" src="" alt="Random Meme" style="display:none;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Jokes Modal -->
+<div class="modal fade" id="staticBackdropJokes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content custom-modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                    <img width="60" class="img-fluid waifu-img" src="./assets/mememan.jpg" alt=""
+                        onclick="showFullscreen(this)">
+                    Jokes, Room!
+                </h1>
+                <button type="button" class="custom-btn-close meme-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-brands fa-mixer"></i></button>
+            </div>
+            <div class="modal-body custom-modal-body">
+                <div class="container-jokes">
+                    <button class="jokes-btn custom-memes-btn" id="generate-joke-btn">Get Joke <i class="fa-brands fa-space-awesome"></i></button>
+                    <div id="joke-container">
+                      <!-- Random joke will be displayed here -->
+                    </div>
+                    <!-- Preloader GIF -->
+                    <div id="preloaderJokes" style="display: none;">
+                        <img class="img-fluid" src="assets/joke-preloader.gif" alt="Loading..." />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
 
   <!-- Current Image Modal -->
 <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true" data-bs-backdrop="static">
@@ -206,6 +343,11 @@
   document.head.appendChild(script);
 </script>
 
+<!-- qc -->
+ <script src="./qc.js"></script>
+
+<script src="./memes.js"></script>
+<script src="./jokes.js"></script>
 <script src="update.js"></script>  
 <script src="play.js"></script>
 </body>
