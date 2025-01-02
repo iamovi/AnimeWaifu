@@ -206,12 +206,35 @@
             
             <button id="jokes" style="cursor: pointer;" class="stuff-item" data-bs-toggle="modal" data-bs-target="#staticBackdropJokes">
             Jokes, Room! <i class="fa-solid fa-fish"></i></button>
+            
+            <button id="QC" style="cursor: pointer;" class="stuff-item" data-bs-toggle="modal" data-bs-target="#staticBackdropQC">
+            Quick Chat <i class="fa-solid fa-bolt"></i></button>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+<!-- QC Modal -->
+<div class="modal fade" id="staticBackdropQC" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content custom-modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" id="staticBackdropLabel">
+                    <img width="60" class="img-fluid waifu-img" src="./assets/qc.jpg" alt=""
+                        onclick="showFullscreen(this)">
+                    Chat Anonymously.
+                </h2>
+                <button type="button" class="custom-btn-close meme-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-brands fa-mixer"></i></button>
+            </div>
+            <div class="modal-body custom-modal-body">
+                <!-- Embed the iframe -->
+                <iframe src="https://chatguys-letschat.netlify.app/" width="100%" height="450px" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
