@@ -67,7 +67,7 @@ function countdownToEnableButton(button) {
 
 // Dark mode toggle
 document.getElementById('darkModeToggle').addEventListener('change', function() {
-    const modalContent = document.querySelector('.custom-modal-content');
+    const modalContent = document.querySelector('.memes-modal-dark');
     const preloader = document.getElementById('preloader-unique');
     const memePreloaderGif = preloader.querySelector('img');
 
