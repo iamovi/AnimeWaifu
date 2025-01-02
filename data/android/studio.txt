@@ -1,5 +1,5 @@
 Android Studio //
 
-Current VersionCode: 8
+Current VersionCode: 9
 
-Version 2.3.4
+Version 2.4.4

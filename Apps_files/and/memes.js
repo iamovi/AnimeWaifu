@@ -16,7 +16,7 @@ function fetchMeme() {
     generateButton.innerHTML = 'Loading...';
 
     // Show preloader before starting the fetch
-    preloader.style.display = 'block'; 
+    preloader.style.display = 'block'; // Show preloader GIF
     memeImg.style.display = 'none'; 
 
     // Fetch memes from a variety of popular subreddits for more variety
