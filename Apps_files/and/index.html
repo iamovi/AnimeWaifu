@@ -206,7 +206,7 @@
                            
           <div class="container-stuff">
 
-            <img class="img-fluid w-50 text-center d-block" src="https://ik.imagekit.io/iamovi/nyan_cat.gif?updatedAt=1707315309094" alt="">
+            <img class="img-fluid w-75 text-center d-block" src="https://ik.imagekit.io/iamovi/nyan_cat.gif?updatedAt=1707315309094" alt="">
 
             <button id="memes" style="cursor: pointer;" class="stuff-item" data-bs-toggle="modal"
               data-bs-target="#staticBackdropMemes">
@@ -222,11 +222,7 @@
 
             <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="cursor: pointer;"
               class="stuff-item">About
-              Menu <i class="bi bi-egg-fried"></i></button>
-
-            <button data-bs-toggle="modal" data-bs-target="#staticBackdropHen" style="cursor: pointer;"
-              class="stuff-item text-danger">Hentai GIF. <i class="fa-solid fa-heart"></i></button>
-              
+              Menu <i class="bi bi-egg-fried"></i></button>              
 
           </div>
         </div>
@@ -257,31 +253,6 @@
 
           <!-- Embed the iframe with specific ID -->
           <iframe id="qcIframe" width="100%" height="450px" frameborder="0" style="display: none;"></iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Hen. Modal -->
-  <div class="modal fade" id="staticBackdropHen" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content custom-modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title fs-5" id="staticBackdropLabel">
-            <img width="60" class="img-fluid waifu-img" src="./assets/hen.jpg" alt="" onclick="showFullscreen(this)">
-            Hentai Gifs. <i class="fa-solid fa-heart"></i>
-          </h2>
-          <button type="button" class="custom-btn-close meme-close" data-bs-dismiss="modal" aria-label="Close">
-            <i class="fa-brands fa-mixer"></i>
-          </button>
-        </div>
-        <div class="modal-body custom-modal-body">
-          <button class="hen-btn custom-hen-btn" id="generate-hen-btn">Get GIF
-            <i class="fa-brands fa-space-awesome"></i>
-          </button>
-          <!-- Container to display the GIF -->
-          <div id="gif-container" style="margin-top: 20px; text-align: center;"></div>
         </div>
       </div>
     </div>
@@ -402,14 +373,6 @@
     qcScript.src = "https://iamovi.github.io/AnimeWaifu/qc.js?t=" + new Date().getTime();
     document.head.appendChild(qcScript);
   </script>
-
-  <!-- hen -->
-  <script>
-    const henScript = document.createElement("script");
-    henScript.src = "https://iamovi.github.io/AnimeWaifu/Apps_files/and/hen/gifs.js?t=" + new Date().getTime();
-    document.head.appendChild(henScript);
-  </script>
-
 
   <script src="./memes.js"></script>
   <script src="./jokes.js"></script>
