@@ -3,7 +3,7 @@ document
   .addEventListener("shown.bs.modal", function () {
     const iframe = document.getElementById("qcIframe");
     const preloader = document.getElementById("qcPreloader");
-    const baseUrl = "https://animewaifuqc.netlify.app";
+    const baseUrl = "https://animewaifuqcz.netlify.app";
 
     preloader.style.display = "block";
     iframe.style.display = "none";
