@@ -83,9 +83,6 @@
       <hr>
       <li style="cursor: pointer;" class="dropdown-item text-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Check App Version <i class="bi bi-app"></i></li>
 
-      <li style="cursor: pointer;" class="dropdown-item text-success" id="share-me">Share This App! <i
-          class="bi bi-egg-fill"></i></li>
-
           <li id="hmmm" style="cursor: pointer;" class="dropdown-item">
             Play Hmmm <i class="bi bi-play-fill"></i>
         </li>
@@ -125,40 +122,42 @@
 
 <!-- Version Modal -->
 <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-     aria-labelledby="staticBackdropLabel2" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel2">
-                    <img width="60" class="img-fluid waifu-img" src="./animewaifu.png" alt=""
-                         onclick="showFullscreen(this)">
-                    AnimeWaifu App Version.
-                </h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body text-center" style="  font-family: Iceland";>
-                <h3 class="text-dark">Current Version: 2.2.1</h3>
-                
-                <!-- <button class="update_btn ani-btn-v" onclick="checkForUpdates()">Check for Updates</button> -->
+  aria-labelledby="staticBackdropLabel2" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel2">
+          <img width="60" class="img-fluid waifu-img" src="./animewaifu.png" alt=""
+            onclick="showFullscreen(this)">
+          AnimeWaifu App Version.
+        </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="button-group">
+        <button class="text-success inv-btn" id="share-me">Share This App! <i class="bi bi-egg-fill"></i></button>
+        <button class="inv-btn"><a class="text-decoration-none text-dark" href="https://iamovi.github.io/AnimeWaifu/install" target="_blank">Visit Store</a></button>
+      </div>
+      <hr>
+      <div class="modal-body text-center" style="font-family: Iceland;">
+        <h3 class="text-dark">Current Version: 2.2.4</h3>
 
-                <button class="button" onclick="checkForUpdates()">
-                  Check for
-                  <span class="button-span"> ─ Updates</span>
-                </button>
-                
+        <button class="button" onclick="checkForUpdates()">
+          Check for
+          <span class="button-span"> ─ Updates</span>
+        </button>
 
-                <audio id="update-sound" src="./assets/yeah.mp3" preload="auto"></audio>
-                <div id="update-message" style="display:none;">
-                    <!-- This content will be dynamically updated by JavaScript -->
-                </div>
-            </div>
+        <audio id="update-sound" src="./assets/yeah.mp3" preload="auto"></audio>
+        <div id="update-message" style="display:none;">
+          <!-- This content will be dynamically updated by JavaScript -->
         </div>
+      </div>
     </div>
+  </div>
 </div>
 
 
 
-  <!-- Menu Modal -->
+   <!-- Menu Modal -->
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -230,7 +229,7 @@
             </div>
             <div class="modal-body custom-modal-body">
                 <!-- Embed the iframe -->
-                <iframe src="https://chatguys-letschat.netlify.app/" width="100%" height="450px" frameborder="0"></iframe>
+                <iframe id="qcIframe" width="100%" height="450px" frameborder="0"></iframe>
             </div>
         </div>
     </div>
@@ -343,6 +342,9 @@
   script.src = "https://iamovi.github.io/AnimeWaifu/animewaifutalks.js?t=" + new Date().getTime();
   document.head.appendChild(script);
 </script>
+
+<!-- qc -->
+ <script src="./qc.js"></script>
 
 <script src="./memes.js"></script>
 <script src="./jokes.js"></script>

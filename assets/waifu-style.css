@@ -278,6 +278,21 @@ button.btn-close {
   color: #aaa;
 }
 
+/* /// */
+
+.inv-btn {
+  width: auto;
+  margin: 10px;
+  border: 0.5px solid black;
+  padding: 5px 10px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
 /* current img */
 
 .btn-shine {
@@ -328,7 +343,7 @@ button.btn-close {
   display: block;
 }
 
-/* From Uiverse.io by martinval9 */ 
+
 /* The switch - the box around the slider */
 .switch {
  font-size: 11px;
