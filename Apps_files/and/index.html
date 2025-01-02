@@ -231,14 +231,19 @@
                 <button type="button" class="custom-btn-close meme-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-brands fa-mixer"></i></button>
             </div>
             <div class="modal-body custom-modal-body">
-                <!-- Embed the iframe -->
-                <iframe id="qcIframe" width="100%" height="450px" frameborder="0"></iframe>
+                <!-- Preloader Spinner with specific ID -->
+                <div id="qcPreloader" class="text-center mt-5" style="display: none;">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+
+                <!-- Embed the iframe with specific ID -->
+                <iframe id="qcIframe" width="100%" height="450px" frameborder="0" style="display: none;"></iframe>
             </div>
         </div>
     </div>
 </div>
-
-
 
 <!-- Memes Modal -->
 <div class="modal fade" id="staticBackdropMemes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -347,7 +352,11 @@
 </script>
 
 <!-- qc -->
- <script src="./qc.js"></script>
+<script>
+  const qcScript = document.createElement("script");
+  qcScript.src = "https://iamovi.github.io/AnimeWaifu/qc.js?t=" + new Date().getTime();
+  document.head.appendChild(qcScript);
+</script>
 
 <script src="./memes.js"></script>
 <script src="./jokes.js"></script>
