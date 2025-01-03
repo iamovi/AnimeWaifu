@@ -55,11 +55,11 @@ Type **aw** to view a AnimeWaifu on terminal.
 #### **CLI Commands,**
 | Command                | Description                                            |
 |------------------------|--------------------------------------------------------|
-| `--menu`              | Opens the interactive menu with arrow key navigation.  |
-| `-V` or `--version`   | Displays the current version of the program.           |
-| `-H` or `--help`      | Displays help information with a list of commands.     |
+| `aw --menu`              | Opens the interactive menu with arrow key navigation.  |
+| `aw -V` or `aw --version`   | Displays the current version of the program.           |
+| `aw -H` or `aw --help`      | Displays help information with a list of commands.     |
 | `aw i love you`       | Displays a special reply: *"Waifu: Aww, I love you too!"*. |
-| *(No arguments)*      | Fetches and displays a random waifu image.             |
+| *aw*      | Fetches and displays a random waifu image.             |
 | *(Invalid commands)*  | Shows an error message with instructions to use `--help`. |
 
 
