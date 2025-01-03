@@ -1,0 +1,23 @@
+{
+  "name": "animewaifu_pixel_terminal",
+  "version": "1.0.0",
+  "main": "main.mjs",
+  "bin": {
+    "aw": "./main.mjs"
+  },
+  "scripts": {
+    "start": "node main.mjs"
+  },
+  "keywords": [
+    "animewaifu",
+    "terminalwaifu",
+    "animepixelpic"
+  ],
+  "author": "Maruf Ovi",
+  "license": "MIT",
+  "description": "A cli tool to display AnimeWaifu Pixel Pic on terminal.",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "terminal-image": "^1.1.0"
+  }
+}

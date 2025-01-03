@@ -33,11 +33,22 @@ powershell -c "irm iamovi.github.io/AnimeWaifu/Install.ps1 | iex"
 - Wait for the installation to complete.
 
 
-# 🎉 Project - momose
+## 🌸 AnimeWaifu_Pixel_Terminal
 
-### Check out another project, ***Animewaifu on your Terminal***
+#### This is a CLI tool that brings Anime Waifu straight to your terminal! Fetch a new waifu every time you run it and display it in pixel style.
 
-![momose preview](https://cdn.jsdelivr.net/gh/iamovi/momose/preview.png)
+![aw preview](./AnimeWaifu_Pixel_Terminal/aw_preview.gif)
+
+## 📦 Installation and Usages
+
+```bash
+npm i -g animewaifu_pixel_terminal
+```
+
+```bash
+aw
+```
+Type **aw** to view a AnimeWaifu on terminal.
 
 ***https://github.com/iamovi/momose***
 
