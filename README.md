@@ -20,7 +20,7 @@ AnimeWaifu Apps are available!
 ***Or, Download from Itch.io: [Click Here/](https://iamovi.itch.io/animewaifu)***
 
 <div style="text-align: center; margin-top: 20px;">
-  <img src="https://iamovi.github.io/AnimeWaifu/itchio.png" alt="AnimeWaifu Itch.io Preview" width="400">
+  <img src="https://iamovi.github.io/AnimeWaifu/itchio.png" alt="AnimeWaifu Itch.io Preview" width="100">
 </div>
 
 
