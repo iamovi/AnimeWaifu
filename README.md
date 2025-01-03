@@ -1,4 +1,4 @@
-![Random Waifu Image Generator](https://iamovi.github.io/AnimeWaifu/assets/waifu-preview.jpg)
+![AnimeWaifu Project Preview](https://iamovi.github.io/AnimeWaifu/assets/waifu-preview.jpg)
 
 ## Website/
 
@@ -18,6 +18,8 @@ AnimeWaifu Apps are available!
 
 
 ***Or, Download from Itch.io: [Click Here/](https://iamovi.itch.io/animewaifu)***
+
+![AnimeWaifu Itch.io Preview](https://iamovi.github.io/AnimeWaifu/itchio.png)
 
 
 ***Or, Install on Windows with powershell:***
