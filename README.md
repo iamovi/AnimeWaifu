@@ -50,9 +50,9 @@ aw
 ```
 Type **aw** to view a AnimeWaifu on terminal.
 
-### aw Commands List
+### aw Commands List:
 
-#### **CLI Commands**
+#### **CLI Commands,**
 | Command                | Description                                            |
 |------------------------|--------------------------------------------------------|
 | `--menu`              | Opens the interactive menu with arrow key navigation.  |
@@ -64,7 +64,7 @@ Type **aw** to view a AnimeWaifu on terminal.
 
 ---
 
-#### **Menu Options**
+#### **Menu Options,**
 | Menu Option                  | Description                                              |
 |------------------------------|----------------------------------------------------------|
 | **Check for Updates**        | Checks if the app is up-to-date with the latest version. |
