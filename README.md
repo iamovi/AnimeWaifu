@@ -1,4 +1,5 @@
-![AnimeWaifu Project Preview](https://iamovi.github.io/AnimeWaifu/assets/waifu-preview.jpg)
+<img src="https://iamovi.github.io/AnimeWaifu/assets/waifu-preview.jpg" alt="AnimeWaifu Project Preview" width="250">
+
 
 ## Website/
 
@@ -19,10 +20,7 @@ AnimeWaifu Apps are available!
 
 ***Or, Download from Itch.io: [Click Here/](https://iamovi.itch.io/animewaifu)***
 
-<div style="display: flex; justify-content: center;">
-  <img src="https://iamovi.github.io/AnimeWaifu/itchio.png" alt="AnimeWaifu Itch.io Preview" width="200">
-</div>
-
+<img src="https://iamovi.github.io/AnimeWaifu/itchio.png" alt="AnimeWaifu Itch.io Preview" width="200">
 
 
 ***Or, Install on Windows with powershell:***
