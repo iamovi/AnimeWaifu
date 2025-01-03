@@ -50,6 +50,32 @@ aw
 ```
 Type **aw** to view a AnimeWaifu on terminal.
 
+# Commands List
+
+### **CLI Commands**
+| Command                | Description                                            |
+|------------------------|--------------------------------------------------------|
+| `--menu`              | Opens the interactive menu with arrow key navigation.  |
+| `-V` or `--version`   | Displays the current version of the program.           |
+| `-H` or `--help`      | Displays help information with a list of commands.     |
+| `aw i love you`       | Displays a special reply: *"Waifu: Aww, I love you too!"*. |
+| *(No arguments)*      | Fetches and displays a random waifu image.             |
+| *(Invalid commands)*  | Shows an error message with instructions to use `--help`. |
+
+---
+
+### **Menu Options**
+| Menu Option                  | Description                                              |
+|------------------------------|----------------------------------------------------------|
+| **Check for Updates**        | Checks if the app is up-to-date with the latest version. |
+| **Get a Random Waifu**       | Fetches and displays a random waifu image.              |
+| **Anime Fun Facts**          | Fetches and displays a random anime fun fact.           |
+| **View Current Version**     | Displays the current version of the program.            |
+| **Check AnimeWaifu Project** | Opens the AnimeWaifu GitHub project in your browser.     |
+| **Clear Console**            | Clears the terminal screen.                             |
+| **Exit**                     | Exits the application.                                  |
+
+
 ---
 
 ### License
