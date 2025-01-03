@@ -50,8 +50,6 @@ aw
 ```
 Type **aw** to view a AnimeWaifu on terminal.
 
-***https://github.com/iamovi/momose***
-
 ---
 
 ### License
