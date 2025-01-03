@@ -62,7 +62,7 @@ Type **aw** to view a AnimeWaifu on terminal.
 | *(No arguments)*      | Fetches and displays a random waifu image.             |
 | *(Invalid commands)*  | Shows an error message with instructions to use `--help`. |
 
----
+
 
 #### **Menu Options,**
 | Menu Option                  | Description                                              |
