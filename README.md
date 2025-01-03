@@ -3,7 +3,7 @@
 
 ## Website/
 
-Check live preview in web,
+***Check live preview in web,***
 
 Visit: [https://iamovi.github.io/AnimeWaifu](https://iamovi.github.io/AnimeWaifu)
 
