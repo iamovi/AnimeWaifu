@@ -1,4 +1,4 @@
-<img src="https://iamovi.github.io/AnimeWaifu/assets/waifu-preview-v2.jpg" alt="AnimeWaifu Project Preview" width="350">
+<img src="https://iamovi.github.io/AnimeWaifu/assets/waifu-preview-v2.jpg" alt="AnimeWaifu Project Preview" width="290">
 
 
 ## Website/
