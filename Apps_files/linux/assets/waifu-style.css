@@ -1,0 +1,458 @@
+*{
+  user-select: none;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+  background-color: black;
+}
+
+#swipe-container {
+  font-family: 'Chakra Petch', sans-serif;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background-size: cover; /* Default for mobile */
+  background-position: center;
+  background-repeat: no-repeat; /* Prevent tiling */
+  text-align: center;
+  line-height: 100vh;
+  font-size: 20px;
+  transition: background-image 0.3s ease;
+  position: relative;
+  /* transition: background-image 0.5s ease-in-out; */
+}
+
+#swipe-text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-family: "Bungee Spice", serif;
+
+}
+
+#video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Send it to the background */
+}
+
+#background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+
+#preloader {
+  position: fixed; 
+  top: -36%;       
+  right: 9px;      
+  display: none;    
+}
+
+#preloaderX {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+#preloader img {
+  width: 40px;
+  height: 40px;
+}
+
+#preloaderX {
+  margin-top: 5%;
+}
+
+#preloaderX img {
+  width: 100%;
+}
+
+#swipe-container.loading #swipe-text {
+  display: none;
+}
+
+
+@media (min-width: 768px) {
+  #swipe-container {
+    background-size: contain; 
+  }
+
+  #swipe-text {
+    font-size: 24px; 
+  }
+}
+
+@media (min-width: 1200px) {
+  #swipe-container {
+    font-size: 28px; 
+  }
+
+  #preloader img {
+    width: 40px; 
+    height: 40px;
+  }
+
+}
+
+
+.dropdown {
+  z-index: 99;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-family: "Shantell Sans", serif;
+
+}
+.dropdown-menu {
+  border-radius: 0 !important;
+
+}
+.dropdown-item {
+  border-radius: 0 !important;
+}
+.btn-secondary {
+  border-radius: 0 !important;
+}
+.dropdown-item:focus, 
+.dropdown-item:active {
+  background-color: transparent !important;
+  color: inherit; 
+  outline: none; 
+}
+
+.nsfw {
+  cursor: pointer;
+}
+
+
+/* Dropdown animation */
+.dropdown-menu {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.dropdown-item img {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-item:hover img {
+  transform: rotate(20deg);
+}
+
+/**************/
+
+.ani_menu{
+  user-select: none;
+  font-family: "Stick", serif;
+}
+
+.img-water-effect {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  cursor: url('./tongue_cursor.png'), default;
+}
+
+.img-water-effect img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ripple {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  transform: scale(0);
+  pointer-events: none;
+  mix-blend-mode: screen; /* Blend with the image */
+  animation: ripple-animation 1s ease-out forwards;
+}
+
+@keyframes ripple-animation {
+  0% {
+    transform: scale(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.yolo {
+  background-color: transparent !important; /* Remove background change on hover */
+}
+
+.modal {
+  font-family: "Stick", serif;
+}
+.modal-body {
+  font-family: "Shantell Sans", serif;
+  font-size: 2em;
+}
+
+/* Remove the focus border from the close button */
+button.btn-close:focus {
+  outline: none; /* Removes the focus outline (blue border) */
+  box-shadow: none; /* Removes any box shadow if it appears */
+}
+button.btn-close {
+  border: 0.5px solid black;
+  border-radius: 0;
+}
+.modal-content {
+  border-radius: 0 !important; /* Set border-radius to 0 */
+}
+
+.pro_info {
+  font-size: 20px;
+}
+
+.pro_info a {
+
+  color: red;
+}
+
+
+/* update button  */
+
+
+.button {
+  /* padding: 15px 20px; */
+  border: none;
+  outline: none;
+  background-color: #151515;
+  color: #eee;
+  /* border-radius: 7px; */
+  /* font-weight: 600; */
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.button-span {
+  color: #aaa;
+}
+
+/* /// */
+
+.inv-btn {
+  width: auto;
+  margin: 10px;
+  border: 0.5px solid black;
+  padding: 5px 10px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+/* current img */
+
+.btn-shine {
+  font-family: inherit;
+  border: none;
+  outline: 1px dotted rgb(37, 37, 37);
+  outline-offset: -4px;
+  cursor: pointer;
+  background: hsl(0deg 0% 75%);
+  box-shadow:
+    inset -1px -1px #292929,
+    inset 1px 1px #fff,
+    inset -2px -2px rgb(158, 158, 158),
+    inset 2px 2px #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 5px 30px;
+  text-decoration: none;
+  color: black;
+}
+
+.btn-shine:active {
+  box-shadow:
+    inset -1px -1px #fff,
+    inset 1px 1px #292929,
+    inset -2px -2px #ffffff,
+    inset 2px 2px rgb(158, 158, 158);
+}
+
+.current_text {
+  font-size: 20px;
+}
+
+.memes-btn, .jokes-btn, .custom-hen-btn {
+  margin: auto;
+  display: inline;
+  width: 50%;
+  font-size: 15px;
+  border: 0.5px solid black;
+  padding: 5px;
+  float: right;
+  margin-top: 9px;
+}
+
+.jokes-btn, .custom-hen-btn {
+  float: none;
+  display: block;
+}
+
+
+/* The switch - the box around the slider */
+.switch {
+ font-size: 11px;
+ position: relative;
+ display: inline-block;
+ width: 3.5em;
+ height: 1em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+ opacity: 0;
+ width: 0;
+ height: 0;
+}
+
+/* The slider */
+.slider {
+ position: absolute;
+ cursor: pointer;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: #ccc;
+ border: 2px solid #000;
+ transition: .4s;
+ border-radius: 1px;
+ text-align: center;
+}
+
+.slider:before {
+ position: absolute;
+ content: "";
+ height: 1.3em;
+ width: 1.2em;
+ border-radius: 2px;
+ left: 0.2em;
+ bottom: 0.3em;
+ background-color: #fff;
+ border: 2px solid #000;
+ transition: 0.1s;
+}
+
+input:checked + .slider {
+ background-color: #000;
+}
+
+input:focus + .slider {
+ box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+ transform: translateX(1.3em);
+}
+
+/* Dark Mode Styles */
+.dark-mode.custom-modal-content {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode.custom-modal-content .modal-header {
+    background-color: black;
+}
+
+.dark-mode.custom-modal-content .custom-btn-close {
+    color: white;
+}
+
+
+
+/* Additional Styles for Switch */
+.custom-switch input:checked + .custom-slider {
+    background-color: green;
+}
+
+.custom-switch input:checked + .custom-slider:before {
+    transform: translateX(26px);
+}
+
+.dark-mode.custom-modal-content .meme-close {
+  color: white;
+  border: 0.5px solid white;
+background: black;
+
+}
+
+.meme-close {
+  position: absolute;
+  padding: 5px 10px;
+  right: 10px;
+  border: 0.5px solid black;
+}
+
+.dark-mode.custom-modal-content .custom-memes-btn {
+  background-color: #333;
+  color: white;
+  border: 0.5px solid white;
+}
+
+#joke-container {
+  font-family: "Jersey 15", serif;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.stuff-item {
+  padding: 5px;
+  border: 0.5px solid black;
+  font-size: 15px;
+}
