@@ -15,7 +15,7 @@ document
       iframe.style.display = "block";
       
       // Dynamically set the iframe height
-      iframe.style.height = "550px"; // Set the height you desire
+      iframe.style.height = "530px"; // Set the height you desire
     };
   });
 
