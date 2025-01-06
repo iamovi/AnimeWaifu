@@ -1,9 +1,11 @@
 {
-    "version": "2.4.5",
+    "version": "2.5.5",
     "update_url": "https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/AnimeWaifu.apk",
     "whats_new": [
-      "bug fixes",
-      "removed hentai gifs."
+      "Added No-Fap Counter",
+      "Added About Developer Option.",
+      "Initial Video stuck bug fixed",
+      "changed initial video"
     ]
   }
   

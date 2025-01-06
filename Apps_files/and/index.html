@@ -10,8 +10,6 @@
   <!-- Preload poster image -->
   <link rel="preload" href="./assets/init-poster.jpg" as="image" />
 
-  <link rel="preload" href="./assets/init-waifu.mp4" as="video" type="video/mp4" />
-
   <meta property="og:title" content="AnimeWaifu" />
   <meta property="og:description" content="Swipe to get a random anime waifu." />
   <meta property="og:image" content="./assets/waifu-preview.jpg" />
@@ -106,7 +104,7 @@
     <div id="video-container">
       <video id="background-video" autoplay muted loop preload="auto" poster="./assets/init-poster.jpg">
         <source src="./assets/init-waifu.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
+        Does not support the video tag.
       </video>
     </div>
 
@@ -146,7 +144,7 @@
         </div>
         <hr>
         <div class="modal-body text-center" style="font-family: Iceland;">
-          <h3 class="text-dark">Current Version: 2.4.5</h3>
+          <h3 class="text-dark">Current Version: 2.5.5</h3>
 
           <button class="button" onclick="checkForUpdates()">
             Check for
@@ -313,6 +311,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
             data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
         </div>
         <div class="modal-body custom-modal-body">
+          <h6 class="text-center fa-italic m-0 p-0">It's okay to watch Anime Waifu, but try not to masturbate limitless!</h6>
             <!-- Preloader Spinner with specific ID -->
             <div id="nfPreloader" class="text-center mt-5" style="display: none;">
                 <div class="spinner-border" role="status">
@@ -321,7 +320,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
             </div>
 
             <!-- Embed the iframe with specific ID -->
-            <iframe id="nfIframe" width="100%" height="500px" frameborder="0" style="display: none;"></iframe>
+            <iframe id="nfIframe" width="100%" height="490px" frameborder="0" style="display: none;"></iframe>
         </div>
     </div>
 </div>
