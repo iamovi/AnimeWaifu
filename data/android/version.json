@@ -1,8 +1,7 @@
 {
-    "version": "2.5.6",
+    "version": "2.5.",
     "update_url": "https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/AnimeWaifu.apk",
     "whats_new": [
-      "Improved UI.",
       "Some bug fixed."
     ]
   }
