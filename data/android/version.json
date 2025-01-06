@@ -1,12 +1,9 @@
 {
-    "version": "2.5.5",
+    "version": "2.5.6",
     "update_url": "https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/AnimeWaifu.apk",
     "whats_new": [
-      "Added No-Fap Counter",
-      "Added About Developer Option.",
-      "Initial Video stuck bug fixed",
-      "changed initial video",
-      "Update menu button"
+      "Improved UI.",
+      "Some bug fixed."
     ]
   }
   

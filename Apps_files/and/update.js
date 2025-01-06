@@ -1,4 +1,4 @@
-const currentVersion = "2.5.5"; // app's current version.
+const currentVersion = "2.5.6"; // app's current version.
 
 async function checkForUpdates() {
     try {

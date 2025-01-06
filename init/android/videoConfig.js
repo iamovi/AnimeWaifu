@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Configuration for video source and poster
     const videoConfig = {
-      videoSrc: 'https://iamovi.github.io/AnimeWaifu/init/android/init-waifu.mp4', // Dynamic video source
-      posterSrc: 'https://iamovi.github.io/AnimeWaifu/init/android/init-poster.jpg' // Dynamic poster source
+      videoSrc: './init-waifu.mp4', // Dynamic video source
+      posterSrc: './init-poster.jpg' // Dynamic poster source
     };
   
     // Preload the poster image
