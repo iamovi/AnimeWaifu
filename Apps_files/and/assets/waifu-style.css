@@ -162,10 +162,10 @@ body {
   background-color: #f1f1f1;
 }
 
-.btn:hover {
+/* .btn:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
-}
+} */
 
 .dropdown-item img {
   transition: transform 0.3s ease;
@@ -173,6 +173,17 @@ body {
 
 .dropdown-item:hover img {
   transform: rotate(20deg);
+}
+
+.main_menu_button {
+  border-radius: 0;
+  padding: 10px 15px;
+  font-size: 15px;
+  animation: 5s ease-in-out infinite cosmicAnimation;
+}
+
+.main_menu_button:hover {
+  color: white;
 }
 
 /**************/
