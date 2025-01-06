@@ -1,9 +1,9 @@
 document
-  .getElementById("staticBackdroprexrex")
+  .getElementById("staticBackdropOvi")
   .addEventListener("shown.bs.modal", function () {
-    const iframe = document.getElementById("rexrexIframe");
-    const preloader = document.getElementById("rexrexPreloader");
-    const baseUrl = "https://trexrunrun.netlify.app";
+    const iframe = document.getElementById("rexIframe");
+    const preloader = document.getElementById("rexPreloader");
+    const baseUrl = "https://iamovi.github.io/EmojiCube";
 
     preloader.style.display = "block";
     iframe.style.display = "none";

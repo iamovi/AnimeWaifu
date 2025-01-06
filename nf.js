@@ -3,7 +3,7 @@ document
   .addEventListener("shown.bs.modal", function () {
     const iframe = document.getElementById("nfIframe");
     const preloader = document.getElementById("nfPreloader");
-    const baseUrl = "https://aw-nofap.netlify.app/";
+    const baseUrl = "https://aw-nofap.netlify.app";
 
     preloader.style.display = "block";
     iframe.style.display = "none";
@@ -15,4 +15,10 @@ document
       iframe.style.display = "block";
       
     };
+  });
+  document
+  .getElementById("staticBackdropNF")
+  .addEventListener("hidden.bs.modal", function () {
+    const iframe = document.getElementById("nfIframe");
+    iframe.src = "";
   });

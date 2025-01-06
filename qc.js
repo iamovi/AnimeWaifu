@@ -3,7 +3,7 @@ document
   .addEventListener("shown.bs.modal", function () {
     const iframe = document.getElementById("qcIframe");
     const preloader = document.getElementById("qcPreloader");
-    const baseUrl = "https://animewaifuqc-v1.netlify.app";
+    const baseUrl = "https://animewaifuqcz.netlify.app";
 
     preloader.style.display = "block";
     iframe.style.display = "none";
@@ -13,7 +13,12 @@ document
     iframe.onload = function () {
       preloader.style.display = "none";
       iframe.style.display = "block";
-      
     };
   });
 
+document
+  .getElementById("staticBackdropQC")
+  .addEventListener("hidden.bs.modal", function () {
+    const iframe = document.getElementById("qcIframe");
+    iframe.src = "";
+  });

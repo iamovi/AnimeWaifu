@@ -3,7 +3,7 @@ document
   .addEventListener("shown.bs.modal", function () {
     const iframe = document.getElementById("nfIframe");
     const preloader = document.getElementById("nfPreloader");
-    const baseUrl = "https://aw-nofap.netlify.app/";
+    const baseUrl = "https://aw-nofap.netlify.app";
 
     preloader.style.display = "block";
     iframe.style.display = "none";
