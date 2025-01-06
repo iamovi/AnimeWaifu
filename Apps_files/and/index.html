@@ -54,12 +54,6 @@
 
   <link rel="stylesheet" href="./animewaifutalks.css">
 
-  <script>
-    const videoConfigScript = document.createElement("script");
-    videoConfigScript.src = "https://iamovi.github.io/AnimeWaifu/init/android/videoConfig.js?t=" + new Date().getTime();
-    document.head.appendChild(videoConfigScript);
-  </script>
-
 </head>
 
 <body>
@@ -229,7 +223,7 @@
 
             <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="cursor: pointer;"
               class="stuff-item">About
-              Menu <i class="bi bi-egg-fried"></i></button>   
+              Menu <i class="fa-solid fa-bars"></i></button>   
               <hr>
 
               <button data-bs-toggle="modal" data-bs-target="#staticBackdropOvi" style="cursor: pointer;"
@@ -459,6 +453,12 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
   const rexScript = document.createElement("script");
   rexScript.src = "https://iamovi.github.io/AnimeWaifu/rex.js?t=" + new Date().getTime();
   document.head.appendChild(rexScript);
+</script>
+
+<script>
+  const videoConfigScript = document.createElement("script");
+  videoConfigScript.src = "https://iamovi.github.io/AnimeWaifu/init/android/videoConfig.js?t=" + new Date().getTime();
+  document.head.appendChild(videoConfigScript);
 </script>
 
   <script src="./memes.js"></script>
