@@ -212,6 +212,9 @@
             
             <button id="QC" style="cursor: pointer;" class="stuff-item" data-bs-toggle="modal" data-bs-target="#staticBackdropQC">
             Quick Chat <i class="fa-solid fa-bolt"></i></button>
+
+            <button id="NF" style="cursor: pointer;" class="stuff-item" data-bs-toggle="modal" data-bs-target="#staticBackdropNF">
+              No Fap! <i class="fa-solid fa-bolt"></i></button>
             
                 </div>
             </div>
@@ -229,7 +232,7 @@
                 <h2 class="modal-title fs-5" id="staticBackdropLabel">
                     <img width="60" class="img-fluid waifu-img" src="./assets/qc.jpg" alt=""
                         onclick="showFullscreen(this)">
-                    Chat Anonymously.
+                    Quick Chat.
                 </h2>
                 <button type="button" class="custom-btn-close meme-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-brands fa-mixer"></i></button>
             </div>
@@ -243,6 +246,34 @@
 
                 <!-- Embed the iframe with specific ID -->
                 <iframe id="qcIframe" width="100%" height="450px" frameborder="0" style="display: none;"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- No-Fap Modal -->
+<div class="modal fade" id="staticBackdropNF" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content custom-modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" id="staticBackdropLabel">
+                    <!-- <img width="60" class="img-fluid waifu-img" src="./assets/qc.jpg" alt=""
+                        onclick="showFullscreen(this)"> -->
+                    No Fap!
+                </h2>
+                <button type="button" class="custom-btn-close meme-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-brands fa-mixer"></i></button>
+            </div>
+            <div class="modal-body custom-modal-body">
+                <!-- Preloader Spinner with specific ID -->
+                <div id="nfPreloader" class="text-center mt-5" style="display: none;">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+
+                <!-- Embed the iframe with specific ID -->
+                <iframe id="nfIframe" width="100%" frameborder="0" style="display: none;"></iframe>
             </div>
         </div>
     </div>
@@ -361,6 +392,8 @@
   qcScript.src = "https://iamovi.github.io/AnimeWaifu/qc.js?t=" + new Date().getTime();
   document.head.appendChild(qcScript);
 </script>
+
+<script src="nf.js"></script>
 
 <script src="./memes.js"></script>
 <script src="./jokes.js"></script>
