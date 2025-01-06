@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Configuration for video source and poster
     const videoConfig = {
-      videoSrc: './assets/init-waifu-old.mp4', // Dynamic video source
-      posterSrc: './assets/init-poster.jpg' // Dynamic poster source
+      videoSrc: './init-waifu.mp4', // Dynamic video source
+      posterSrc: './init-poster.jpg' // Dynamic poster source
     };
   
     // Preload the poster image

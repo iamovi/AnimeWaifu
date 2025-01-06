@@ -54,7 +54,11 @@
 
   <link rel="stylesheet" href="./animewaifutalks.css">
 
-  <script src="videoConfig.js" defer></script>
+  <script>
+    const videoConfigScript = document.createElement("script");
+    videoConfigScript.src = "https://iamovi.github.io/AnimeWaifu/init/android/videoConfig.js?t=" + new Date().getTime();
+    document.head.appendChild(videoConfigScript);
+  </script>
 
 </head>
 
@@ -106,7 +110,7 @@
     <div id="video-container">
       <video id="background-video" autoplay muted loop preload="auto">
         <source id="video-source" type="video/mp4" />
-        Your browser does not support the video tag.
+        does not support the video tag.
       </video>
     </div>    
 
@@ -244,8 +248,8 @@
     <div class="modal-dialog">
       <div class="modal-content custom-modal-content">
         <div class="modal-header">
-          <h2 class="modal-title fs-4" id="staticBackdropLabel">
-            <img style="cursor: pointer;" width="60" class="img-fluid waifu-img" src="./assets/ovi.jpg" alt="" onclick="showFullscreen(this)">
+          <h2 class="modal-title fs-5" id="staticBackdropLabel">
+            <img style="cursor: pointer;" width="55" class="img-fluid waifu-img" src="./assets/ovi.jpg" alt="" onclick="showFullscreen(this)">
             Developer of this App.
           </h2>
           <button type="button" class="custom-btn-close meme-close" data-bs-toggle="modal"
@@ -291,7 +295,7 @@
           </div>
 
           <!-- Embed the iframe with specific ID -->
-          <iframe id="qcIframe" width="100%" height="480px" frameborder="0" style="display: none;"></iframe>
+          <iframe id="qcIframe" width="100%" height="490px" frameborder="0" style="display: none;"></iframe>
         </div>
       </div>
     </div>
@@ -321,7 +325,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
             </div>
 
             <!-- Embed the iframe with specific ID -->
-            <iframe id="nfIframe" width="100%" height="490px" frameborder="0" style="display: none;"></iframe>
+            <iframe id="nfIframe" width="100%" height="500px" frameborder="0" style="display: none;"></iframe>
         </div>
     </div>
 </div>
