@@ -14,7 +14,5 @@ document
       preloader.style.display = "none";
       iframe.style.display = "block";
       
-      // Dynamically set the iframe height
-      iframe.style.height = "480px"; // Set the height you desire
     };
   });

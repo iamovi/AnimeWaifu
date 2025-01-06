@@ -14,17 +14,6 @@ document
       preloader.style.display = "none";
       iframe.style.display = "block";
       
-      // Dynamically set the iframe height
-      iframe.style.height = "500px"; // Set the height you desire
     };
   });
 
-document
-  .getElementById("staticBackdropQC")
-  .addEventListener("hidden.bs.modal", function () {
-    const iframe = document.getElementById("qcIframe");
-    iframe.src = "";
-    
-    // Reset the iframe height when modal is hidden
-    iframe.style.height = "450px"; // Reset to default height
-  });
