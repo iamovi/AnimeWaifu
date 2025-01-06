@@ -54,6 +54,8 @@
 
   <link rel="stylesheet" href="./animewaifutalks.css">
 
+  <script src="videoConfig.js" defer></script>
+
 </head>
 
 <body>
@@ -102,12 +104,11 @@
     <div id="swipe-text">hi, Swipe for Anime Waifu.</div>
 
     <div id="video-container">
-      <video id="background-video" autoplay muted loop preload="auto" poster="./assets/init-poster.jpg">
-        <source src="./assets/init-waifu.mp4" type="video/mp4" />
-        Does not support the video tag.
+      <video id="background-video" autoplay muted loop preload="auto">
+        <source id="video-source" type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
-    </div>
-
+    </div>    
 
     <div id="preloaderX">
       <img src="./assets/anime.gif" alt="Loading..." />
