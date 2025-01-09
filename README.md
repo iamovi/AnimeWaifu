@@ -21,7 +21,7 @@ AnimeWaifu Apps are available!
 
 ***Or, Download from Itch.io: [Click Here/](https://iamovi.itch.io/animewaifu)***
 
-<img src="https://iamovi.github.io/AnimeWaifu/itchio.png" alt="AnimeWaifu Itch.io Preview" width="200">
+<img src="./itchio-pc.jpeg" alt="AnimeWaifu Itch.io Preview" width="300">
 
 
 ***Or, Install on Windows with powershell:***
