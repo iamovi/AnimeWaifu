@@ -11,17 +11,22 @@ Visit: [https://iamovi.github.io/AnimeWaifu](https://iamovi.github.io/AnimeWaifu
 
 AnimeWaifu Apps are available!
 
-- Android .apk
-- Windows .exe
+<img src="./cursor.jpg" alt="AnimeWaifu Itch.io Preview" width="300">
 
-- A dedicated QuickChat App from AnimeWaifu Project are Available!
+> Android .apk
+
+<img src="./touch.jpg" alt="AnimeWaifu Itch.io Preview" width="200">
+
+> Windows .exe
+
+/ A dedicated QuickChat App from AnimeWaifu Project are Available!
 
 ***Download from: [Here/](https://iamovi.github.io/AnimeWaifu/install/)***
 
 
 ***Or, Download from Itch.io: [Click Here/](https://iamovi.itch.io/animewaifu)***
 
-<img src="./itchio-pc.jpeg" alt="AnimeWaifu Itch.io Preview" width="300">
+<img src="./itchio-pc.jpeg" alt="AnimeWaifu Itch.io Preview" width="250">
 
 
 ***Or, Install on Windows with powershell:***
