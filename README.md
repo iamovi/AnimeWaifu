@@ -13,7 +13,8 @@ AnimeWaifu Apps are available!
 
 - Android .apk
 - Windows .exe
-- Linux .deb / .rpm / .AppImage
+
+- A dedicated QuickChat App from AnimeWaifu Project are Available!
 
 ***Download from: [Here/](https://iamovi.github.io/AnimeWaifu/install/)***
 
@@ -42,7 +43,6 @@ powershell -c "irm iamovi.github.io/AnimeWaifu/Install.ps1 | iex"
 
 [QuickChatSetup.exe](https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/QuickChatSetup.exe)
 
-! Linux file of QuickChat will be uploaded soon!
 
 ### 🌸 AnimeWaifu_Pixel_Terminal
 
