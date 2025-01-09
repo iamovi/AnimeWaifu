@@ -1,0 +1,58 @@
+{
+  "name": "AnimeWaifu",
+  "version": "2.0.0",
+  "main": "main.js",
+  "scripts": {
+    "go": "electron .",
+    "boom": "electron-builder"
+  },
+  "keywords": [
+    "AnimeWaifu", "ani", "waifu", "iamovi"
+  ],
+  "author": {
+    "name": "Maruf Ovi",
+    "email": "fornet.ovi@gmail.com"
+  },
+  "license": "MIT",
+  "description": "Random Anime Waifu on Swipe, Arrow Keys.",
+  "devDependencies": {
+    "electron": "^31.3.1",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.animewaifu.iamovi",
+    "productName": "AnimeWaifu",
+    "win": {
+      "target": ["nsis"],
+      "icon": "build/icon.ico",
+      "artifactName": "AnimeWaifuSetup.${ext}"
+    },
+    "linux": {
+      "target": ["AppImage", "deb", "rpm"],
+      "icon": "build/linux/png",
+      "category": "Utility",
+      "maintainer": "Maruf Ovi <fornet.ovi@gmail.com>"
+    },
+    "mac": {
+      "target": ["dmg", "zip"],
+      "icon": "build/mac/icon.icns",
+      "category": "public.app-category.utilities",
+      "artifactName": "niceexe-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": true,
+      "allowToChangeInstallationDirectory": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    },
+    "directories": {
+      "buildResources": "build"
+    },
+    "extraResources": [
+      {
+        "from": "LICENSE",
+        "to": "LICENSE"
+      }
+    ]
+  }
+}

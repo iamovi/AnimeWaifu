@@ -1,0 +1,6 @@
+
+    "win": {
+      "target": ["nsis", "msi"],
+      "icon": "build/icon.png",
+      "artifactName": "niceexe.${ext}"
+    },
