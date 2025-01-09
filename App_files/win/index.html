@@ -8,7 +8,7 @@
   <link href="./animewaifu.png" rel="icon" />
 
   <!-- Preload poster image -->
-  <link rel="preload" href="./assets/init-poster.jpg" as="image" />
+  <link rel="preload" href="./init/poster.jpg" as="image" />
 
   <meta property="og:title" content="AnimeWaifu" />
   <meta property="og:description" content="Swipe to get a random anime waifu." />
@@ -59,8 +59,8 @@
 <body>
 
   <div class="dropdown" id="main_menu">
-    <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      <i class="bi bi-egg-fried"></i>
+    <button class="btn ani-btn-z main_menu_button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
     </button>
     <ul class="dropdown-menu">
       <li class="text-center fw-bold ani_menu">AnimeWaifu Menu,</li>
@@ -102,12 +102,11 @@
     <div id="swipe-text">hi, Swipe Or Press Arrow Keys for Anime Waifu.</div>
 
     <div id="video-container">
-      <video id="background-video" autoplay muted loop preload="auto" poster="./assets/init-poster.jpg">
-        <source src="./assets/init-waifu.mp4" type="video/mp4" />
+      <video id="background-video" autoplay muted loop preload="auto" poster="./init/poster.jpg">
+        <source src="https://iamovi.github.io/AnimeWaifu/App_files/win/init/waifu.mp4" type="video/mp4" />
         Does not support the video tag.
       </video>
-    </div>
-
+    </div>    
 
     <div id="preloaderX">
       <img src="./assets/anime.gif" alt="Loading..." />
@@ -144,7 +143,7 @@
         </div>
         <hr>
         <div class="modal-body text-center" style="font-family: Iceland;">
-          <h3 class="text-dark">Current Version: 2.1.0</h3>
+          <h3 class="text-dark">Current Version: 2.5.7</h3>
 
           <button class="button" onclick="checkForUpdates()">
             Check for
@@ -171,16 +170,17 @@
           <h1 class="modal-title fs-5" id="staticBackdropLabel">
             <img width="60" class="img-fluid waifu-img" src="./assets/waifu-preview.jpg" alt=""
               onclick="showFullscreen(this)">
-            About AnimeWaifu Menu.
+            About Menu.
           </h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="custom-btn-close meme-close" data-bs-toggle="modal"
+          data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
         </div>
         <div class="modal-body">
           Press SpaceBar <i class="bi bi-align-bottom"></i> Or, Double click <i class="bi bi-circle"></i> anywhere to
           hide or unhide Menu Bar.
           <br><br>
           <div class="pro_info">
-            <p class="text-success">Project: AnimeWaifu</p>
+            <p class="text-success">Project: AnimeWaifu.</p>
           </div>
         </div>
       </div>
@@ -204,7 +204,7 @@
                            
           <div class="container-stuff">
 
-            <img class="img-fluid w-75 text-center d-block" src="https://ik.imagekit.io/iamovi/nyan_cat.gif?updatedAt=1707315309094" alt="">
+            <img class="img-fluid w-50 text-center d-block" src="https://ik.imagekit.io/iamovi/nyan_cat.gif?updatedAt=1707315309094" alt="">
 
             <button id="memes" style="cursor: pointer;" class="stuff-item" data-bs-toggle="modal"
               data-bs-target="#staticBackdropMemes">
@@ -218,11 +218,50 @@
               data-bs-target="#staticBackdropQC">
               Quick Chat <i class="fa-solid fa-bolt"></i></button>
 
+              <button id="NF" style="cursor: pointer;" class="stuff-item" data-bs-toggle="modal" data-bs-target="#staticBackdropNF">
+                No Fap! <i class="fa-solid fa-bolt"></i></button>
+
             <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="cursor: pointer;"
               class="stuff-item">About
-              Menu <i class="bi bi-egg-fried"></i></button>              
+              Menu <i class="fa-solid fa-bars"></i></button>   
+              <hr>
+
+              <button data-bs-toggle="modal" data-bs-target="#staticBackdropOvi" style="cursor: pointer;"
+              class="stuff-item m-auto d-block">About Developer (Ovi)</i></button>   
+
 
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Ovi Modal -->
+    <div class="modal fade" id="staticBackdropOvi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content custom-modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="staticBackdropLabel">
+            <img style="cursor: pointer;" width="55" class="img-fluid waifu-img" src="./assets/ovi.jpg" alt="" onclick="showFullscreen(this)">
+            Developer of this App.
+          </h2>
+          <button type="button" class="custom-btn-close meme-close" data-bs-toggle="modal"
+          data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
+        </div>
+        <div class="modal-body custom-modal-body">
+          <h3>I'm Maruf Ovi.</h3>
+          <h4>I think, observe and write code!</h4>
+          <h4 class="mt-3">Check me on <a class="bg-dark text-white p-2" href="https://github.com/iamovi"><i class="bi bi-github"></i></a></h4>
+                    <!-- Preloader Spinner with specific ID -->
+                    <div id="rexPreloader" class="text-center mt-5" style="display: none;">
+                      <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                      </div>
+                    </div>
+                    <br>
+               <!-- Embed the iframe with specific ID -->
+                      <iframe id="rexIframe" width="100%" height="300px" frameborder="0" style="display: none;"></iframe>
         </div>
       </div>
     </div>
@@ -236,10 +275,10 @@
         <div class="modal-header">
           <h2 class="modal-title fs-5" id="staticBackdropLabel">
             <img width="60" class="img-fluid waifu-img" src="./assets/qc.jpg" alt="" onclick="showFullscreen(this)">
-            Chat Anonymously.
+            Quick Chat.
           </h2>
-          <button type="button" class="custom-btn-close meme-close" data-bs-dismiss="modal" aria-label="Close"><i
-              class="fa-brands fa-mixer"></i></button>
+          <button type="button" class="custom-btn-close meme-close" data-bs-toggle="modal"
+          data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
         </div>
         <div class="modal-body custom-modal-body">
           <!-- Preloader Spinner with specific ID -->
@@ -250,11 +289,41 @@
           </div>
 
           <!-- Embed the iframe with specific ID -->
-          <iframe id="qcIframe" width="100%" height="450px" frameborder="0" style="display: none;"></iframe>
+          <iframe id="qcIframe" width="100%" height="490px" frameborder="0" style="display: none;"></iframe>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- No-Fap Modal -->
+<div class="modal fade" id="staticBackdropNF" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content custom-modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title fs-5" id="staticBackdropLabel">
+                <!-- <img width="60" class="img-fluid waifu-img" src="./assets/qc.jpg" alt=""
+                    onclick="showFullscreen(this)"> -->
+                No Fap!
+            </h2>
+            <button type="button" class="custom-btn-close meme-close" data-bs-toggle="modal"
+            data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
+        </div>
+        <div class="modal-body custom-modal-body">
+          <h6 class="text-center fa-italic m-0 p-0">It's okay to watch Anime Waifu, but try not to masturbate limitless!</h6>
+            <!-- Preloader Spinner with specific ID -->
+            <div id="nfPreloader" class="text-center mt-5" style="display: none;">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+
+            <!-- Embed the iframe with specific ID -->
+            <iframe id="nfIframe" width="100%" height="495px" frameborder="0" style="display: none;"></iframe>
+        </div>
+    </div>
+</div>
+</div>
 
   <!-- Memes Modal -->
   <div class="modal fade" id="staticBackdropMemes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -267,8 +336,8 @@
               onclick="showFullscreen(this)">
             Memes, Room!
           </h1>
-          <button type="button" class="custom-btn-close meme-close" data-bs-dismiss="modal" aria-label="Close"><i
-              class="fa-brands fa-mixer"></i></button>
+          <button type="button" class="custom-btn-close meme-close" data-bs-toggle="modal"
+          data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
         </div>
         <div class="modal-body custom-modal-body">
           <div class="container-memes">
@@ -304,8 +373,8 @@
               onclick="showFullscreen(this)">
             Jokes, Room!
           </h1>
-          <button type="button" class="custom-btn-close meme-close" data-bs-dismiss="modal" aria-label="Close"><i
-              class="fa-brands fa-mixer"></i></button>
+          <button type="button" class="custom-btn-close meme-close" data-bs-toggle="modal"
+          data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
         </div>
         <div class="modal-body custom-modal-body">
           <div class="container-jokes">
@@ -371,6 +440,20 @@
     qcScript.src = "https://iamovi.github.io/AnimeWaifu/qc.js?t=" + new Date().getTime();
     document.head.appendChild(qcScript);
   </script>
+
+  <!-- Np-Fap -->
+<script>
+  const nfScript = document.createElement("script");
+  nfScript.src = "https://iamovi.github.io/AnimeWaifu/nf.js?t=" + new Date().getTime();
+  document.head.appendChild(nfScript);
+</script>
+
+<!-- Ovi -->
+<script>
+  const rexScript = document.createElement("script");
+  rexScript.src = "https://iamovi.github.io/AnimeWaifu/rex.js?t=" + new Date().getTime();
+  document.head.appendChild(rexScript);
+</script>
 
   <script src="./memes.js"></script>
   <script src="./jokes.js"></script>

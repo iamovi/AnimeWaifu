@@ -1,9 +1,9 @@
 document
-  .getElementById("staticBackdropQC")
+  .getElementById("staticBackdropNF")
   .addEventListener("shown.bs.modal", function () {
-    const iframe = document.getElementById("qcIframe");
-    const preloader = document.getElementById("qcPreloader");
-    const baseUrl = "https://animewaifuqc-v1.netlify.app";
+    const iframe = document.getElementById("nfIframe");
+    const preloader = document.getElementById("nfPreloader");
+    const baseUrl = "https://aw-nofap.netlify.app";
 
     preloader.style.display = "block";
     iframe.style.display = "none";
@@ -13,12 +13,12 @@ document
     iframe.onload = function () {
       preloader.style.display = "none";
       iframe.style.display = "block";
+      
     };
   });
-
-document
-  .getElementById("staticBackdropQC")
+  document
+  .getElementById("staticBackdropNF")
   .addEventListener("hidden.bs.modal", function () {
-    const iframe = document.getElementById("qcIframe");
+    const iframe = document.getElementById("nfIframe");
     iframe.src = "";
   });

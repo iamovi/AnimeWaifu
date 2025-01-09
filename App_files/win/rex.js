@@ -1,9 +1,9 @@
 document
-  .getElementById("staticBackdropQC")
+  .getElementById("staticBackdropOvi")
   .addEventListener("shown.bs.modal", function () {
-    const iframe = document.getElementById("qcIframe");
-    const preloader = document.getElementById("qcPreloader");
-    const baseUrl = "https://animewaifuqc-v1.netlify.app";
+    const iframe = document.getElementById("rexIframe");
+    const preloader = document.getElementById("rexPreloader");
+    const baseUrl = "https://iamovi.github.io/EmojiCube";
 
     preloader.style.display = "block";
     iframe.style.display = "none";

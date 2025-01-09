@@ -1,0 +1,10 @@
+<div id="swipe-text">hi, Swipe Or Press Arrow Keys for Anime Waifu.</div>
+
+// Handle arrow key events to generate a new image
+document.addEventListener('keydown', function (e) {
+  // Check if the pressed key is one of the arrow keys
+  if (e.code === 'ArrowLeft' || e.code === 'ArrowRight' || e.code === 'ArrowUp' || e.code === 'ArrowDown') {
+    e.preventDefault(); // Prevent default behavior (like page scrolling)
+    getRandomWaifuImage(); // Fetch a new image
+  }
+});
