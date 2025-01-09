@@ -25,7 +25,7 @@ AnimeWaifu Apps are available!
 
 ***Or, Download from Itch.io: [Click Here/](https://iamovi.itch.io/animewaifu)***
 
-<img src="./itchio-pc.jpeg" alt="AnimeWaifu Itch.io Preview" width="250">
+<img src="./itchio-pc.jpeg" alt="AnimeWaifu Itch.io Preview" width="270">
 
 
 ***Or, Install on Windows with powershell:***
@@ -38,6 +38,8 @@ powershell -c "irm iamovi.github.io/AnimeWaifu/Install.ps1 | iex"
 - Wait for the installation to complete.
 
 ### 🚀 A dedicated QuickChat App from AnimeWaifu Project.
+
+<img src="./qc-pv.jpg" alt="AnimeWaifu Itch.io Preview" width="270">
 
 ***You can use QuickChat feature directly in AnimeWaifu App, but if you need a dedicated QuickChat App, Here it is:***
 
