@@ -19,7 +19,6 @@ AnimeWaifu Apps are available!
 
 > Android .apk
 
-/ A dedicated QuickChat App from AnimeWaifu Project is Available!
 
 ***Download from: [Here/](https://iamovi.github.io/AnimeWaifu/install/)***
 
