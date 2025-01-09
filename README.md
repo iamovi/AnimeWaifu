@@ -32,8 +32,19 @@ powershell -c "irm iamovi.github.io/AnimeWaifu/Install.ps1 | iex"
 ```
 - Wait for the installation to complete.
 
+### 🚀 A dedicated QuickChat App from AnimeWaifu Project.
 
-## 🌸 AnimeWaifu_Pixel_Terminal
+***You can use QuickChat feature directly in AnimeWaifu App, but if you need a dedicated QuickChat App, Here it is:***
+
+#### Download:
+
+[QuickChat.apk](https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/QuickChat.apk)
+
+[QuickChatSetup.exe](https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/QuickChatSetup.exe)
+
+! Linux file of QuickChat will be uploaded soon!
+
+### 🌸 AnimeWaifu_Pixel_Terminal
 
 #### This is a CLI tool that brings Anime Waifu straight to your terminal! Fetch a new waifu every time you run it and display it in pixel style.
 
