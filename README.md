@@ -13,11 +13,11 @@ AnimeWaifu Apps are available!
 
 <img src="./cursor.jpg" alt="AnimeWaifu Itch.io Preview" width="300">
 
-> Android .apk
+> Windows .exe
 
 <img src="./touch.jpg" alt="AnimeWaifu Itch.io Preview" width="200">
 
-> Windows .exe
+> Android .apk
 
 / A dedicated QuickChat App from AnimeWaifu Project are Available!
 
