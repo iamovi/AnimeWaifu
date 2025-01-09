@@ -59,7 +59,8 @@ document.getElementById('darkModeToggle').addEventListener('change', function() 
 
     if (this.checked) {
         modalContent.classList.add('dark-mode');
-        memePreloaderGif.src = 'assets/meme-preloader-black.gif'; 
+        memePreloaderGif.src = 'assets/meme-preloader-black.gif';
+        memePreloaderGif.style.width = "70%";
     } else {
         modalContent.classList.remove('dark-mode');
         memePreloaderGif.src = 'assets/meme-preloader.gif';

@@ -1,7 +1,8 @@
 {
-  "version": "2.1.0",
+  "version": "2.1.1",
   "update_url": "https://github.com/iamovi/AnimeWaifu/releases/tag/waifuappsv2",
   "whats_new": [
-    "Introducing AnimeWaifu .exe 2.1.0"
+    "Resize modals to fit perfectly.",
+    "Improve UI."
   ]
 }
