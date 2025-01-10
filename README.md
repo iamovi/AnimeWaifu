@@ -27,7 +27,7 @@
 
 <br>
 
-***Or, Download from Itch.io: [Click Here/](https://iamovi.itch.io/animewaifu)***
+### ***Or, Download from Itch.io: [Click Here/](https://iamovi.itch.io/animewaifu)***
 
 <img src="./itchio-pc.jpeg" alt="AnimeWaifu Itch.io Preview" width="270">
 
