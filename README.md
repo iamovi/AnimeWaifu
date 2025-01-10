@@ -6,7 +6,7 @@
 
 **Check live preview in web,**
 
-***Visit: [https://iamovi.github.io/AnimeWaifu](https://iamovi.github.io/AnimeWaifu)***
+***Visit: [iamovi.github.io/AnimeWaifu](iamovi.github.io/AnimeWaifu)***
 
 <br>
 
