@@ -46,7 +46,7 @@ powershell -c "irm iamovi.github.io/AnimeWaifu/Install.ps1 | iex"
 
 ### 🚀 A dedicated QuickChat App from AnimeWaifu Project.
 
-<img src="./qc-pv.png" alt="AnimeWaifu Itch.io Preview" width="200">
+<img src="./qc-pv.png" alt="AnimeWaifu Itch.io Preview" width="150">
 
 ***You can use QuickChat feature directly in AnimeWaifu App, but if you need a dedicated QuickChat App, Here it is:***
 
