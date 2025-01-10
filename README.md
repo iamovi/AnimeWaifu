@@ -20,14 +20,14 @@ AnimeWaifu Apps are available!
 > Android .apk
 <br>
 
-***Download from: [Here/](https://iamovi.github.io/AnimeWaifu/install/)***
+***Download from Main Site: [Here/](https://iamovi.github.io/AnimeWaifu/install/)***
 
-
+<br>
 ***Or, Download from Itch.io: [Click Here/](https://iamovi.itch.io/animewaifu)***
 
 <img src="./itchio-pc.jpeg" alt="AnimeWaifu Itch.io Preview" width="270">
 
-
+<br>
 ***Or, Install on Windows with powershell:***
 
 - Run powershell as administrator.
@@ -37,6 +37,7 @@ powershell -c "irm iamovi.github.io/AnimeWaifu/Install.ps1 | iex"
 ```
 - Wait for the installation to complete.
 
+<br>
 ### 🚀 A dedicated QuickChat App from AnimeWaifu Project.
 
 <img src="./qc-pv.png" alt="AnimeWaifu Itch.io Preview" width="200">
@@ -49,13 +50,14 @@ powershell -c "irm iamovi.github.io/AnimeWaifu/Install.ps1 | iex"
 
 [QuickChatSetup.exe](https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/QuickChatSetup.exe)
 
-
+<br>
 ### 🌸 AnimeWaifu_Pixel_Terminal
 
 #### This is a CLI tool that brings Anime Waifu straight to your terminal! Fetch a new waifu every time you run it and display it in pixel style.
 
 ![aw preview](./AnimeWaifu_Pixel_Terminal/aw_preview.gif)
 
+<br>
 ## 📦 Installation and Usages
 
 ```bash
@@ -67,6 +69,7 @@ aw
 ```
 Type **aw** to view a AnimeWaifu on terminal.
 
+<br>
 ### aw Commands List:
 
 #### **CLI Commands,**
@@ -93,8 +96,7 @@ Type **aw** to view a AnimeWaifu on terminal.
 | **Exit**                     | Exits the application.                                  |
 
 
----
-
+<br>
 ### License
 
 [MIT](LICENSE)
@@ -103,7 +105,8 @@ Type **aw** to view a AnimeWaifu on terminal.
 
 [Maruf Ovi](https://oviportfo.netlify.app/)
 
-#### ***_ here's poem about anime waifu 🌛***
+<br>
+#### ***_ here's poem about Anime Waifu 🌸***
 ```
 Anime waifus are the best
 They always make my heart go doki-doki
