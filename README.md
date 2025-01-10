@@ -1,11 +1,14 @@
 <img src="https://iamovi.github.io/AnimeWaifu/assets/waifu-preview.jpg" alt="AnimeWaifu Project Preview" width="290">
 
+<br>
 
 ## Website/
 
 **Check live preview in web,**
 
 ***Visit: [https://iamovi.github.io/AnimeWaifu](https://iamovi.github.io/AnimeWaifu)***
+
+<br>
 
 ## APPS
 
