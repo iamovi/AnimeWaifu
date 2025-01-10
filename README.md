@@ -18,7 +18,7 @@ AnimeWaifu Apps are available!
 <img src="./touch.jpg" alt="AnimeWaifu Itch.io Preview" width="200">
 
 > Android .apk
-
+<br>
 
 ***Download from: [Here/](https://iamovi.github.io/AnimeWaifu/install/)***
 
