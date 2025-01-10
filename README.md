@@ -3,13 +3,13 @@
 
 ## Website/
 
-***Check live preview in web,***
+**Check live preview in web,**
 
-Visit: [https://iamovi.github.io/AnimeWaifu](https://iamovi.github.io/AnimeWaifu)
+***Visit: [https://iamovi.github.io/AnimeWaifu](https://iamovi.github.io/AnimeWaifu)***
 
 ## APPS
 
-AnimeWaifu Apps are available!
+***AnimeWaifu Apps are available! 🌱***
 
 <img src="./cursor.jpg" alt="AnimeWaifu Itch.io Preview" width="300">
 
