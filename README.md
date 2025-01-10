@@ -20,7 +20,8 @@ AnimeWaifu Apps are available!
 > Android .apk
 <br>
 
-***Download from Main Site: [Here/](https://iamovi.github.io/AnimeWaifu/install/)***
+***Download from Main Site:
+ [Here/](https://iamovi.github.io/AnimeWaifu/install)***
 
 <br>
 ***Or, Download from Itch.io: [Click Here/](https://iamovi.itch.io/animewaifu)***
