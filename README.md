@@ -14,7 +14,7 @@ AnimeWaifu Apps are available!
 <img src="./cursor.jpg" alt="AnimeWaifu Itch.io Preview" width="300">
 
 > Windows .exe
-
+<br>
 <img src="./touch.jpg" alt="AnimeWaifu Itch.io Preview" width="200">
 
 > Android .apk
