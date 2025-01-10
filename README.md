@@ -35,12 +35,12 @@
 
 ***Or, Install on Windows with powershell:***
 
-- Run powershell as administrator.
+> Run powershell as administrator and Type This:
 
 ```bash
 powershell -c "irm iamovi.github.io/AnimeWaifu/Install.ps1 | iex"
 ```
-- Wait for the installation to complete.
+> Wait for the installation to complete.
 
 <br>
 
