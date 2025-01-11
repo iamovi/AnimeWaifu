@@ -1,3 +1,18 @@
 #animewaifu-talks {
   text-shadow: 2px 2px 4px rgba(255, 152, 0, 0.7);
 }
+#loading-text {
+  width: 90%;
+  padding: 20px;
+  background: rgb(175, 68, 68);
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 1000;
+  font-family: "Shantell Sans", serif;
+}

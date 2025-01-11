@@ -1,6 +1,6 @@
 // AnimeWaifu Talks
 
-const animeWaifuURL = "https://animewaifutalks.up.railway.app";
+const animeWaifuURL = "https://animewaifu-talks.onrender.com";
 
 document
   .getElementById("animewaifu-talks")
@@ -18,7 +18,7 @@ document
     preloaderX.style.display = "block";
 
     loadingText.style.display = "block";
-    loadingText.innerText = "Loading, please wait...";
+    loadingText.innerText = "Loading...<br> Currently this App's backend is deployed on render.com free tier due to money issues, So the first load may take up to 1 minute. Kindly wait :(";
 
     iframe.addEventListener("load", function () {
       preloaderX.style.display = "none";
@@ -36,4 +36,4 @@ document.getElementById("close-iframe").addEventListener("click", function () {
   iframe.src = "";
   preloaderX.style.display = "none";
   loadingText.style.display = "none";
-});
+})

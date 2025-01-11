@@ -52,7 +52,7 @@
 
   <script src="offline.js"></script>
 
-  <link rel="stylesheet" href="./animewaifutalks.css">
+  <link rel="stylesheet" href="https://iamovi.github.io/AnimeWaifu/animewaifutalks.css">
 
 </head>
 
@@ -106,23 +106,25 @@
         <source src="https://iamovi.github.io/AnimeWaifu/App_files/android/init/waifu.mp4" type="video/mp4" />
         Does not support the video tag.
       </video>
-    </div>    
+    </div>
 
     <div id="preloaderX">
       <img src="./assets/anime.gif" alt="Loading..." />
     </div>
   </div>
 
-  <!-- Fullscreen iframe container, hidden by default -->
-  <div id="iframe-container"
-    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;  z-index: 999;">
+<!-- AnimeWaifu Talks! -->
+<div id="iframe-container" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 999;">
 
-    <button id="close-iframe" class="fw-bold"
-      style="position: absolute; top: 75px; right: 15px; color: black; border: none; padding: 5px;"><i
-        class="bi bi-arrow-90deg-right"></i></button>
+  <button id="close-iframe" class="fw-bold"
+    style="position: absolute; top: 75px; right: 15px; color: black; border: none; padding: 5px;">
+    <i class="bi bi-arrow-90deg-right"></i></button>
 
-    <iframe id="animewaifu-iframe" src="" style="width: 100%; height: 100%; border: none;"></iframe>
-  </div>
+  <iframe id="animewaifu-iframe" src="" style="width: 100%; height: 100%; border: none;"></iframe>
+
+  <!-- Preloader text that will appear when loading -->
+  <p id="loading-text"></p>
+</div>
 
   <!-- Version Modal -->
   <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -173,7 +175,7 @@
             About Menu.
           </h1>
           <button type="button" class="custom-btn-close meme-close" data-bs-toggle="modal"
-          data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
+            data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
         </div>
         <div class="modal-body">
           Press SpaceBar <i class="bi bi-align-bottom"></i> Or, Double click <i class="bi bi-circle"></i> anywhere to
@@ -201,10 +203,11 @@
               class="fa-brands fa-mixer"></i></button>
         </div>
         <div class="modal-body custom-modal-body">
-                           
+
           <div class="container-stuff">
 
-            <img class="img-fluid w-50 text-center d-block" src="https://ik.imagekit.io/iamovi/nyan_cat.gif?updatedAt=1707315309094" alt="">
+            <img class="img-fluid w-50 text-center d-block"
+              src="https://ik.imagekit.io/iamovi/nyan_cat.gif?updatedAt=1707315309094" alt="">
 
             <button id="memes" style="cursor: pointer;" class="stuff-item" data-bs-toggle="modal"
               data-bs-target="#staticBackdropMemes">
@@ -218,16 +221,22 @@
               data-bs-target="#staticBackdropQC">
               Quick Chat <i class="fa-solid fa-bolt"></i></button>
 
-              <button id="NF" style="cursor: pointer;" class="stuff-item" data-bs-toggle="modal" data-bs-target="#staticBackdropNF">
-                No Fap! <i class="fa-solid fa-rocket"></i></button>
+            <button id="NF" style="cursor: pointer;" class="stuff-item" data-bs-toggle="modal"
+              data-bs-target="#staticBackdropNF">
+              No Fap! <i class="fa-solid fa-rocket"></i></button>
 
             <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="cursor: pointer;"
               class="stuff-item">About
-              Menu <i class="fa-solid fa-bars"></i></button>   
-              <hr>
+              Menu <i class="fa-solid fa-bars"></i></button>
 
-              <button data-bs-toggle="modal" data-bs-target="#staticBackdropOvi" style="cursor: pointer;"
-              class="stuff-item m-auto d-block">About Developer (Ovi)</i></button>   
+            <button id="memes" style="cursor: pointer;" class="stuff-item" data-bs-toggle="modal"
+              data-bs-target="#staticBackdropMW">
+              MORE WAIFU! <i class="fa-solid fa-lemon"></i></button>
+
+            <hr>
+
+            <button data-bs-toggle="modal" data-bs-target="#staticBackdropOvi" style="cursor: pointer;"
+              class="stuff-item m-auto d-block">About Developer (Ovi)</i></button>
 
 
           </div>
@@ -236,32 +245,34 @@
     </div>
   </div>
 
-    <!-- Ovi Modal -->
-    <div class="modal fade" id="staticBackdropOvi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  <!-- Ovi Modal -->
+  <div class="modal fade" id="staticBackdropOvi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content custom-modal-content">
         <div class="modal-header">
           <h2 class="modal-title fs-5" id="staticBackdropLabel">
-            <img style="cursor: pointer;" width="55" class="img-fluid waifu-img" src="./assets/ovi.jpg" alt="" onclick="showFullscreen(this)">
+            <img style="cursor: pointer;" width="55" class="img-fluid waifu-img" src="./assets/ovi.jpg" alt=""
+              onclick="showFullscreen(this)">
             Developer of this App.
           </h2>
           <button type="button" class="custom-btn-close meme-close" data-bs-toggle="modal"
-          data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
+            data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
         </div>
         <div class="modal-body custom-modal-body">
           <h3>I'm Maruf Ovi.</h3>
           <h4>I think, observe and write code!</h4>
-          <h4 class="mt-3">Check me on <a class="bg-dark text-white p-2" href="https://github.com/iamovi"><i class="bi bi-github"></i></a></h4>
-                    <!-- Preloader Spinner with specific ID -->
-                    <div id="rexPreloader" class="text-center mt-5" style="display: none;">
-                      <div class="spinner-border" role="status">
-                        <span class="visually-hidden">Loading...</span>
-                      </div>
-                    </div>
-                    <br>
-               <!-- Embed the iframe with specific ID -->
-                      <iframe id="rexIframe" width="100%" height="310px" frameborder="0" style="display: none;"></iframe>
+          <h4 class="mt-3">Check me on <a class="bg-dark text-white p-2" href="https://github.com/iamovi"><i
+                class="bi bi-github"></i></a></h4>
+          <!-- Preloader Spinner with specific ID -->
+          <div id="rexPreloader" class="text-center mt-5" style="display: none;">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+          <br>
+          <!-- Embed the iframe with specific ID -->
+          <iframe id="rexIframe" width="100%" height="310px" frameborder="0" style="display: none;"></iframe>
         </div>
       </div>
     </div>
@@ -278,7 +289,7 @@
             Quick Chat.
           </h2>
           <button type="button" class="custom-btn-close meme-close" data-bs-toggle="modal"
-          data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
+            data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
         </div>
         <div class="modal-body custom-modal-body">
           <!-- Preloader Spinner with specific ID -->
@@ -296,34 +307,35 @@
   </div>
 
   <!-- No-Fap Modal -->
-<div class="modal fade" id="staticBackdropNF" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-aria-labelledby="staticBackdropLabel" aria-hidden="true">
-<div class="modal-dialog">
-    <div class="modal-content custom-modal-content">
+  <div class="modal fade" id="staticBackdropNF" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content custom-modal-content">
         <div class="modal-header">
-            <h2 class="modal-title fs-5" id="staticBackdropLabel">
-                <!-- <img width="60" class="img-fluid waifu-img" src="./assets/qc.jpg" alt=""
+          <h2 class="modal-title fs-5" id="staticBackdropLabel">
+            <!-- <img width="60" class="img-fluid waifu-img" src="./assets/qc.jpg" alt=""
                     onclick="showFullscreen(this)"> -->
-                No Fap!
-            </h2>
-            <button type="button" class="custom-btn-close meme-close" data-bs-toggle="modal"
+            No Fap!
+          </h2>
+          <button type="button" class="custom-btn-close meme-close" data-bs-toggle="modal"
             data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
         </div>
         <div class="modal-body custom-modal-body">
-          <h6 class="text-center fa-italic m-0 p-0">It's okay to watch Anime Waifu, but try not to masturbate limitless!</h6>
-            <!-- Preloader Spinner with specific ID -->
-            <div id="nfPreloader" class="text-center mt-5" style="display: none;">
-                <div class="spinner-border" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
+          <h6 class="text-center fa-italic m-0 p-0">It's okay to watch Anime Waifu, but try not to masturbate limitless!
+          </h6>
+          <!-- Preloader Spinner with specific ID -->
+          <div id="nfPreloader" class="text-center mt-5" style="display: none;">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
             </div>
+          </div>
 
-            <!-- Embed the iframe with specific ID -->
-            <iframe id="nfIframe" width="100%" height="500px" frameborder="0" style="display: none;"></iframe>
+          <!-- Embed the iframe with specific ID -->
+          <iframe id="nfIframe" width="100%" height="500px" frameborder="0" style="display: none;"></iframe>
         </div>
+      </div>
     </div>
-</div>
-</div>
+  </div>
 
   <!-- Memes Modal -->
   <div class="modal fade" id="staticBackdropMemes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -337,7 +349,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
             Memes, Room!
           </h1>
           <button type="button" class="custom-btn-close meme-close" data-bs-toggle="modal"
-          data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
+            data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
         </div>
         <div class="modal-body custom-modal-body">
           <div class="container-memes">
@@ -374,7 +386,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
             Jokes, Room!
           </h1>
           <button type="button" class="custom-btn-close meme-close" data-bs-toggle="modal"
-          data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
+            data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
         </div>
         <div class="modal-body custom-modal-body">
           <div class="container-jokes">
@@ -417,6 +429,65 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
     </div>
   </div>
 
+<!-- More Waifu Modal -->
+<div class="modal fade" id="staticBackdropMW" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content custom-modal-content memes-modal-dark">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                    <img width="60" class="img-fluid waifu-img" src="./assets/mw.gif" alt="" onclick="showFullscreen(this)">
+                    MORE WAIFU! <i class="fa-solid fa-lemon"></i>
+                </h1>
+                <button type="button" class="custom-btn-close meme-close" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
+            </div>
+            <div class="modal-body custom-modal-body">
+                <div class="container-memes">
+                    <div class="dropdown mwD">
+                        <button class="dropdown-toggle mwDbtn" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Type?
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item" data-type="waifu">i. WAIFU</li>
+                            <li class="dropdown-item" data-type="neko">ii. NEKO</li>
+                            <li class="dropdown-item" data-type="trap">iii. TRAP</li>
+                            <li class="dropdown-item" data-type="blowjob">iv. BLOWJOB</li>
+                            <hr>
+                            <li class="dropdown-item" data-type="dance">v. DANCE</li>
+                            <li class="dropdown-item" data-type="happy">vi. HAPPY</li>
+                            <li class="dropdown-item" data-type="cry">vii. CRY</li>
+                            <li class="dropdown-item" data-type="nom">viii. NOM</li>
+                            <li class="dropdown-item" data-type="cringe">ix. CRINGE</li>
+                            <li class="dropdown-item" data-type="handhold">x. HANDHOLD</li>
+                            <li class="dropdown-item" data-type="kill">xi. KILL</li>
+                        </ul>
+                    </div>
+
+                    <!-- Selected Category Display -->
+                    <span id="selected-category-display" class="mt-2 text-muted">Selected: None</span>
+
+                    <button class="memes-btn custom-memes-btn mb-3 mwDGbtn" id="generate-meme-btn-mw">Get Pic <i
+                        class="fa-brands fa-space-awesome"></i></button>
+                    <div id="meme-container">
+                        <!-- Error message will be shown here -->
+                        <span id="error-message-mw" style="color: red; display: none;"
+                            class="text-center mt-5 fst-italic bg-dark"></span>
+                        <!-- Preloader (GIF) -->
+                        <div id="preloader-unique-mw" class="preloader custom-preloader"
+                            style="display:none; text-align: center;">
+                            <img src="assets/mw-loading.gif" alt="Loading..." class="preloader-gif img-fluid w-75 m-auto">
+                        </div>
+                        <!-- Meme Image -->
+                        <img id="meme-img-unique-mw" class="img-fluid m-auto w-75" src="" alt="Another Waifu."
+                            style="display:none;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
   <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
@@ -442,21 +513,22 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
   </script>
 
   <!-- Np-Fap -->
-<script>
-  const nfScript = document.createElement("script");
-  nfScript.src = "https://iamovi.github.io/AnimeWaifu/nf.js?t=" + new Date().getTime();
-  document.head.appendChild(nfScript);
-</script>
+  <script>
+    const nfScript = document.createElement("script");
+    nfScript.src = "https://iamovi.github.io/AnimeWaifu/nf.js?t=" + new Date().getTime();
+    document.head.appendChild(nfScript);
+  </script>
 
-<!-- Ovi -->
-<script>
-  const rexScript = document.createElement("script");
-  rexScript.src = "https://iamovi.github.io/AnimeWaifu/rex.js?t=" + new Date().getTime();
-  document.head.appendChild(rexScript);
-</script>
+  <!-- Ovi -->
+  <script>
+    const rexScript = document.createElement("script");
+    rexScript.src = "https://iamovi.github.io/AnimeWaifu/rex.js?t=" + new Date().getTime();
+    document.head.appendChild(rexScript);
+  </script>
 
   <script src="./memes.js"></script>
   <script src="./jokes.js"></script>
+  <script src="./mw.js"></script>
   <script src="update.js"></script>
   <script src="play.js"></script>
 
