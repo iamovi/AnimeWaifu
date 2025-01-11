@@ -2,10 +2,8 @@
 
 <br>
 <br>
-<div style="display: flex; align-items: center;">
-  <img src="https://img.icons8.com/doodle/96/domain.png" alt="AnimeWaifu Itch.io Preview" width="35" style="vertical-align: middle;">
-  <span style="margin-left: 8px; font-weight: bold; font-size: 18px;">Website/</span>
-</div>
+
+## <img src="https://img.icons8.com/doodle/96/domain.png" alt="AnimeWaifu Itch.io Preview" width="35" style="vertical-align: middle;"> APPS
 
 <br>
 
@@ -16,10 +14,7 @@
 
 <br>
 
-<div style="display: flex; align-items: center;">
-  <img src="https://img.icons8.com/plasticine/100/squared-menu.png" alt="AnimeWaifu Itch.io Preview" width="35" style="vertical-align: middle;">
-  <span style="margin-left: 8px; font-weight: bold; font-size: 18px;">APPS</span>
-</div>
+## <img src="https://img.icons8.com/plasticine/100/squared-menu.png" alt="AnimeWaifu Itch.io Preview" width="35" style="vertical-align: middle;"> APPS
 
 <br>
 
@@ -36,6 +31,9 @@
 > Android .apk
 
 <br>
+
+## <img src="https://img.icons8.com/arcade/64/download.png" alt="AnimeWaifu Itch.io Preview" width="35" style="vertical-align: middle;"> APPS
+
 
 ### ***Download from Main Site: [Here/](https://iamovi.github.io/AnimeWaifu/install)***
 
