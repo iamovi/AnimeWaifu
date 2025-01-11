@@ -32,7 +32,7 @@
 
 <br>
 
-## <img src="https://img.icons8.com/arcade/64/download.png" alt="AnimeWaifu Itch.io Preview" width="35" style="vertical-align: middle;"> APPS
+## <img src="https://img.icons8.com/arcade/64/download.png" alt="AnimeWaifu Itch.io Preview" width="35" style="vertical-align: middle;"> Downloads
 
 
 ### ***Download from Main Site: [Here/](https://iamovi.github.io/AnimeWaifu/install)***
