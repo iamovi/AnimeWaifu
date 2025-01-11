@@ -55,9 +55,9 @@ powershell -c "irm iamovi.github.io/AnimeWaifu/Install.ps1 | iex"
 
 #### Download:
 
-***[QuickChat.apk](https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/QuickChat.apk)***
+***[QuickChat.apk](https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/QuickChat.apk)*** <img src="https://img.icons8.com/cotton/128/android-os.png" alt="AnimeWaifu Itch.io Preview" width="35">
 
-***[QuickChatSetup.exe](https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/QuickChatSetup.exe)***
+***[QuickChatSetup.exe](https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/QuickChatSetup.exe)*** <img src="https://img.icons8.com/doodle/192/windows8.png" alt="AnimeWaifu Itch.io Preview" width="30">
 
 <br>
 
