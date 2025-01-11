@@ -520,3 +520,9 @@ background: black;
 #selected-category-display {
   font-size: 13px;
 }
+
+.husband-g {
+  font-size: 13px;
+  display: inline;
+  margin-top: 0px;
+}

@@ -145,7 +145,7 @@
         </div>
         <hr>
         <div class="modal-body text-center" style="font-family: Iceland;">
-          <h3 class="text-dark">Current Version: 2.5.8</h3>
+          <h3 class="text-dark">Current Version: 2.6.8</h3>
 
           <button class="button" onclick="checkForUpdates()">
             Check for
@@ -229,9 +229,13 @@
               class="stuff-item">About
               Menu <i class="fa-solid fa-bars"></i></button>
 
-            <button id="memes" style="cursor: pointer;" class="stuff-item" data-bs-toggle="modal"
+            <button id="MW" style="cursor: pointer;" class="stuff-item" data-bs-toggle="modal"
               data-bs-target="#staticBackdropMW">
               MORE WAIFU! <i class="fa-solid fa-lemon"></i></button>
+
+              <button id="Husband" style="cursor: pointer;" class="stuff-item" data-bs-toggle="modal"
+              data-bs-target="#staticBackdropHusband">
+              Anime Husband <i class="fa-solid fa-bug"></i></button>
 
             <hr>
 
@@ -437,7 +441,7 @@
             <div class="modal-header">
                 <h1 class="modal-title fs-5" id="staticBackdropLabel">
                     <img width="60" class="img-fluid waifu-img" src="./assets/mw.gif" alt="" onclick="showFullscreen(this)">
-                    MORE WAIFU! <i class="fa-solid fa-lemon"></i>
+                    MORE WAIFU <i class="fa-solid fa-lemon"></i>
                 </h1>
                 <button type="button" class="custom-btn-close meme-close" data-bs-toggle="modal"
                     data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
@@ -479,8 +483,43 @@
                             style="display:none; text-align: center;">
                             <img src="assets/mw-loading.gif" alt="Loading..." class="preloader-gif img-fluid w-75 m-auto">
                         </div>
+                        <hr>
                         <!-- Meme Image -->
                         <img id="meme-img-unique-mw" class="img-fluid m-auto w-75" src="" alt="Another Waifu."
+                            style="display:none;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Husband Modal -->
+<div class="modal fade" id="staticBackdropHusband" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content custom-modal-content memes-modal-dark">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                    <img width="60" class="img-fluid waifu-img" src="./assets/husband.gif" alt="" onclick="showFullscreen(this)">
+                    Anime Husband <i class="fa-solid fa-bug"></i>
+                </h1>
+                <button type="button" class="custom-btn-close meme-close" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
+            </div>
+            <div class="modal-body custom-modal-body">
+                <div class="container-memes">
+                  <p class="husband-g">Anime Husband for Girls!</p>
+                    <button class="memes-btn m-auto custom-memes-btn mb-3 mt-3" id="generate-meme-btn-husband">Get Husband <i
+                        class="fa-brands fa-space-awesome"></i></button>
+                    <div id="meme-container">
+                        <!-- Preloader (GIF) -->
+                        <div id="preloader-unique-husband" class="preloader custom-preloader"
+                            style="display:none; text-align: center;">
+                            <img src="assets/husband-load.gif" alt="Loading..." class="preloader-gif img-fluid w-75 m-auto">
+                        </div>
+                        <!-- Meme Image -->
+                        <img id="meme-img-unique-husband" class="img-fluid m-auto w-75" src="" alt="Another Waifu."
                             style="display:none;">
                     </div>
                 </div>
@@ -529,6 +568,7 @@
   <script src="./memes.js"></script>
   <script src="./jokes.js"></script>
   <script src="./mw.js"></script>
+  <script src="./husband.js"></script>
   <script src="update.js"></script>
   <script src="play.js"></script>
 
