@@ -3,7 +3,7 @@
 <br>
 <br>
 
-## <img src="https://img.icons8.com/doodle/96/domain.png" alt="AnimeWaifu Itch.io Preview" width="35" style="vertical-align: middle;"> APPS
+## <img src="https://img.icons8.com/doodle/96/domain.png" alt="AnimeWaifu Itch.io Preview" width="35" style="vertical-align: middle;"> Website/
 
 <br>
 
