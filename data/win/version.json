@@ -1,8 +1,9 @@
 {
-  "version": "2.1.1",
-  "update_url": "https://github.com/iamovi/AnimeWaifu/releases/tag/waifuappsv2",
+  "version": "2.2.1",
+  "update_url": "https://github.com/iamovi/AnimeWaifu/install/",
   "whats_new": [
-    "Resize modals to fit perfectly.",
-    "Improve UI."
+    "Added Anime Husband Feature.",
+    "Added More Anime Waifu Category.",
+    "Few UI Enhancement."
   ]
 }

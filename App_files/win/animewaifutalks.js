@@ -18,7 +18,7 @@ document
     preloaderX.style.display = "block";
 
     loadingText.style.display = "block";
-    loadingText.innerText = "Loading, please wait...";
+    loadingText.innerHTML = "Loading...<br> Currently this app's backend is deployed on render.com free tier due to money issues, so the first load may take up to 1 minute. Kindly wait :(";
 
     iframe.addEventListener("load", function () {
       preloaderX.style.display = "none";
@@ -36,4 +36,4 @@ document.getElementById("close-iframe").addEventListener("click", function () {
   iframe.src = "";
   preloaderX.style.display = "none";
   loadingText.style.display = "none";
-});
+})

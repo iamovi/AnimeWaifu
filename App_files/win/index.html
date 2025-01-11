@@ -113,16 +113,18 @@
     </div>
   </div>
 
-  <!-- Fullscreen iframe container, hidden by default -->
-  <div id="iframe-container"
-    style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;  z-index: 999;">
+<!-- AnimeWaifu Talks! -->
+<div id="iframe-container" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 999;">
 
-    <button id="close-iframe" class="fw-bold"
-      style="position: absolute; top: 75px; right: 15px; color: black; border: none; padding: 5px;"><i
-        class="bi bi-arrow-90deg-right"></i></button>
+  <button id="close-iframe" class="fw-bold"
+    style="position: absolute; top: 75px; right: 15px; color: black; border: none; padding: 5px;">
+    <i class="bi bi-arrow-90deg-right"></i></button>
 
-    <iframe id="animewaifu-iframe" src="" style="width: 100%; height: 100%; border: none;"></iframe>
-  </div>
+  <iframe id="animewaifu-iframe" src="" style="width: 100%; height: 100%; border: none;"></iframe>
+
+  <!-- Preloader text that will appear when loading -->
+  <p id="loading-text"></p>
+</div>
 
   <!-- Version Modal -->
   <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -261,8 +263,8 @@
           data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
         </div>
         <div class="modal-body custom-modal-body">
-          <h3>I'm Maruf Ovi.</h3>
-          <h4>I think, observe and write code!</h4>
+          <h3>I'm Maruf Ovi,</h3>
+          <h4>i'm a writer, i write code.</h4>
           <h4 class="mt-3">Check me on <a class="bg-dark text-white p-2" href="https://github.com/iamovi"><i class="bi bi-github"></i></a></h4>
                     <!-- Preloader Spinner with specific ID -->
                     <div id="rexPreloader" class="text-center mt-5" style="display: none;">
@@ -480,7 +482,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     </div>
                     <hr>
                     <!-- Meme Image -->
-                    <img id="meme-img-unique-mw" class="img-fluid m-auto w-75" src="" alt="Another Waifu."
+                    <img id="meme-img-unique-mw" class="img-fluid m-auto w-50" src="" alt="Another Waifu."
                         style="display:none;">
                 </div>
             </div>
@@ -513,8 +515,9 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
                         style="display:none; text-align: center;">
                         <img src="assets/husband-load.gif" alt="Loading..." class="preloader-gif img-fluid w-75 m-auto">
                     </div>
+                    <hr>
                     <!-- Meme Image -->
-                    <img id="meme-img-unique-husband" class="img-fluid m-auto w-75" src="" alt="Another Waifu."
+                    <img id="meme-img-unique-husband" class="img-fluid m-auto w-50" src="" alt="Another Waifu."
                         style="display:none;">
                 </div>
             </div>
