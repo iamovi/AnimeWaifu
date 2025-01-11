@@ -1,16 +1,27 @@
-<img src="https://iamovi.github.io/AnimeWaifu/assets/waifu-preview.jpg" alt="AnimeWaifu Project Preview" width="290">
+<img src="https://iamovi.github.io/AnimeWaifu/assets/waifu-preview.jpg" alt="AnimeWaifu Project Preview" width="290"> <img width="100" height="100" src="https://img.icons8.com/plasticine/100/bunch-flowers.png" alt="bunch-flowers"/>
+
+<br>
+<br>
+<div style="display: flex; align-items: center;">
+  <img src="https://img.icons8.com/doodle/96/domain.png" alt="AnimeWaifu Itch.io Preview" width="35" style="vertical-align: middle;">
+  <span style="margin-left: 8px; font-weight: bold; font-size: 18px;">Website/</span>
+</div>
 
 <br>
 
-## Website/
-
 **Check live preview in web,**
+
 
 ***Visit: [iamovi.github.io/AnimeWaifu](https://iamovi.github.io/AnimeWaifu)***
 
 <br>
 
-## APPS
+<div style="display: flex; align-items: center;">
+  <img src="https://img.icons8.com/plasticine/100/squared-menu.png" alt="AnimeWaifu Itch.io Preview" width="35" style="vertical-align: middle;">
+  <span style="margin-left: 8px; font-weight: bold; font-size: 18px;">APPS</span>
+</div>
+
+<br>
 
 ***AnimeWaifu Apps are available! 🌱***
 
