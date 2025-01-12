@@ -484,10 +484,6 @@ background: black;
   cursor: pointer;
 }
 
-.mwDGbtn {
-  width: 40%;
-}
- 
 .mwDbtn {
   background: #fbca1f;
   font-family: inherit;
@@ -525,4 +521,46 @@ background: black;
   font-size: 13px;
   display: inline;
   margin-top: 0px;
+}
+
+.mwDGbtn {
+  width: 35%;
+  font-size: 15px;
+}
+ 
+
+/* // */
+
+#meme-img-unique-husband {
+  width: 85%;
+}
+
+#meme-img-unique-mw {
+  width: 85%;
+}
+
+/* Hide the scrollbar but allow scrolling */
+::-webkit-scrollbar {
+  width: 6px; /* Change this to make the scrollbar smaller */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+  border-radius: 10px;
+}
+
+/* Optional: Hide scrollbar completely */
+::-webkit-scrollbar {
+  display: none;  /* This will hide the scrollbar completely, but scrolling will still work */
+}
+
+/* For a thin scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: darkgray transparent;
+}
+
+/* For hiding the scrollbar completely */
+* {
+  scrollbar-width: none;
 }

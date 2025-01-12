@@ -25,8 +25,11 @@ function fetchHusbandImage() {
     preloader.style.display = 'block'; // Show preloader GIF
     memeImg.style.display = 'none'; 
 
+    // Add a cache-busting query parameter to avoid caching the JSON file
+    const url = 'https://iamovi.github.io/AnimeWaifu/data/husband.json' + '?_=' + new Date().getTime();
+
     // Fetch the husband JSON file containing the image URLs
-    fetch('./husband.json')
+    fetch(url)
         .then(response => response.json())
         .then(data => {
             const husbandLinks = data.links;
@@ -42,12 +45,15 @@ function fetchHusbandImage() {
                 seenHusbands.add(husbandUrl);
                 memeImg.src = husbandUrl;
                 memeImg.onload = function() {
-                    // Hide preloader and show the image when it's loaded
-                    preloader.style.display = 'none';
-                    memeImg.style.display = 'block';
+                    // Delay showing the image for 1 second
+                    setTimeout(() => {
+                        // Hide preloader and show the image after the delay
+                        preloader.style.display = 'none';
+                        memeImg.style.display = 'block';
 
-                    // Countdown in the button after the meme is loaded
-                    countdownToEnableButton(generateButton, 'Get Pic');
+                        // Countdown in the button after the meme is loaded
+                        countdownToEnableButton(generateButton, 'Get Husband');
+                    }, 1000); // 1 second delay
                 };
             }
         })
@@ -55,7 +61,7 @@ function fetchHusbandImage() {
             console.error('Error fetching husband image:', error);
             preloader.style.display = 'none';
             generateButton.disabled = false;
-            generateButton.innerHTML = 'Get Pic <i class="fa-brands fa-space-awesome"></i>';
+            generateButton.innerHTML = 'Get Husband <i class="fa-brands fa-space-awesome"></i>';
         });
 }
 
@@ -82,7 +88,7 @@ function resetModal() {
 
     // Reset the button state
     generateButton.disabled = false;
-    generateButton.innerHTML = 'Get Pic <i class="fa-brands fa-space-awesome"></i>';
+    generateButton.innerHTML = 'Get Husband <i class="fa-brands fa-space-awesome"></i>';
 
     // Hide the image and preloader
     memeImg.style.display = 'none';

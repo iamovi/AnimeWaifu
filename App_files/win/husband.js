@@ -6,6 +6,12 @@ document.getElementById('generate-meme-btn-husband').addEventListener('click', f
     fetchHusbandImage();
 });
 
+// Reset modal when it is hidden
+const husbandModal = document.getElementById('staticBackdropHusband');
+husbandModal.addEventListener('hidden.bs.modal', function () {
+    resetModal();
+});
+
 function fetchHusbandImage() {
     const generateButton = document.getElementById('generate-meme-btn-husband');
     const preloader = document.getElementById('preloader-unique-husband');
@@ -19,15 +25,16 @@ function fetchHusbandImage() {
     preloader.style.display = 'block'; // Show preloader GIF
     memeImg.style.display = 'none'; 
 
-    // Fetch a random anime character from Jikan API
-    fetch('https://api.jikan.moe/v4/random/anime')
+    // Add a cache-busting query parameter to avoid caching the JSON file
+    const url = 'https://iamovi.github.io/AnimeWaifu/data/husband.json' + '?_=' + new Date().getTime();
+
+    // Fetch the husband JSON file containing the image URLs
+    fetch(url)
         .then(response => response.json())
         .then(data => {
-            const anime = data.data;
-            // Check if the character is male based on the anime's general character gender (if available)
-            // For simplicity, you can manually choose certain anime with male characters
-            // Here, we are directly picking the character image from the anime
-            const husbandUrl = anime.images.jpg.image_url; // Get the character's image URL (this can be male or female)
+            const husbandLinks = data.links;
+            const randomIndex = Math.floor(Math.random() * husbandLinks.length);
+            const husbandUrl = husbandLinks[randomIndex];
 
             // Check if the meme URL has already been shown
             if (seenHusbands.has(husbandUrl)) {
@@ -38,12 +45,15 @@ function fetchHusbandImage() {
                 seenHusbands.add(husbandUrl);
                 memeImg.src = husbandUrl;
                 memeImg.onload = function() {
-                    // Hide preloader and show the image when it's loaded
-                    preloader.style.display = 'none';
-                    memeImg.style.display = 'block';
+                    // Delay showing the image for 1 second
+                    setTimeout(() => {
+                        // Hide preloader and show the image after the delay
+                        preloader.style.display = 'none';
+                        memeImg.style.display = 'block';
 
-                    // Countdown in the button after the meme is loaded
-                    countdownToEnableButton(generateButton, 'Get Husband');
+                        // Countdown in the button after the meme is loaded
+                        countdownToEnableButton(generateButton, 'Get Husband');
+                    }, 1000); // 1 second delay
                 };
             }
         })
@@ -68,4 +78,19 @@ function countdownToEnableButton(button, defaultText) {
             button.disabled = false;
         }
     }, 1000);
+}
+
+// Function to reset the modal content
+function resetModal() {
+    const generateButton = document.getElementById('generate-meme-btn-husband');
+    const preloader = document.getElementById('preloader-unique-husband');
+    const memeImg = document.getElementById('meme-img-unique-husband');
+
+    // Reset the button state
+    generateButton.disabled = false;
+    generateButton.innerHTML = 'Get Husband <i class="fa-brands fa-space-awesome"></i>';
+
+    // Hide the image and preloader
+    memeImg.style.display = 'none';
+    preloader.style.display = 'none';
 }
