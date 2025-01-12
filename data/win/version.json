@@ -1,9 +1,8 @@
 {
-  "version": "2.2.2",
+  "version": "2.2.3",
   "update_url": "https://iamovi.github.io/AnimeWaifu/install/",
   "whats_new": [
-    "Added Anime Husband Feature.",
-    "Added More Anime Waifu Category.",
+    "Added Anime GIF feature.",
     "Few UI Enhancement.",
     "Some Bug fixed."
   ]
