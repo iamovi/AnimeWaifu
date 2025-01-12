@@ -229,13 +229,9 @@
               class="stuff-item">About
               Menu <i class="fa-solid fa-bars"></i></button>
 
-            <button id="MW" style="cursor: pointer;" class="stuff-item" data-bs-toggle="modal"
+            <button id="MW" style="cursor: pointer;" class="stuff-item mwDbtn" data-bs-toggle="modal"
               data-bs-target="#staticBackdropMW">
-              MORE WAIFU <i class="fa-solid fa-lemon"></i></button>
-
-              <button id="Husband" style="cursor: pointer;" class="stuff-item" data-bs-toggle="modal"
-              data-bs-target="#staticBackdropHusband">
-              Anime Husband <i class="fa-solid fa-bug"></i></button>
+              Anime GIF <i class="fa-solid fa-lemon"></i></button>
 
             <hr>
 
@@ -430,7 +426,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
     </div>
   </div>
 
-  <!-- More Waifu Modal -->
+  <!-- Anime GIF Modal -->
 <div class="modal fade" id="staticBackdropMW" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
 aria-labelledby="staticBackdropLabel" aria-hidden="true">
 <div class="modal-dialog">
@@ -438,7 +434,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-header">
             <h1 class="modal-title fs-5" id="staticBackdropLabel">
                 <img width="60" class="img-fluid waifu-img" src="./assets/mw.gif" alt="" onclick="showFullscreen(this)">
-                MORE WAIFU <i class="fa-solid fa-lemon"></i>
+                Anime GIF <i class="fa-solid fa-lemon"></i>
             </h1>
             <button type="button" class="custom-btn-close meme-close" data-bs-toggle="modal"
                 data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
@@ -446,78 +442,17 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-body custom-modal-body">
             <div class="container-memes">
                 <div class="dropdown mwD">
-                    <button class="dropdown-toggle mwDbtn" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Type?
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li class="dropdown-item" data-type="waifu">i. WAIFU</li>
-                        <li class="dropdown-item" data-type="neko">ii. NEKO</li>
-                        <li class="dropdown-item" data-type="trap">iii. TRAP</li>
-                        <li class="dropdown-item" data-type="blowjob">iv. BLOWJOB</li>
-                        <hr>
-                        <li class="dropdown-item" data-type="dance">v. DANCE</li>
-                        <li class="dropdown-item" data-type="happy">vi. HAPPY</li>
-                        <li class="dropdown-item" data-type="cry">vii. CRY</li>
-                        <li class="dropdown-item" data-type="nom">viii. NOM</li>
-                        <li class="dropdown-item" data-type="cringe">ix. CRINGE</li>
-                        <li class="dropdown-item" data-type="handhold">x. HANDHOLD</li>
-                        <li class="dropdown-item" data-type="kill">xi. KILL</li>
-                    </ul>
-                </div>
-
-                <!-- Selected Category Display -->
-                <span id="selected-category-display" class="mt-2 text-muted">Selected: None</span>
-
-                <button class="memes-btn custom-memes-btn mb-3 mwDGbtn" id="generate-meme-btn-mw">Get Pic <i
+                  <p class="fs-6 d-inline mt-0 text-danger">Contain Hentai 🌼</p>
+                <button class="memes-btn custom-memes-btn mb-3" id="generate-meme-btn-mw">Get Pic <i
                     class="fa-brands fa-space-awesome"></i></button>
                 <div id="meme-container">
-                    <!-- Error message will be shown here -->
-                    <span id="error-message-mw" style="color: red; display: none;"
-                        class="text-center mt-5 fst-italic fs-5"></span>
                     <!-- Preloader (GIF) -->
                     <div id="preloader-unique-mw" class="preloader custom-preloader"
                         style="display:none; text-align: center;">
                         <img src="assets/mw-loading.gif" alt="Loading..." class="preloader-gif img-fluid w-75 m-auto">
                     </div>
-                    <hr>
                     <!-- Meme Image -->
-                    <img id="meme-img-unique-mw" class="img-fluid m-auto" src="" alt="Another Waifu."
-                        style="display:none;">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-
-<!-- Husband Modal -->
-<div class="modal fade" id="staticBackdropHusband" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-aria-labelledby="staticBackdropLabel" aria-hidden="true">
-<div class="modal-dialog">
-    <div class="modal-content custom-modal-content memes-modal-dark">
-        <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                <img width="60" class="img-fluid waifu-img" src="./assets/husband.gif" alt="" onclick="showFullscreen(this)">
-                Anime Husband <i class="fa-solid fa-bug"></i>
-            </h1>
-            <button type="button" class="custom-btn-close meme-close" data-bs-toggle="modal"
-                data-bs-target="#staticBackdropStuff"><i class="bi bi-arrow-90deg-left"></i></button>
-        </div>
-        <div class="modal-body custom-modal-body">
-            <div class="container-memes">
-              <p class="husband-g">Anime Husband for Girls!</p>
-                <button class="memes-btn m-auto custom-memes-btn mb-3 mt-3" id="generate-meme-btn-husband">Get Husband <i
-                    class="fa-brands fa-space-awesome"></i></button>
-                <div id="meme-container">
-                    <!-- Preloader (GIF) -->
-                    <div id="preloader-unique-husband" class="preloader custom-preloader"
-                        style="display:none; text-align: center;">
-                        <img src="assets/husband-load.gif" alt="Loading..." class="preloader-gif img-fluid w-75 m-auto">
-                    </div>
-                    <hr>
-                    <!-- Meme Image -->
-                    <img id="meme-img-unique-husband" class="img-fluid m-auto" src="" alt="Another Waifu."
+                    <img id="meme-img-unique-mw" class="img-fluid m-auto w-100" src="" alt="Another Waifu."
                         style="display:none;">
                 </div>
             </div>
@@ -563,10 +498,16 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
   document.head.appendChild(rexScript);
 </script>
 
+<!-- GIF -->
+<script>
+  const mwScript = document.createElement("script");
+  mwScript.src = "./mw.js?t=" + new Date().getTime();
+  document.head.appendChild(mwScript);
+</script>
+
+
 <script src="./memes.js"></script>
 <script src="./jokes.js"></script>
-<script src="./mw.js"></script>
-<script src="./husband.js"></script>
 <script src="update.js"></script>
 <script src="play.js"></script>
 

@@ -475,20 +475,12 @@ background: black;
   
 }
 
-.mwD p {
-  margin-bottom: 0;
-  border-bottom: 0.5px solid black;
-}
-
-.mwD ul li {
-  cursor: pointer;
-}
 
 .mwDbtn {
   background: #fbca1f;
   font-family: inherit;
   padding: 5px;
-  font-weight: 900;
+  /* font-weight: 900; */
   font-size: 18px;
   border: 3px solid black;
   /* border-radius: 0.4em; */
@@ -507,38 +499,11 @@ background: black;
 }
 
 
-
-#staticBackdropMW .dropdown-item.active {
-  background-color: pink !important;
-  color: white;
-}
-
-#selected-category-display {
-  font-size: 13px;
-}
-
-.husband-g {
-  font-size: 13px;
-  display: inline;
-  margin-top: 0px;
-}
-
-.mwDGbtn {
-  width: 35%;
-  font-size: 15px;
-}
- 
-
 /* // */
-
-#meme-img-unique-husband {
-  width: 85%;
+#MW {
+  margin-left: 10px;
+  margin-top: 20px;
 }
-
-#meme-img-unique-mw {
-  width: 85%;
-}
-
 /* Hide the scrollbar but allow scrolling */
 ::-webkit-scrollbar {
   width: 6px; /* Change this to make the scrollbar smaller */
