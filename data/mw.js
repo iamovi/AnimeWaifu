@@ -1,6 +1,3 @@
-// Set to store previously seen meme URLs
-const seenWaifuImages = new Set();
-
 // Array of direct GIF links
 const gifUrls = [
     "https://i.ibb.co/wRmZTTt/28669772.gif",
@@ -148,24 +145,17 @@ function fetchWaifuImage() {
             .then(response => response.json())
             .then(data => {
                 const waifuImageUrl = data.url; // Get the waifu image URL
+                
+                // Display the waifu image
+                memeImg.src = waifuImageUrl;
+                memeImg.onload = function() {
+                    // Hide preloader and show the image when it's loaded
+                    preloader.style.display = 'none';
+                    memeImg.style.display = 'block';
 
-                // Check if the image URL has already been shown
-                if (seenWaifuImages.has(waifuImageUrl)) {
-                    console.log('Duplicate image detected. Fetching a new image...');
-                    fetchWaifuImage(); // Retry fetching another image
-                } else {
-                    // Add the image URL to the set and display it
-                    seenWaifuImages.add(waifuImageUrl);
-                    memeImg.src = waifuImageUrl;
-                    memeImg.onload = function() {
-                        // Hide preloader and show the image when it's loaded
-                        preloader.style.display = 'none';
-                        memeImg.style.display = 'block';
-
-                        // Countdown in the button after the image is loaded
-                        countdownToEnableButton(generateButton, 'Get Pic');
-                    };
-                }
+                    // Countdown in the button after the image is loaded
+                    countdownToEnableButton(generateButton, 'Get Pic');
+                };
             })
             .catch(error => {
                 console.error('Error fetching image:', error);
