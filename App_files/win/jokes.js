@@ -18,7 +18,7 @@ function fetchRandomJoke() {
     jokeContainer.innerHTML = ''; 
     
     // JokeAPI endpoint for fetching a random joke
-    const url = 'https://v2.jokeapi.dev/joke/Any';
+    const url = 'https://v2.jokeapi.dev/joke/Miscellaneous,Dark,Pun,Spooky,Christmas';
 
     // Fetch the joke from the API
     fetch(url)
