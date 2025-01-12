@@ -484,10 +484,6 @@ background: black;
   cursor: pointer;
 }
 
-.mwDGbtn {
-  width: 40%;
-}
- 
 .mwDbtn {
   background: #fbca1f;
   font-family: inherit;
@@ -525,4 +521,21 @@ background: black;
   font-size: 13px;
   display: inline;
   margin-top: 0px;
+}
+
+
+.mwDGbtn {
+  width: 35%;
+  font-size: 15px;
+}
+ 
+
+/* // */
+
+#meme-img-unique-husband {
+  width: 85%;
+}
+
+#meme-img-unique-mw {
+  width: 85%;
 }
