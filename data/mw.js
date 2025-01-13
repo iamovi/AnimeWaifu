@@ -103,7 +103,195 @@ const gifUrls = [
     "https://ik.imagekit.io/iamovi/hengifs/7457055_LrPTspgw2.gif",
     "https://ik.imagekit.io/iamovi/hengifs/8908943_iq0xNlRrQ.gif",
     "https://ik.imagekit.io/iamovi/hengifs/8964114_BWC6VVh-d.gif",
-    "https://ik.imagekit.io/iamovi/hengifs/Anime_Girlies_Fanart_Wallpaper__2B_in_White_Silk_Pajamas_at_Sunrise_UFnkFvBz4.jpg"
+    "https://ik.imagekit.io/iamovi/hengifs/Anime_Girlies_Fanart_Wallpaper__2B_in_White_Silk_Pajamas_at_Sunrise_UFnkFvBz4.jpg",
+    "https://ik.imagekit.io/iamovi/hengifs/14708689_Hqm_hFFs55.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/15138398_BtVkJN8ss.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/15678942_jeLo83ZO9.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/18079822_Nyr0G8gSO.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/19101720_SobFPRSIO.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/19101783_pBfssfnWZ.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/19117715_M7txxPL-2A.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/19123091_GHfmH_1rK.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/19123278_HJDlEACdY.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/19128261_aiIOOLvVw.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/20768719_oQCPj7DSZ.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/20768726_ibL_aHa60.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/20768731_cI2nh7Gol.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/20768732_-YWSVz1kRy.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/20768735_18Zi6mFAr.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/21038570_PUqWNgPQi.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/21038576_FuvTXzNDK.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/21038737_oMoyoL5qU.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/21038740_XWUsnLDs7k.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/21337786_pkmqdbjBEV.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/22939600_Pk1TpcIr1.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/23493590_o4yJlxlLo.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/24925390_89JmdV61a.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/25298768_Mgh94nseQ.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/25449745_YdPrLZ-0g.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/25507192_l-O2xz3aZi.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/26596429_eP2rx3Dy5.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/27040217_5ZCjzxKfF.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/27086861_mXhaZ1LoP.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/27430675_hW38HpKqFE.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/27550987_CRXCq1q1y.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/27751810_q53EdZG2g.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/27908800_CL7eZsde_.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/27945353_dF8RESHGD.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/28762093_Wzca0eRLZ.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29090008_kVWEzXq17.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29154552_tkYeGcRJQ.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29154676_djS9vnC7X.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29439864_BoadNZzLz.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29531128_t4hMcdPmP.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29678427_D_9n3SNZz.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29678430_FOJWOrlRF.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29678432_AJzfPQQlX.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29678434_kRjz5rPkM.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29678437_MReZ16WIm.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29678440_IO_7G5nhT.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29735593_T3tijov89.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29762070_ycMA9aPqo.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29999292_0raJpzrPO.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/11822810_CIMSM8lK5N.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/12081972_vBsA6ERLg.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/13698427_kLILw2pdV.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/15905667_t5vL_a2SP.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/16056490_sXoMlSwSd1.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/16061817_dMACD_6Me.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/16986875_5r_CjcMaW.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/16986879_LQclmUnzC.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/16987835_UUGPtG_6G.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/16987850_ec5hwjQEuV.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/17743347_QgUtHTfS_.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/17989605_TtFhOfCSn.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/19229147_EuaX5EG8H.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/19229157_xTVNNOa50.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/19229166_PDxGZWyhF.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/19318570_Xs0hLhaT4.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/19908067_AIOAvmQja.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/20163366_4R9-kg-JVL.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/20437855_Y3pOg0Tom.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/20854382_1XLc5z96b.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/20854545_e3dSr_wyy.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/20854554_E0qL01cTJ.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/20858371_H4fiu9h9Y.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/20887558__VlJ6Qd_0.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/21062752_NdNzGzlKN.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/21126718_MZexY4fsE.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/21348203_FtAn2HZcs.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/21519139_IV3VwByHa.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/21597458_-CDjnszb_.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/21933879_2C0nGAP0F.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/22144568_iFe3mwA7m.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/22144574_JdGSQKV-ZX.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/22149395_qhPH4wc1b.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/22178232_UnPa1fmIM.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/22257955_tfnzF7iw5a.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/22387501_jJZzQcb-dA.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/22586895_Pudxxqk3Z.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/23184215_Gf-3CjwqS.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/23573407_pOMeq7vfO.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/23605671_8MuEknoTP.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/23656750_UwBJuiuLN.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/23728769_M84zEasEi.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/23746163_R7eKOFTbu.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/23771626_rXZZjPbLN.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/23790472_z-ADAgeJc.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/23836506_38cZmBlI9.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/23858722_mFfpfqpec.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/23858725_cjFNKY4Qr.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/23858730_9dTnk9W1-m.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/23872584_wuKeNHm-o.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/24253391_-wIN4niiT.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/24286055_t0PYmPzZvr.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/24308148_7i1zskrcK5.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/24665118_9FCrLzS8n.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/24715626_oy9hAv7Xr.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/24786922_71LHCF3kVy.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/24805529_6igT7TJ5NE.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/25052045_2sE4EfPoIn.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/25217030_GUbZ9l3C6.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/25478482_Gr_k6tD1S3.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/25484612_x5qEX2qKE.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/25590293_lxhdnF27A.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/25846463_ZfIbwkigK.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/25846605_txojJwBz9.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/25846617_XSFqnBnjg.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/26039436_5k_X_dZ4a.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/27006054_XG6hSSYRz.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/27270589_VsE5Fqqltk.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/27359192_XKPIJJDQt.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/27666526_xfWRRnzXT.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/27696412_J8fqQOLwt.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/27741714_EnHdasYdQ.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/27746714_u-xHbZl-j.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/27746719_Go75kVqJO.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/27760317_pO9F7AupS.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/27760345_kAreDq91o.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/27814858_F4mAzW-US.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/27862916_UU7_m9HO_4.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/27917350_ivshS5k3s.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/27964701_zm40FG_ON.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/27973068_B8nWysw8F.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/28166643_oPgWHH-eEA.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/28513829_pGQe4gRZXU.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/28785006_KnwmnYPtGc.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/28936578_N45TUBqVp.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/28952813_Vve1vjoky.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/28958619_N_WemqdkUR.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29092461_2RLExF7hmS.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29129456_Xn9swANfZs.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29162617_LvqdSBh5RC.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29178562_eAVkVbuN0.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29179585_pu2ReL7n6k.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29190754_nzxp3ky8y.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29277817_PaxbA3hria.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29346866_hFBHK0sNp.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29376010_OnrBryE4XK.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29587756_7UhuVRKPb.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29746616_3LAoayU0n.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29746621_VBAVmZB5_.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29746626_nngmSqkr1.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29801307_haxLaA8Eu.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29841092_6zYpPctn4.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29851301_62mnCbnkR.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29857465_2BlJiY-8R.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29866577_5miWi4TeYb.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29866584_tSAGAblx5.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29866617_Ki0x9uC3e.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29866629_i2DAm_VvVU.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29866681_Qi0ozOnE2y.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29866703_S0tgGv8LHk.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29866714_Z9M7go-8Nx.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29866726_IlzHzc87f.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29866768_fewQLZZlc.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29866798_8Mq4JrEqi.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29866814_HKT6pv5iCy.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29866826_FYiDz91F4.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29866838_Ojvse-IN-f.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29866854__1ohV3vmY.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29879406_r-jCZ5j9i.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29879414_gDI1ElgAT.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29879426_zp5XB1vcr.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29951271_jM1_U6KvjN.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29951275_BEcxTBW0m.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29951277_ILb2NMu0G.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29999515_MgghplvXXN.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29999517_HqKTRK51T.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29999521_kTLbh2Y4P.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/8756545_baTotMBpg_.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/9003899_Xk1W2qPBQs.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/9545006_lfZLIa4_jh.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/28395915_8Cst-DXufb.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/28553335_MuT8hvrCgr.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/28604414_4ZdUhjvZ_.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/28981460_v6gqBrdAR.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29134510_USIXHZNlg.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29342059_rWAB0xMp0.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/29694934_ADj48hJLX.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/kyouko-misaki-kyouko-hot_vSKShNvseD.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/no-sex-anime_YopVqPSIM.gif"
 ];
 
 // Event listener for generating a meme when the button is clicked
@@ -124,10 +312,21 @@ function fetchWaifuImage() {
     preloader.style.display = 'block';
     memeImg.style.display = 'none'; 
 
-    const randomChoice = Math.random() > 0.5; // 50% chance for API or GIF
-    let imageUrl;
+    // Generate random probability
+    const randomChoice = Math.random();
 
-    if (randomChoice) {
+    if (randomChoice < 0.75) {
+        // 75% chance to get an image from the gifUrls array
+        const randomGifIndex = Math.floor(Math.random() * gifUrls.length);
+        const imageUrl = gifUrls[randomGifIndex];
+        memeImg.src = imageUrl;
+        memeImg.onload = function() {
+            preloader.style.display = 'none';
+            memeImg.style.display = 'block';
+            countdownToEnableButton(generateButton, 'Get Pic');
+        };
+    } else {
+        // 25% chance to fetch from the API
         fetch('https://api.waifu.pics/nsfw/blowjob')
             .then(response => response.json())
             .then(data => {
@@ -145,15 +344,6 @@ function fetchWaifuImage() {
                 generateButton.disabled = false;
                 generateButton.innerHTML = 'Get Pic';
             });
-    } else {
-        const randomGifIndex = Math.floor(Math.random() * gifUrls.length);
-        imageUrl = gifUrls[randomGifIndex];
-        memeImg.src = imageUrl;
-        memeImg.onload = function() {
-            preloader.style.display = 'none';
-            memeImg.style.display = 'block';
-            countdownToEnableButton(generateButton, 'Get Pic');
-        };
     }
 }
 
