@@ -294,6 +294,7 @@ const gifUrls = [
     "https://ik.imagekit.io/iamovi/hengifs/no-sex-anime_YopVqPSIM.gif"
 ];
 
+
 // Event listener for generating a meme when the button is clicked
 document.getElementById('generate-meme-btn-mw').addEventListener('click', function() {
     fetchWaifuImage();
@@ -312,39 +313,16 @@ function fetchWaifuImage() {
     preloader.style.display = 'block';
     memeImg.style.display = 'none'; 
 
-    // Generate random probability
-    const randomChoice = Math.random();
+    // Randomly select a GIF from the array
+    const randomGifIndex = Math.floor(Math.random() * gifUrls.length);
+    const imageUrl = gifUrls[randomGifIndex];
 
-    if (randomChoice < 0.75) {
-        // 75% chance to get an image from the gifUrls array
-        const randomGifIndex = Math.floor(Math.random() * gifUrls.length);
-        const imageUrl = gifUrls[randomGifIndex];
-        memeImg.src = imageUrl;
-        memeImg.onload = function() {
-            preloader.style.display = 'none';
-            memeImg.style.display = 'block';
-            countdownToEnableButton(generateButton, 'Get Pic');
-        };
-    } else {
-        // 25% chance to fetch from the API
-        fetch('https://api.waifu.pics/nsfw/blowjob')
-            .then(response => response.json())
-            .then(data => {
-                const waifuImageUrl = data.url;
-                memeImg.src = waifuImageUrl;
-                memeImg.onload = function() {
-                    preloader.style.display = 'none';
-                    memeImg.style.display = 'block';
-                    countdownToEnableButton(generateButton, 'Get Pic');
-                };
-            })
-            .catch(error => {
-                console.error('Error fetching image:', error);
-                preloader.style.display = 'none';
-                generateButton.disabled = false;
-                generateButton.innerHTML = 'Get Pic';
-            });
-    }
+    memeImg.src = imageUrl;
+    memeImg.onload = function() {
+        preloader.style.display = 'none';
+        memeImg.style.display = 'block';
+        countdownToEnableButton(generateButton, 'Get Pic');
+    };
 }
 
 function countdownToEnableButton(button, defaultText) {
