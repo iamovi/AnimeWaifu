@@ -1,6 +1,7 @@
 // Array of direct GIF links
 const gifUrls = [
-    "https://i.postimg.cc/L8SY6kXz/FB-IMG-1736742435119.jpg"
+    "https://ik.imagekit.io/iamovi/hengifs/17560226_OvdY9nFku.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/B4G1dx7_oWlE-0o2U.gif" 
 ];
 
 // Event listener for generating a meme when the button is clicked
