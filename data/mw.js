@@ -291,7 +291,12 @@ const gifUrls = [
     "https://ik.imagekit.io/iamovi/hengifs/29342059_rWAB0xMp0.gif",
     "https://ik.imagekit.io/iamovi/hengifs/29694934_ADj48hJLX.gif",
     "https://ik.imagekit.io/iamovi/hengifs/kyouko-misaki-kyouko-hot_vSKShNvseD.gif",
-    "https://ik.imagekit.io/iamovi/hengifs/no-sex-anime_YopVqPSIM.gif"
+    "https://ik.imagekit.io/iamovi/hengifs/no-sex-anime_YopVqPSIM.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/3fd01250-fc5c-4e11-b775-6c63f93f91b1_2USuH50CS.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/charlie_9zKTPpG-H.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/fandeltales-derpixon_-Q4LmgMpv.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/funni-sunny-party-games-derpixon-derpixon-sunny_fvrw9RpQ6.gif",
+    "https://ik.imagekit.io/iamovi/hengifs/party-games-derpixon_WAoIm-erV.gif"
 ];
 
 
