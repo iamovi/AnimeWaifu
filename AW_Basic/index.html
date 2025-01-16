@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnimeWaifu</title>
+  <link href="./animewaifu.png" rel="icon" />
+  
+  
+  <link rel="preload" href="./assets/init-waifu.mp4" as="video" type="video/mp4" />
+
+  <meta property="og:title" content="AnimeWaifu" />
+  <meta property="og:description" content="Swipe to get a random anime waifu." />
+  <meta property="og:url" content="https://iamovi.github.io/AnimeWaifu/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+
+    <!-- ani.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ani.css@1.0.2/dist/css/ani.min.css">
+
+
+  <link href="assets/waifu-style.css" rel="stylesheet" />
+
+  <!-- Preload the GIF -->
+  <link rel="preload" href="./assets/waifu_wait.gif" as="image" />
+
+</head>
+
+<body>
+
+
+  <div id="swipe-container">
+    <div id="preloader">
+      <img src="flower.gif" alt="Loading..." />
+    </div>
+    <div id="swipe-text">hi, Swipe for Anime Waifu.</div>
+    
+    <div id="video-container">
+ <video id="background-video" autoplay muted loop preload="auto" poster="./assets/init-poster.jpg">
+   <source src="./assets/init-waifu.mp4" type="video/mp4" />
+   Your browser does not support the video tag.
+</video>
+
+  </div>
+
+
+
+
+<!-- Memes Modal -->
+<div class="modal fade" id="staticBackdropMemes" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content custom-modal-content memes-modal-dark">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                    <img width="60" class="img-fluid waifu-img" src="./assets/mememan.gif" alt=""
+                        onclick="showFullscreen(this)">
+                    Memes, Room!
+                </h1>
+                <button type="button" class="custom-btn-close meme-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-brands fa-mixer"></i></button>
+            </div>
+            <div class="modal-body custom-modal-body">
+                <div class="container-memes">
+                    <label class="switch custom-switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider custom-slider"></span>
+                    </label>
+                    <button class="memes-btn custom-memes-btn" id="generate-meme-btn">Get Meme <i class="fa-brands fa-space-awesome"></i></button>
+                    <div id="meme-container">
+                        <!-- Preloader (GIF) -->
+                        <div id="preloader-unique" class="preloader custom-preloader" style="display:none; text-align: center;">
+                            <img src="assets/meme-preloader.gif" alt="Loading..." class="preloader-gif img-fluid">
+                        </div>
+                        <!-- Meme Image -->
+                        <img id="meme-img-unique" class="img-fluid mt-2 text-center" src="" alt="Random Meme" style="display:none;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+  <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="assets/app.js"></script>
+
+</body>
+
+</html>
