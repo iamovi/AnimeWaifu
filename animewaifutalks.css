@@ -4,7 +4,7 @@
   text-shadow: 2px 2px 4px rgba(255, 152, 0, 0.7);
 
 #loading-text {
-  width: 90%;
+  width: 85%;
   padding: 20px;
   background: rgba(0, 0, 0, 0.5); /* Dark transparent background */
   backdrop-filter: blur(10px); /* Glass effect */
@@ -19,7 +19,6 @@
   font-weight: bold;
   z-index: 1000;
   font-family: "Tajawal", serif;
-  border-radius: 10px; /* Rounded corners for aesthetics */
-border-radius: 0px;
+  border-radius: 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
