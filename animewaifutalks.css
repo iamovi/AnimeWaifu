@@ -3,10 +3,13 @@
 #animewaifu-talks {
   text-shadow: 2px 2px 4px rgba(255, 152, 0, 0.7);
 }
+
 #loading-text {
   width: 90%;
   padding: 20px;
-  background: rgb(175, 68, 68);
+  background: rgba(0, 0, 0, 0.5); /* Dark transparent background */
+  backdrop-filter: blur(10px); /* Glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for depth */
   display: none;
   position: fixed;
   top: 50%;
@@ -17,4 +20,7 @@
   font-weight: bold;
   z-index: 1000;
   font-family: "Tajawal", serif;
+  border-radius: 10px; /* Rounded corners for aesthetics */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
+
