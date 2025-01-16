@@ -17,14 +17,17 @@ document
     iframeContainer.style.display = "block";
     preloaderX.style.display = "block";
 
-    // Delay the loading text by 1 second
-    setTimeout(function() {
+    // Create a variable to store the timeout ID for loading text
+    let loadingTextTimeout = setTimeout(function() {
       loadingText.style.display = "block";
       loadingText.innerHTML = "Loading...<br> Currently this App's backend is deployed on render.com free tier due to money issues, So the first load may take up to 1 minute. Kindly wait :(";
     }, 1000); // 1 second delay for loading text
 
     iframe.addEventListener("load", function () {
-      // Hide both preloader gif and loading text immediately
+      // Clear the timeout if iframe loads before 1 second
+      clearTimeout(loadingTextTimeout);
+
+      // Hide both the preloader gif and the loading text immediately when the iframe loads
       preloaderX.style.display = "none";
       loadingText.style.display = "none";
     });
