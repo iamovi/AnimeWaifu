@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal&display=swap');
-
 #animewaifu-talks {
   text-shadow: 2px 2px 4px rgba(255, 152, 0, 0.7);
 }
@@ -19,7 +17,7 @@
   font-size: 18px;
   font-weight: bold;
   z-index: 1000;
-  font-family: "Tajawal", serif;
+  font-family: "Bubbler One", serif;
   border-radius: 0;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
