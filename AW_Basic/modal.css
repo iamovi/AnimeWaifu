@@ -1,0 +1,207 @@
+.custom-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: red;
+  cursor: pointer;
+  line-height: 1;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.custom-close-btn:hover {
+  color: darkred;
+}
+
+.custom-modal-content {
+  border-radius: 0 !important;
+  backdrop-filter: blur(10px); 
+}
+
+.modal h1 {
+  font-family: "Annie Use Your Telescope", serif;
+  font-weight: bold;
+  
+}
+
+/* The switch - the box around the slider */
+.switch {
+ font-size: 11px;
+ position: relative;
+ display: inline-block;
+ width: 3.5em;
+ height: 1em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+ opacity: 0;
+ width: 0;
+ height: 0;
+}
+
+/* The slider */
+.slider {
+ position: absolute;
+ cursor: pointer;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: #ccc;
+ border: 2px solid #000;
+ transition: .4s;
+ border-radius: 1px;
+}
+
+.slider:before {
+ position: absolute;
+ content: "";
+ height: 1.3em;
+ width: 1.2em;
+ border-radius: 2px;
+ left: 0.2em;
+ bottom: 0.3em;
+ background-color: #fff;
+ border: 2px solid #000;
+ transition: 0.1s;
+}
+
+input:checked + .slider {
+ background-color: #000;
+}
+
+input:focus + .slider {
+ box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+ transform: translateX(1.3em);
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Push items to the edges */
+}
+
+.toggle-container p {
+  margin: 0; /* Remove default margin */
+  font-size: 1em; /* Adjust font size if needed */
+  flex-grow: 1; /* Allow the text to take up remaining space */
+}
+
+.switch {
+  margin-left: auto; /* Ensure the toggle stays on the right */
+}
+
+.modal-body {
+font-family: "Reddit Mono", serif;
+}
+
+/* Notification Container Styles */
+#notification-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  max-width: 300px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Base Notification Styles */
+.notification {
+  padding: 12px 20px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: fadeIn 0.5s forwards, fadeOut 0.5s 2.5s forwards; /* Animations */
+  width: 100%;
+  display: inline-block;
+}
+
+/* Success Notification Styles */
+.notification.success {
+  background-color: #4CAF50; /* Green */
+  border-left: 5px solid #388E3C;
+}
+
+/* Warning Notification Styles */
+.notification.warning {
+  background-color: #FF9800; /* Orange */
+  border-left: 5px solid #F57C00;
+}
+
+/* Error Notification Styles (optional for future use) */
+.notification.error {
+  background-color: #F44336; /* Red */
+  border-left: 5px solid #D32F2F;
+}
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation for fade-out */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+/* Optional styling for notifications while they are in the container */
+.notification:empty {
+  display: none;
+}
+
+.info {
+  color: gray;
+  text-align: center;
+  font-size: 13px;
+  padding: 0 20px;
+}
+
+
+.button {
+  background: #fbca1f;
+  font-family: inherit;
+  padding: 5px;
+  font-size: 18px;
+  border: 3px solid black;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+  margin: auto;
+  display: block;
+  margin-top: 25%;
+}
+
+.button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+.button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}

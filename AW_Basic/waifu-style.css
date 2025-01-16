@@ -19,34 +19,33 @@ body {
   background-repeat: no-repeat; /* Prevent tiling */
   text-align: center;
   line-height: 100vh;
-  font-size: 20px;
   transition: background-image 0.3s ease;
   position: relative;
-  /* transition: background-image 0.5s ease-in-out; */
 }
 
 #swipe-text {
   position: absolute;
-  top: 30%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  font-family: "Bungee Spice", serif;
-
+  font-size: 27px;
+  color: white;
+  font-family: "Jersey 15", serif;
 }
 
 
 #preloader {
   position: fixed; 
-  top: -36%;       
-  right: 9px;      
+  top: -43%;       
+  right: 0px;      
   display: none;    
 }
 
 
 #preloader img {
-  width: 40px;
-  height: 40px;
+  width: 110px;
+  height: 110px;
 }
 
 
@@ -54,6 +53,39 @@ body {
   display: none;
 }
 
+#image-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Send it to the background */
+}
+
+#background-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+#loading-text {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 5px;
+  display: none; /* Initially hide it */
+  z-index: 100;
+  font-family: "Jersey 15", serif;
+}
 
 @media (min-width: 768px) {
   #swipe-container {
