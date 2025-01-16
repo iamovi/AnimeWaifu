@@ -22,5 +22,34 @@
   font-family: "Tajawal", serif;
   border-radius: 10px; /* Rounded corners for aesthetics */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  animation: fade-in 0.5s ease-out; /* Animation added */
 }
 
+.glass-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  animation: pop-in 0.5s ease-out;
+}
+
+@keyframes pop-in {
+  0% { 
+    transform: scale(0.8); 
+    opacity: 0; 
+  }
+  100% { 
+    transform: scale(1); 
+    opacity: 1; 
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
