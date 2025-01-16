@@ -20,5 +20,6 @@
   z-index: 1000;
   font-family: "Tajawal", serif;
   border-radius: 10px; /* Rounded corners for aesthetics */
+border-radius: 0px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 }
