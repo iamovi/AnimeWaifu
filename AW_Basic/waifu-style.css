@@ -1,5 +1,4 @@
-/* General Styles */
-* {
+*{
   user-select: none;
 }
 
@@ -9,7 +8,6 @@ body {
   background-color: black;
 }
 
-/* Default styles for mobile */
 #swipe-container {
   font-family: 'Chakra Petch', sans-serif;
   color: white;
@@ -36,6 +34,7 @@ body {
   font-family: "Jersey 15", serif;
 }
 
+
 #preloader {
   position: fixed; 
   top: -43%;       
@@ -43,10 +42,12 @@ body {
   display: none;    
 }
 
+
 #preloader img {
   width: 110px;
   height: 110px;
 }
+
 
 #swipe-container.loading #swipe-text {
   display: none;
@@ -74,78 +75,40 @@ body {
 
 #loading-text {
   position: fixed;
-  bottom: 20px;
-  left: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
   transform: translateX(-50%);
   font-size: 18px;
-  color: white;
+  color: black;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 5px;
-  display: none; /* Initially hide it */
+  display: none; 
   z-index: 100;
   font-family: "Jersey 15", serif;
+  background-color: white;
 }
 
-/* PC Screen Styles */
 @media (min-width: 768px) {
   #swipe-container {
-    font-family: 'Chakra Petch', sans-serif;
-    color: white;
-    font-weight: bold;
-    width: 100%;
-    height: 100vh;
-    background-size: contain; /* Prevent stretching */
-    background-position: center;
-    background-repeat: no-repeat;
-    text-align: center;
-    line-height: 100vh;
-    transition: background-image 0.3s ease;
-    position: relative;
-  }
-
-  #image-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1; /* Send it to the background */
-    display: flex; /* Center the image */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-  }
-
-  #background-image {
-    max-width: 90%; /* Limit width to 90% of the container */
-    max-height: 90%; /* Limit height to 90% of the container */
-    object-fit: contain; /* Ensure the image keeps its aspect ratio */
-    background-color: black; /* Maintain a black background for gaps */
-    border-radius: 10px; /* Optional: Add rounded corners */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Optional: Add a subtle shadow */
-  }
-
-  #loading-text {
-    font-size: 20px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-}
-
-/* Larger Screen Styles */
-@media (min-width: 1200px) {
-  #swipe-container {
-    font-size: 20px;
+    background-size: contain; 
   }
 
   #swipe-text {
-    font-size: 24px;
+    font-size: 24px; 
+  }
+}
+
+@media (min-width: 1200px) {
+  #swipe-container {
+    font-size: 28px; 
   }
 
-  #background-image {
-    max-width: 70%; /* Adjust for larger screens */
-    max-height: 70%;
+  #preloader img {
+    width: 60px; 
+    height: 60px;
   }
+
 }
 
 

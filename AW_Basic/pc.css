@@ -1,0 +1,61 @@
+/* PC Screen Styles */
+@media (min-width: 768px) {
+    #swipe-container {
+      font-family: 'Chakra Petch', sans-serif;
+      color: white;
+      font-weight: bold;
+      width: 100%;
+      height: 100vh;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      text-align: center;
+      line-height: 100vh;
+      transition: background-image 0.3s ease;
+      position: relative;
+    }
+  
+    #image-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+    }
+  
+    #background-image {
+      max-width: 90%;
+      max-height: 90%; 
+      object-fit: contain;
+      background-color: black;
+
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); 
+    }
+  
+    #loading-text {
+      font-size: 20px;
+
+    }
+
+  }
+  
+  /* Larger Screen Styles */
+  @media (min-width: 1200px) {
+    #swipe-container {
+      font-size: 20px;
+    }
+  
+    #swipe-text {
+      font-size: 24px;
+    }
+  
+    #background-image {
+      max-width: 70%; 
+      max-height: 85%;
+    }
+  }

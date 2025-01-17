@@ -17,88 +17,93 @@
 
 .custom-modal-content {
   border-radius: 0 !important;
-  backdrop-filter: blur(10px); 
+  backdrop-filter: blur(10px);
 }
 
 .modal h1 {
   font-family: "Annie Use Your Telescope", serif;
   font-weight: bold;
-  
+
 }
 
 /* The switch - the box around the slider */
 .switch {
- font-size: 11px;
- position: relative;
- display: inline-block;
- width: 3.5em;
- height: 1em;
+  font-size: 11px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 1em;
 }
 
 /* Hide default HTML checkbox */
 .switch input {
- opacity: 0;
- width: 0;
- height: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 /* The slider */
 .slider {
- position: absolute;
- cursor: pointer;
- top: 0;
- left: 0;
- right: 0;
- bottom: 0;
- background-color: #ccc;
- border: 2px solid #000;
- transition: .4s;
- border-radius: 1px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border: 2px solid #000;
+  transition: .4s;
+  border-radius: 1px;
 }
 
 .slider:before {
- position: absolute;
- content: "";
- height: 1.3em;
- width: 1.2em;
- border-radius: 2px;
- left: 0.2em;
- bottom: 0.3em;
- background-color: #fff;
- border: 2px solid #000;
- transition: 0.1s;
+  position: absolute;
+  content: "";
+  height: 1.3em;
+  width: 1.2em;
+  border-radius: 2px;
+  left: 0.2em;
+  bottom: 0.3em;
+  background-color: #fff;
+  border: 2px solid #000;
+  transition: 0.1s;
 }
 
-input:checked + .slider {
- background-color: #000;
+input:checked+.slider {
+  background-color: #000;
 }
 
-input:focus + .slider {
- box-shadow: 0 0 1px #2196F3;
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + .slider:before {
- transform: translateX(1.3em);
+input:checked+.slider:before {
+  transform: translateX(1.3em);
 }
 
 .toggle-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Push items to the edges */
+  justify-content: space-between;
+  /* Push items to the edges */
 }
 
 .toggle-container p {
-  margin: 0; /* Remove default margin */
-  font-size: 1em; /* Adjust font size if needed */
-  flex-grow: 1; /* Allow the text to take up remaining space */
+  margin: 0;
+  /* Remove default margin */
+  font-size: 1em;
+  /* Adjust font size if needed */
+  flex-grow: 1;
+  /* Allow the text to take up remaining space */
 }
 
 .switch {
-  margin-left: auto; /* Ensure the toggle stays on the right */
+  margin-left: auto;
+  /* Ensure the toggle stays on the right */
 }
 
 .modal-body {
-font-family: "Reddit Mono", serif;
+  font-family: "Reddit Mono", serif;
 }
 
 /* Notification Container Styles */
@@ -124,26 +129,30 @@ font-family: "Reddit Mono", serif;
   font-style: italic;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   opacity: 0;
-  animation: fadeIn 0.5s forwards, fadeOut 0.5s 2.5s forwards; /* Animations */
+  animation: fadeIn 0.5s forwards, fadeOut 0.5s 2.5s forwards;
+  /* Animations */
   width: 100%;
   display: inline-block;
 }
 
 /* Success Notification Styles */
 .notification.success {
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50;
+  /* Green */
   border-left: 5px solid #388E3C;
 }
 
 /* Warning Notification Styles */
 .notification.warning {
-  background-color: #FF9800; /* Orange */
+  background-color: #FF9800;
+  /* Orange */
   border-left: 5px solid #F57C00;
 }
 
 /* Error Notification Styles (optional for future use) */
 .notification.error {
-  background-color: #F44336; /* Red */
+  background-color: #F44336;
+  /* Red */
   border-left: 5px solid #D32F2F;
 }
 
@@ -153,6 +162,7 @@ font-family: "Reddit Mono", serif;
     opacity: 0;
     transform: translateX(100%);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -165,6 +175,7 @@ font-family: "Reddit Mono", serif;
     opacity: 1;
     transform: translateX(0);
   }
+
   100% {
     opacity: 0;
     transform: translateX(100%);
@@ -181,6 +192,20 @@ font-family: "Reddit Mono", serif;
   text-align: center;
   font-size: 13px;
   padding: 0 20px;
+
+}
+
+.info2 {
+  color: white;
+  text-align: center;
+  font-size: 13px;
+  padding: 10px 20px;
+
+  background-color: #FF80AB;
+  /* Soft Pink */
+  border-left: 5px solid #F50057;
+  /* Rich Pink */
+
 }
 
 
@@ -205,4 +230,30 @@ font-family: "Reddit Mono", serif;
 .button:active {
   transform: translate(0.05em, 0.05em);
   box-shadow: 0.05em 0.05em;
+}
+
+
+#loadingTimeoutModal {
+  font-family: "Reddit Mono", serif;
+}
+
+#loadingTimeoutModal h5 {
+  color: red;
+}
+
+#loadingTimeoutModal .modal-content {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0;
+  padding: 0 30px;
+}
+
+#loadingTimeoutModal .modal-body {
+  color: white;
+}
+
+#loadingTimeoutModal #refresh-button {
+  background-color: #fbca1f;
+  border-radius: 0;
 }

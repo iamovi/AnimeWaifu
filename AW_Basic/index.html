@@ -29,6 +29,7 @@
 
   <link href="waifu-style.css" rel="stylesheet" />
   <link href="modal.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./pc.css">
   
   <!-- Preloads -->
   <link rel="preload" href="waifu_wait.gif" as="image" />
@@ -92,6 +93,23 @@
     </div>
   </div>
 </div>
+
+<div class="modal fade" id="loadingTimeoutModal" tabindex="-1" aria-labelledby="loadingTimeoutLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loadingTimeoutLabel">Waifu Loading Timeout  <i class="bi bi-exclamation-triangle-fill"></i></h5>
+      </div>
+      <div class="modal-body">
+        It's taking too long to fetch your Waifu. Please refresh the page to try again.
+      </div>
+      <div class="modal-footer">
+        <button id="refresh-button" type="button" class="btn">Refresh</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   
   <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
