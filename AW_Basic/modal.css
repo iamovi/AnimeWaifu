@@ -117,10 +117,11 @@ font-family: "Reddit Mono", serif;
 .notification {
   padding: 12px 20px;
   margin-bottom: 12px;
-  border-radius: 8px;
+  border-radius: 0;
   font-size: 14px;
   font-weight: 600;
   color: white;
+  font-style: italic;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   opacity: 0;
   animation: fadeIn 0.5s forwards, fadeOut 0.5s 2.5s forwards; /* Animations */
