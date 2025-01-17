@@ -73,12 +73,13 @@ function getRandomWaifuImage() {
   const currentSession = fetchSessionId; // Store the current session ID
 
   // Variables for toggling loading images
-  let toggle = true;
+  let toggleIndex = 0; // Index to track the current placeholder image
+  const placeholderImages = ['waifu-load.jpg', 'waifu-load-real.jpg', 'waifu-load-manga.jpg']; // Array of placeholder images
 
   // Function to toggle placeholder images immediately
   const togglePlaceholderImages = () => {
-    backgroundImage.src = toggle ? 'waifu-load.jpg' : 'waifu-load-real.jpg';
-    toggle = !toggle;
+    backgroundImage.src = placeholderImages[toggleIndex]; // Set the current placeholder image
+    toggleIndex = (toggleIndex + 1) % placeholderImages.length; // Cycle through the images
   };
 
   // Start by toggling immediately, then every 1 second
