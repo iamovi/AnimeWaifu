@@ -26,6 +26,7 @@ let isLoading = false;
 let hasSwiped = false;
 let currentCategory = 'sfw'; // Default category
 let retryCount = 0;
+let fetchSessionId = 0; // A counter to track the active fetch session
 
 // Event listener for toggle switch
 toggleNsfw.addEventListener('change', () => {
@@ -36,6 +37,7 @@ toggleNsfw.addEventListener('change', () => {
     currentCategory = 'sfw'; // Set category to SFW
     showNotification('NSFW mode is now OFF', 'warning');
   }
+  fetchSessionId++; // Increment session ID to invalidate ongoing fetches
 });
 
 // Function to show notifications
@@ -65,21 +67,55 @@ function getRandomWaifuImage() {
   }
 
   preloader.style.display = 'block'; // Show preloader
-  backgroundImage.src = 'waifu-load.jpg'; // Show placeholder/loading image
   isLoading = true; // Set loading state
   loadingText.style.display = 'block'; // Show loading text
+
+  const currentSession = fetchSessionId; // Store the current session ID
+
+  // Variables for toggling loading images
+  let toggle = true;
+
+  // Function to toggle placeholder images immediately
+  const togglePlaceholderImages = () => {
+    backgroundImage.src = toggle ? 'waifu-load.jpg' : 'waifu-load-real.jpg';
+    toggle = !toggle;
+  };
+
+  // Start by toggling immediately, then every 1 second
+  togglePlaceholderImages(); // Immediate toggle
+  const toggleInterval = setInterval(togglePlaceholderImages, 1000);
+
+  // Timeout to stop loading if stuck
+  const loadingTimeout = setTimeout(() => {
+    if (currentSession === fetchSessionId) {
+      preloader.style.display = 'none';
+      loadingText.style.display = 'none';
+      isLoading = false;
+      clearInterval(toggleInterval); // Stop toggling
+      console.error('Loading timed out.');
+    }
+  }, 10000); // 10-second timeout
 
   const fetchImage = () => {
     setTimeout(() => {
       fetch(`https://api.waifu.pics/${currentCategory}/waifu`) // Fetch image based on currentCategory
         .then((response) => response.json())
         .then((data) => {
+          if (currentSession !== fetchSessionId) {
+            // Ignore response if session ID has changed
+            clearInterval(toggleInterval);
+            clearTimeout(loadingTimeout);
+            return;
+          }
+
           if (data?.url) {
             const newImage = new Image(); // Create a temporary image
             newImage.src = data.url;
 
             // Wait until the image is fully loaded
             newImage.onload = () => {
+              clearInterval(toggleInterval); // Stop toggling images
+              clearTimeout(loadingTimeout); // Clear timeout
               backgroundImage.src = data.url; // Update the background image
               preloader.style.display = 'none'; // Hide preloader
               loadingText.style.display = 'none'; // Hide loading text
@@ -97,10 +133,18 @@ function getRandomWaifuImage() {
         })
         .catch((err) => {
           console.error('Error fetching image:', err);
+          if (currentSession !== fetchSessionId) {
+            clearInterval(toggleInterval);
+            clearTimeout(loadingTimeout);
+            return; // Ignore response if session ID has changed
+          }
+
           if (retryCount < 3) {
             retryCount++;
             fetchImage(); // Retry fetching up to 3 times
           } else {
+            clearInterval(toggleInterval); // Stop toggling images after retries
+            clearTimeout(loadingTimeout); // Clear timeout
             preloader.style.display = 'none'; // Hide preloader after max retries
             loadingText.style.display = 'none'; // Hide loading text
             isLoading = false; // Reset loading state
