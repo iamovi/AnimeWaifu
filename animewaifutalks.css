@@ -5,9 +5,9 @@
 #loading-text {
   width: 85%;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.5); /* Dark transparent background */
-  backdrop-filter: blur(10px); /* Glass effect */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for depth */
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   display: none;
   position: fixed;
   top: 50%;
@@ -17,7 +17,7 @@
   font-size: 18px;
   font-weight: bold;
   z-index: 1000;
-  font-family: "Bubbler One", serif;
   border-radius: 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+font-family: "Shantell Sans", serif;
 }
