@@ -9,25 +9,65 @@ function Test-Admin {
 }
 
 if (-not (Test-Admin)) {
-    Write-Output "Please run PowerShell as an administrator to execute this script."
-    Write-Output "Press Enter to exit..."
+    Write-Host "Please run PowerShell as an administrator to execute this script.`n"
+    Write-Host "Press Enter to exit...`n"
     [System.Console]::ReadLine() | Out-Null
     exit
 }
 
-# Define the download URL
-$DownloadUrl = "https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/AnimeWaifuSetup.exe"
+# Options for the user
+Write-Host "Select the version of AnimeWaifu to download and install:`n"
+Write-Host "1) AnimeWaifu`n"
+Write-Host "2) AnimeWaifu Basic`n"
+Write-Host "3) AnimeWaifu Lite`n"
+Write-Host "4) Cancel`n"
+
+# Get the user's choice and validate
+do {
+    $choice = Read-Host "Enter your choice (1/2/3/4)"
+    switch ($choice) {
+        "1" { $DownloadUrl = "https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/AnimeWaifuSetup.exe" }
+        "2" { $DownloadUrl = "https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/AnimeWaifu_Basic_Setup.exe" }
+        "3" { $DownloadUrl = "https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/AnimeWaifu_Lite_Setup.exe" }
+        "4" {
+            Write-Host "Installation canceled by user.`n"
+            exit
+        }
+        default {
+            Write-Host "Invalid choice. Please enter 1, 2, 3, or 4.`n"
+            continue
+        }
+    }
+} while (-not $DownloadUrl)
 
 # Define the path where the .exe will be downloaded
 $DownloadPath = "${env:USERPROFILE}\Downloads\AnimeWaifuPS1.exe"
 
-# Download the .exe file
-curl.exe -Lo $DownloadPath $DownloadUrl
+try {
+    # Download the .exe file
+    Write-Host "Downloading from $DownloadUrl...`n"
+    curl.exe -Lo $DownloadPath $DownloadUrl
 
-# Execute the downloaded .exe file
-Start-Process -FilePath $DownloadPath -NoNewWindow -Wait
+    # Execute the downloaded .exe file and capture the exit code
+    Write-Host "Executing the installer...`n"
+    $process = Start-Process -FilePath $DownloadPath -NoNewWindow -Wait -PassThru
 
-# Delete the downloaded .exe file
-Remove-Item -Path $DownloadPath -Force
+    # Check the exit code after execution
+    if ($process.ExitCode -eq 0) {
+        Write-Host "Installation completed successfully!`n"
+    } else {
+        Write-Host "Installation was canceled or failed. Exit code: $($process.ExitCode)`n"
+    }
+}
+catch {
+    Write-Host "An error occurred: $_`n"
+}
+finally {
+    # Cleanup the downloaded .exe file regardless of success or failure
+    Write-Host "Cleaning up the downloaded installer...`n"
+    if (Test-Path $DownloadPath) {
+        Remove-Item -Path $DownloadPath -Force
+    }
+}
 
-Write-Output "AnimeWaifu was downloaded, executed successfully from ${DownloadUrl}"
+Write-Host "Script execution completed! Made by Maruf Ovi.`n"
