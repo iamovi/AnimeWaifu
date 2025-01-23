@@ -32,7 +32,7 @@
 
 <br>
 
-## <img src="https://img.icons8.com/arcade/64/download.png" alt="AnimeWaifu Itch.io Preview" width="35" style="vertical-align: middle;"> Downloads
+## <img src="https://img.icons8.com/external-tal-revivo-fresh-tal-revivo/28/external-download-file-with-down-arrow-isolated-on-white-background-upload-fresh-tal-revivo.png" alt="AnimeWaifu Itch.io Preview" width="35" style="vertical-align: middle;"> Downloads
 
 
 ### ***Download from Main Site: [Here/](https://iamovi.github.io/AnimeWaifu/install)***
@@ -52,27 +52,85 @@
 ```bash
 powershell -c "irm iamovi.github.io/AnimeWaifu/Install.ps1 | iex"
 ```
+> Choose which version to download,
+
 > Wait for the installation to complete.
 
 <br>
 
-### 🚀 A dedicated QuickChat App from AnimeWaifu Project.
+## <img src="https://img.icons8.com/doodle/48/flower--v1.png" alt="AnimeWaifu Itch.io Preview" width="35" style="vertical-align: middle;"> Side Projects from AnimeWaifu!
+
+<img width="100" height="100" src="https://img.icons8.com/external-microdots-premium-microdot-graphic/64/external-sea-animal-kingdom-vol2-microdots-premium-microdot-graphic.png" alt="bunch-flowers"/>
+
+<br><br>
+
+***AnimeWaifu Basic.***
+This Project offers basic function that brings ultimate waifu images on swipe with unique interface and modern in app notification system.
+
+***Download:***
+
+***[AnimeWaifu_Basic.apk](https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/AnimeWaifu_Basic.apk)*** <img src="https://img.icons8.com/cotton/128/android-os.png" alt="AnimeWaifu Itch.io Preview" width="35">
+
+***[AnimeWaifu_Basic_Setup.exe](https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/AnimeWaifu_Basic_Setup.exe)*** <img src="https://img.icons8.com/doodle/192/windows8.png" alt="AnimeWaifu Itch.io Preview" width="30">
+
+<img src="https://img.icons8.com/plasticine/100/wavy-line.png" alt="AnimeWaifu Itch.io Preview" width="100">
+
+<br>
+
+**AnimeWaifu Lite.** This Project offers simple swipe to get anime waifu features only, lightweight and clean UI.
+
+***Download:***
+
+***[AnimeWaifu_Lite.apk](https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/AnimeWaifu_Lite.apk)*** <img src="https://img.icons8.com/cotton/128/android-os.png" alt="AnimeWaifu Itch.io Preview" width="35">
+
+***[AnimeWaifu_Lite_Setup.exe](https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/AnimeWaifu_Lite_Setup.exe)*** <img src="https://img.icons8.com/doodle/192/windows8.png" alt="AnimeWaifu Itch.io Preview" width="30">
+
+<img src="https://img.icons8.com/plasticine/100/wavy-line.png" alt="AnimeWaifu Itch.io Preview" width="100">
+
+<br>
+
+**🚀 A dedicated QuickChat App from AnimeWaifu Project.** ***You can use QuickChat feature directly in AnimeWaifu App, but if you need a dedicated QuickChat App, Here it is:***
+
+<br>
 
 <img src="./qc-pv.png" alt="AnimeWaifu Itch.io Preview" width="150">
 
-***You can use QuickChat feature directly in AnimeWaifu App, but if you need a dedicated QuickChat App, Here it is:***
+<br>
 
-#### Download:
+***Download:***
 
 ***[QuickChat.apk](https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/QuickChat.apk)*** <img src="https://img.icons8.com/cotton/128/android-os.png" alt="AnimeWaifu Itch.io Preview" width="35">
 
 ***[QuickChatSetup.exe](https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/QuickChatSetup.exe)*** <img src="https://img.icons8.com/doodle/192/windows8.png" alt="AnimeWaifu Itch.io Preview" width="30">
 
+<img src="https://img.icons8.com/plasticine/100/wavy-line.png" alt="AnimeWaifu Itch.io Preview" width="100">
+
 <br>
 
-### 🌸 AnimeWaifu_Pixel_Terminal
+<img src="https://img.icons8.com/badges/48/cloud.png" alt="AnimeWaifu Itch.io Preview" width="35" style="vertical-align: middle;"> ***AnimeWaifu Cloud.*** This Project is designed to run all AnimeWaifu Projects on the cloud. Less in size and Fast.
 
-#### This is a CLI tool that brings Anime Waifu straight to your terminal! Fetch a new waifu every time you run it and display it in pixel style.
+<br>
+
+<img src="./aw-cloud-preview.png" alt="AnimeWaifu Itch.io Preview" width="150">
+
+<br>
+
+***Download:***
+
+***[AnimeWaifu_Cloud.apk](https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/AnimeWaifu_Cloud.apk)*** <img src="https://img.icons8.com/cotton/128/android-os.png" alt="AnimeWaifu Itch.io Preview" width="35">
+
+***[AnimeWaifu_Cloud_Setup.exe](https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/AnimeWaifu_Cloud_Setup.exe)*** <img src="https://img.icons8.com/doodle/192/windows8.png" alt="AnimeWaifu Itch.io Preview" width="30">
+
+<img src="https://img.icons8.com/plasticine/100/wavy-line.png" alt="AnimeWaifu Itch.io Preview" width="100">
+
+
+<br>
+
+## <img src="https://img.icons8.com/fluency/48/pixel-heart.png" alt="AnimeWaifu Itch.io Preview" width="35" style="vertical-align: middle;"> AnimeWaifu_Pixel_Terminal.
+
+***This is a CLI tool that brings Anime Waifu straight to your terminal! Fetch a new waifu every time you run it and display it in pixel style.***
+
+<br>
 
 ![aw preview](./AnimeWaifu_Pixel_Terminal/aw_preview.gif)
 
@@ -119,17 +177,39 @@ Type **aw** to view a AnimeWaifu on terminal.
 
 <br>
 
-### License
+## <img src="https://img.icons8.com/doodle/48/certificate--v1.png" alt="AnimeWaifu Itch.io Preview" width="35" style="vertical-align: middle;"> License
 
-[MIT](LICENSE)
+This project is licensed under the [Creative Commons Attribution-NoDerivatives 4.0 International License (CC BY-ND 4.0)](https://creativecommons.org/licenses/by-nd/4.0/).  
+© Maruf Ovi 2025  
 
-## Author
+### <img src="https://img.icons8.com/doodle/48/checkmark.png" alt="AnimeWaifu Itch.io Preview" width="35" style="vertical-align: middle;"> What you can do:
 
-[Maruf Ovi](https://oviportfo.netlify.app/)
+- You may **copy** and **share** the project in its original form (e.g., you can redistribute it or use it for personal or commercial purposes).
+- You must **provide proper attribution** to the original creator (give credit to me, [Maruf Ovi], and link back to the repository).
+
+### <img src="https://img.icons8.com/keek/100/delete-sign.png" alt="AnimeWaifu Itch.io Preview" width="35" style="vertical-align: middle;"> What you cannot do:
+
+- You **cannot modify**, **adapt**, or **build upon** the project in any way (e.g., no making changes to the code or content).
+- You **cannot create any derivative works** or remix the project.
+- You **cannot sublicense** or apply additional restrictions to the project.
 
 <br>
 
-#### ***_ here's poem about Anime Waifu 🌸***
+## <img src="https://img.icons8.com/plasticine/100/saitama.png" alt="AnimeWaifu Itch.io Preview" width="35" style="vertical-align: middle;"> Author
+
+[Maruf Ovi](https://oviportfo.netlify.app/)
+
+fornet.ovi@gmail.com
+
+<br>
+<br>
+
+***_ here's poem about Anime Waifu 🌸***
+
+<img width="100" height="100" src="https://img.icons8.com/doodle/48/pretty-woman.png" alt="bunch-flowers"/><img width="100" height="100" src="https://img.icons8.com/doodle/48/bunch-flowers.png" alt="bunch-flowers"/>
+
+<br>
+
 ```
 Anime waifus are the best
 They always make my heart go doki-doki
@@ -163,3 +243,9 @@ They always comfort me in my sadness
 面白くて親切で思いやりがある 🌈
 悲しみの中でもいつも私を慰めてくれる 🤗
 ```
+
+<br><br><br>
+
+<img width="100" height="100" src="https://img.icons8.com/officel/80/so-so.png" alt="bunch-flowers"/>
+
+***Bye Bye, Enjoy AnimeWaifu!***

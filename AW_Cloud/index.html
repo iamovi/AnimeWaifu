@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnimeWaifu Cloud</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+  <style>
+    @font-face {
+      font-family: "roboto_mono";
+      src: url("./RobotoMono-Regular.ttf") format("truetype");
+    }
+
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: "roboto_mono";
+      background-color: white;
+    }
+
+    #preloader {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    #loadingText {
+      position: fixed;
+      width: 100%;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 13px;
+      padding: 5px;
+      color: black;
+      z-index: 9999;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.1s ease;
+    }
+
+    .error-text {
+      color: red;
+    }
+
+    iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+
+    .button-container {
+      position: fixed;
+      top: 100px;
+      left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 10000;
+    }
+
+    .button-container .project-text {
+      font-size: 18px;
+      color: black;
+      margin-bottom: 10px;
+    }
+
+    .button-container .buttons {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .button-container button {
+      background: #fbca1f;
+      font-family: inherit;
+      padding: 0.6em 1.3em;
+      font-size: 15px;
+      border: 3px solid black;
+      box-shadow: 0.1em 0.1em;
+      cursor: default;
+    }
+
+    .button-container button:hover {
+      transform: translate(-0.05em, -0.05em);
+      box-shadow: 0.15em 0.15em;
+    }
+
+    .button-container button:active {
+      transform: translate(0.05em, 0.05em);
+      box-shadow: 0.05em 0.05em;
+    }
+
+    /* Modal Styles */
+    #confirmationModal {
+      display: none;
+      position: fixed;
+      width: 70%;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 10001;
+      text-align: center;
+    }
+
+    #confirmationModal p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    #confirmationModal button {
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: default;
+      border: none;
+      margin: 0 10px;
+      font-family: "roboto_mono";
+      border: 0.5px solid black;
+    }
+
+    #confirmationModal button#confirmOpen {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    #confirmationModal button#cancelOpen {
+      background-color: #ff4d4d;
+      color: white;
+      margin-top: 10px;
+    }
+
+    #confirmationModal button:hover {
+      opacity: 0.9;
+    }
+
+    .refreshall {
+      position: fixed;
+      top: 5px;
+      left: 5px;
+      font-size: 20px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      padding: 5px 5px;
+      border-radius: 3px;
+      border: 1px solid black;
+      color: red;
+    }
+  </style>
+  <script>
+    let currentProjectName = "";
+
+    function loadIframe(url, projectName) {
+      const iframe = document.getElementById("embeddedWebsite");
+      const preloader = document.getElementById("preloader");
+      const loadingText = document.getElementById("loadingText");
+      const buttonContainer = document.querySelector(".button-container");
+      const modal = document.getElementById("confirmationModal");
+
+      // Reset loading text and preloader
+      loadingText.innerHTML = "";
+      loadingText.classList.remove("error-text");
+      preloader.style.display = "flex";
+      loadingText.style.display = "block";
+      loadingText.style.opacity = 1;
+
+      let percentage = 0; // Start at 0%
+      let interval;
+
+      // Simulate loading progress
+      const simulateLoading = () => {
+        interval = setInterval(() => {
+          if (percentage < 90) {
+            percentage += 10;
+            loadingText.innerHTML = `${projectName} Cloud is loading... ${percentage}%`;
+          }
+        }, 300);
+      };
+
+      simulateLoading(); // Start simulated loading
+
+      // Load the iframe with the provided URL
+      iframe.src = `${url}?nocache=${new Date().getTime()}`;
+
+      iframe.onload = () => {
+        clearInterval(interval); // Stop the simulated loading
+        loadingText.innerHTML = `${projectName} Cloud is loading... 100%`;
+        setTimeout(() => {
+          loadingText.innerHTML = `${projectName} Cloud is opening...`;
+          setTimeout(() => {
+            preloader.style.display = "none";
+            loadingText.style.display = "none";
+
+            // Show the confirmation modal
+            currentProjectName = projectName;
+            document.getElementById("projectName").textContent =
+              currentProjectName;
+            modal.style.display = "block";
+          }, 1000);
+        }, 500);
+      };
+
+      // Handle timeout for slow connections
+      setTimeout(() => {
+        clearInterval(interval); // Stop the interval if loading takes too long
+        loadingText.style.opacity = 0;
+
+        setTimeout(() => {
+          loadingText.innerHTML =
+            "Taking time, check your internet connection";
+          loadingText.classList.add("error-text");
+          loadingText.style.opacity = 1;
+        }, 100);
+      }, 30000); // Timeout after 30 seconds
+    }
+
+    function confirmOpen() {
+      const iframe = document.getElementById("embeddedWebsite");
+      const buttonContainer = document.querySelector(".button-container");
+      const modal = document.getElementById("confirmationModal");
+
+      iframe.style.display = "block";
+      buttonContainer.style.display = "none";
+      modal.style.display = "none";
+
+      // Add event listeners for mobile back button and Esc key
+      window.addEventListener("popstate", handleBackButton);
+      document.addEventListener("keydown", handleEscKey);
+    }
+
+    function cancelOpen() {
+      const iframe = document.getElementById("embeddedWebsite");
+      const buttonContainer = document.querySelector(".button-container");
+      const modal = document.getElementById("confirmationModal");
+      const preloader = document.getElementById("preloader");
+      const loadingText = document.getElementById("loadingText");
+
+      // Stop the iframe from loading
+      iframe.src = "";
+      iframe.onload = null;
+
+      // Hide the iframe and modal
+      iframe.style.display = "none";
+      modal.style.display = "none";
+
+      // Reset the preloader and loading text
+      preloader.style.display = "flex";
+      loadingText.style.display = "block";
+      loadingText.style.opacity = 1;
+      loadingText.innerHTML = "";
+      loadingText.classList.remove("error-text");
+
+      // Show the button container
+      buttonContainer.style.display = "flex";
+
+      // Remove event listeners
+      window.removeEventListener("popstate", handleBackButton);
+      document.removeEventListener("keydown", handleEscKey);
+    }
+
+    function handleBackButton() {
+      // Close the iframe and return to the initial page
+      cancelOpen();
+    }
+
+    function handleEscKey(event) {
+      if (event.key === "Escape") {
+        // Close the iframe and return to the initial page
+        cancelOpen();
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <button class="refreshall" onclick="location.reload();"><i class="bi bi-power"></i></button>
+
+  <div id="preloader">
+    <img src="./main.gif" alt="AnimeWaifu Cloud is Now Loading..." />
+  </div>
+  <div id="loadingText"></div>
+  <div class="button-container">
+    <div class="project-text">Choose a project to open cloudly!</div>
+    <div class="buttons">
+      <button onclick="loadIframe('https://iamovi.github.io/AnimeWaifu/App_files/android/', 'AnimeWaifu')">
+        AnimeWaifu
+      </button>
+      <button onclick="loadIframe('https://iamovi.github.io/AnimeWaifu/AW_Basic/', 'AW Basic')">
+        AW Basic
+      </button>
+      <button onclick="loadIframe('https://iamovi.github.io/AnimeWaifu/AW_Lite/', 'AW Lite')">
+        AW Lite
+      </button>
+      <button onclick="loadIframe('https://animewaifuqc-v2.netlify.app/', 'QuickChat')">
+        QuickChat
+      </button>
+    </div>
+  </div>
+  <iframe id="embeddedWebsite" allowfullscreen></iframe>
+
+  <!-- Confirmation Modal -->
+  <div id="confirmationModal">
+    <p>
+      <strong>Loaded Successfully!</strong> Do you want to open
+      <span id="projectName"></span>?
+    </p>
+    <button id="confirmOpen" onclick="confirmOpen()">Yes, Open</button>
+    <button id="cancelOpen" onclick="cancelOpen()">No, Cancel</button>
+  </div>
+</body>
+
+</html>
