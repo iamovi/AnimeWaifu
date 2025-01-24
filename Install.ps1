@@ -21,22 +21,24 @@ Write-Host "1) AnimeWaifu`n"
 Write-Host "2) AnimeWaifu Basic`n"
 Write-Host "3) AnimeWaifu Lite`n"
 Write-Host "4) AW. QuickChat`n"
-Write-Host "5) Cancel`n"
+Write-Host "5) AnimeWaifu Cloud`n"
+Write-Host "6) Cancel`n"
 
 # Get the user's choice and validate
 do {
-    $choice = Read-Host "Enter your choice (1/2/3/4/5)"
+    $choice = Read-Host "Enter your choice (1/2/3/4/5/6)"
     switch ($choice) {
         "1" { $DownloadUrl = "https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/AnimeWaifuSetup.exe" }
         "2" { $DownloadUrl = "https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/AnimeWaifu_Basic_Setup.exe" }
         "3" { $DownloadUrl = "https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/AnimeWaifu_Lite_Setup.exe" }
         "4" { $DownloadUrl = "https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/QuickChatSetup.exe" }
-        "5" {
+        "5" { $DownloadUrl = "https://github.com/iamovi/AnimeWaifu/releases/download/waifuappsv2/AnimeWaifu_Cloud_Setup.exe" }
+        "6" {
             Write-Host "Installation canceled by user.`n"
             exit
         }
         default {
-            Write-Host "Invalid choice. Please enter 1, 2, 3, 4, or 5.`n"
+            Write-Host "Invalid choice. Please enter 1, 2, 3, 4, 5, or 6.`n"
             continue
         }
     }
