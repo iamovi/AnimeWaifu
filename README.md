@@ -47,6 +47,12 @@
 
 ***Or, Install on Windows with powershell:***
 
+<br>
+
+<img src="./ps1-preview.png" alt="AnimeWaifu Itch.io Preview" width="300">
+
+<br>
+
 > Run powershell as administrator and Type This:
 
 ```bash
