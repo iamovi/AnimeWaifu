@@ -64,6 +64,30 @@ powershell -c "irm iamovi.github.io/AnimeWaifu/Install.ps1 | iex"
 
 <br>
 
+***Or, Install on windows using node.js CLI: (extra option)***
+
+<br>
+
+> Install CLI globally using NPM:
+
+```bash
+npm i animewaifu_app_installer -g
+```
+
+<br>
+
+> Run the CLI:
+
+```bash
+animewaifu-installer
+```
+
+<br>
+
+> Follow instructions to install AnimeWaifu App!
+
+<br>
+
 ## <img src="https://img.icons8.com/doodle/48/flower--v1.png" alt="AnimeWaifu Itch.io Preview" width="35" style="vertical-align: middle;"> Side Projects from AnimeWaifu!
 
 <img width="100" height="100" src="https://img.icons8.com/external-microdots-premium-microdot-graphic/64/external-sea-animal-kingdom-vol2-microdots-premium-microdot-graphic.png" alt="bunch-flowers"/>
