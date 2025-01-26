@@ -1,6 +1,6 @@
 {
   "name": "animewaifu_app_installer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "main.js",
   "scripts": {
     "start": "node Installer.js"

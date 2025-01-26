@@ -4,7 +4,6 @@ const fs = require('fs');
 const path = require('path');
 const inquirer = require('inquirer');
 const shell = require('shelljs');
-const cliProgress = require('cli-progress');
 
 // Customizable Colors
 const colors = {
@@ -101,36 +100,20 @@ async function main() {
             try {
                 const response = await axios({
                     url: downloadUrl,
-                    method: 'GET',
-                    responseType: 'stream'
+                    responseType: 'stream',
+                    onDownloadProgress: (progressEvent) => {
+                        const totalBytes = progressEvent.total; // Total size of the file in bytes
+                        const downloadedBytes = progressEvent.loaded; // Bytes downloaded so far
+                        const percentCompleted = Math.round((downloadedBytes / totalBytes) * 100); // Percentage completed
+
+                        // Display progress
+                        process.stdout.clearLine(); // Clear the current line
+                        process.stdout.cursorTo(0); // Move cursor to the start of the line
+                        process.stdout.write(`Download Progress: ${percentCompleted}% (${downloadedBytes}/${totalBytes} bytes)`);
+                    }
                 });
-
-                const totalBytes = parseInt(response.headers['content-length'], 10);
-                let downloadedBytes = 0;
-                let startTime = Date.now();
-
-                // Initialize the progress bar with a custom formatter
-                const progressBar = new cliProgress.SingleBar({
-                    format: 'Downloading: {bar} {percentage}% | {value}/{total} bytes | Speed: {speed} KB/s',
-                    barCompleteChar: '\u2588',
-                    barIncompleteChar: '\u2591',
-                    hideCursor: true
-                });
-
-                progressBar.start(totalBytes, 0);
 
                 const writer = fs.createWriteStream(downloadPath);
-                response.data.on('data', (chunk) => {
-                    downloadedBytes += chunk.length;
-
-                    // Calculate download speed
-                    const elapsedTime = (Date.now() - startTime) / 1000; // in seconds
-                    const speed = (downloadedBytes / elapsedTime / 1024).toFixed(2); // in KB/s
-
-                    // Update the progress bar
-                    progressBar.update(downloadedBytes, { speed });
-                });
-
                 response.data.pipe(writer);
 
                 await new Promise((resolve, reject) => {
@@ -138,7 +121,6 @@ async function main() {
                     writer.on('error', reject);
                 });
 
-                progressBar.stop();
                 console.log('\n'); // Move to the next line after download completes
                 console.log(colorText('Executing the installer...\n', colors.Info));
                 shell.exec(`"${downloadPath}"`, (code, stdout, stderr) => {
@@ -150,7 +132,7 @@ async function main() {
                     cleanup();
                 });
             } catch (error) {
-                console.log(colorText(`An error occurred: ${error.message}\n`, colors.Error));
+                console.log(colorText(`An error occurred: ${error}\n`, colors.Error));
                 cleanup();
             }
         } else {
