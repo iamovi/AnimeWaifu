@@ -20,7 +20,7 @@ document
     // Create a variable to store the timeout ID for loading text
     let loadingTextTimeout = setTimeout(function() {
       loadingText.style.display = "block";
-      loadingText.innerHTML = "Loading...<br> Connecting to the AnimeWaifu Talks server!";
+      loadingText.innerHTML = "This will take a minute,<br> Connecting to the AnimeWaifu Talks server!";
     }, 1000); // 1 second delay for loading text
 
     iframe.addEventListener("load", function () {
