@@ -1,6 +1,6 @@
 // AnimeWaifu Talks
 
-const animeWaifuURL = "animewaifutalks-production.up.railway.app";
+const animeWaifuURL = "animewaifutalks.up.railway.app";
 
 document
   .getElementById("animewaifu-talks")
