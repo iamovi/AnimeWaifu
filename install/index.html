@@ -1,136 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AnimeWaifu | Apps</title>
-
-  <!-- disabled_click CDN -->
-
-  <!-- <link rel="stylesheet" href="https://iamovi.github.io/disabled_click/dist/v1_17-03-2024/click_box.css" />
-
-  <script src="https://iamovi.github.io/disabled_click/dist/v1_17-03-2024/v2_disabled-f12/disabled2.js"></script> -->
-
-  <link rel="icon" href="../animewaifu.png" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lekton&display=swap" rel="stylesheet" />
-
-  <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
-
-  <!-- ani.css -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ani.css@1.0.2/dist/css/ani.min.css" />
-
-  <!-- notacursor -->
-  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notacursor@0.0.8/notacursor.css" /> -->
-
-  <!-- bs -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
-
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeWaifu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
-  <!-- disabled_right_click -->
-  <!-- <div id="disabled_click"></div> -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo" onclick="showPage('home')">Anime<span>Waifu</span> Docs</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a class="nav-link active" data-page="home">Home</a></li>
+                <li><a class="nav-link" data-page="apps">Apps</a></li>
+                <li><a class="nav-link" data-page="projects">Side Projects</a></li>
+                <li><a class="nav-link" data-page="about">About</a></li>
+            </ul>
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-  <!-- notAcursor-minecraftSword -->
-  <!-- <div class="notAcursor-dot-minecraftSword" data-notacursor-dot></div>
-  <img src="https://ik.imagekit.io/iamovi/notAcursor/minecraft-sword.png?updatedAt=1701079351519" alt="Cursor Image"
-    class="notAcursor-outline-minecraftSword" data-notacursor-outline> -->
-
-  <div id="loader" class="loader">
-    <div class="spinner"></div>
-    <!-- Spinner element -->
-  </div>
-
-  <div class="dropdown d2">
-    <button class="btn btn-secondary d2b" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      MENU <i class="bi bi-capsule"></i>
-    </button>
-    <ul class="dropdown-menu">
-      <li class="dropdown-item" id="hideVideoButton" style="cursor: pointer;">Hide Video <i class="bi bi-eye-slash-fill"></i></li>
-
-      <li class="dropdown-item" style="cursor: pointer;">
-        <a class="text-success" href="https://drive.proton.me/urls/6XGA4ZA2E8#5xeCE9W0dtmK" target="_blank" style="text-decoration: none; color: inherit;">
-          Other Versions <i class="bi bi-app"></i></i>
-        </a>
-      </li>
-<br>
-      <li class="dropdown-item" style="cursor: pointer;">
-        <a href="https://github.com/iamovi/AnimeWaifu" target="_blank" style="text-decoration: none; color: inherit;">
-          Github Repo. <i class="bi bi-arrow-up-right-square"></i>
-        </a>
-      </li>
-
-      <li class="dropdown-item text-danger" id="playAnimeButton" style="cursor: pointer;">Play Anime <i class="bi bi-play-fill"></i></li>
-      
-
-      <hr>
-
-      <li class="dropdown-item" style="cursor: pointer;">
-        <a class="fw-bold" href="https://iamovi.github.io" target="_blank" style="text-decoration: none; color: inherit;">
-          iamovi <img src="https://oviportfo.netlify.app/assets/favicon/kuroo-96.png" alt="" width="40"> <i class="bi bi-arrow-up-right-square"></i>
-        </a>
-      </li>
-
-    </ul>
-  </div>
-
-  <div class="container">
-    <h1 class="colorful-text">AnimeWaifu.</h1>
-    <a href="https://iamovi.github.io/AnimeWaifu/" target="_blank" class="link">Live Preview on web.</a>
-    <p>Or, download AnimeWaifu app..!</p>
-    <!-- <button id="downloadButton" class="ani-btn-z">Install Now.</button> -->
-
-    <div class="dropdown">
-      <button class="dropdown-toggle ani-btn-z" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-       <img class="img-fluid aniimg" src="../mainicon.jpg" alt=""> Install Now
-      </button>
-      <ul class="dropdown-menu">
-        <li class="dropdown-item" id="downloadButton" style="cursor: pointer;"><img src="https://img.icons8.com/cotton/128/android-os.png" alt="Android" width="50"> Android 48 MB</li>
-
-        <li class="dropdown-item" id="downloadButton2" style="cursor: pointer;"><img src="https://img.icons8.com/doodle/192/windows8.png" alt="Windows" width="35"> Windows 116 MB</li>
-
-      </ul>
-
+    <!-- Home Page -->
+    <div class="page active" id="home">
+        <h1>Welcome to <span class="highlight">AnimeWaifu</span> Docs</h1>
+        <p>This is the right place to know about AnimeWaifu Project and it's Apps and others.</p>
+        <p>Project Repository: <a href="https://github.com/iamovi/AnimeWaifu" target="_blank" class="repo-link">https://github.com/iamovi/AnimeWaifu</a></p>
     </div>
 
+    <!-- Apps Page -->
+    <div class="page" id="apps">
+        <h1><span class="highlight">Apps</span></h1>
+        <p>Explore the AnimeWaifu ecosystem of applications and tools.</p>
+        
+        <h2>Available Apps</h2>
+        <ul class="doc-list">
+            <li>
+                <div class="app-info">
+                    <strong>AnimeWaifu:</strong> Main AnimeWaifu application for Windows and Android.
+                </div>
+                <button class="download-btn" onclick="toggleDownload(this, 'animewaifu')">
+                    <i class="fas fa-download"></i>
+                </button>
+                <div class="download-options" id="animewaifu">
+                    <button class="platform-btn" onclick="downloadApp('animewaifu', 'windows')">
+                        <i class="fab fa-windows"></i> Windows
+                    </button>
+                    <button class="platform-btn" onclick="downloadApp('animewaifu', 'android')">
+                        <i class="fab fa-android"></i> Android
+                    </button>
+                    <button class="close-btn" onclick="closeDownload('animewaifu')">✕</button>
+                </div>
+            </li>
+            <li>
+                <div class="app-info">
+                    <strong>AnimeWaifu Basic:</strong> Basic version of the main application, Just swipe and waifu image without Chatrooms and other feature.
+                </div>
+                <button class="download-btn" onclick="toggleDownload(this, 'basic')">
+                    <i class="fas fa-download"></i>
+                </button>
+                <div class="download-options" id="basic">
+                    <button class="platform-btn" onclick="downloadApp('basic', 'windows')">
+                        <i class="fab fa-windows"></i> Windows
+                    </button>
+                    <button class="platform-btn" onclick="downloadApp('basic', 'android')">
+                        <i class="fab fa-android"></i> Android
+                    </button>
+                    <button class="close-btn" onclick="closeDownload('basic')">✕</button>
+                </div>
+            </li>
+            <li>
+                <div class="app-info">
+                    <strong>AnimeWaifu Lite:</strong> Lightweight version of the main application.
+                </div>
+                <button class="download-btn" onclick="toggleDownload(this, 'lite')">
+                    <i class="fas fa-download"></i>
+                </button>
+                <div class="download-options" id="lite">
+                    <button class="platform-btn" onclick="downloadApp('lite', 'windows')">
+                        <i class="fab fa-windows"></i> Windows
+                    </button>
+                    <button class="platform-btn" onclick="downloadApp('lite', 'android')">
+                        <i class="fab fa-android"></i> Android
+                    </button>
+                    <button class="close-btn" onclick="closeDownload('lite')">✕</button>
+                </div>
+            </li>
+            <li>
+                <div class="app-info">
+                    <strong>AnimeWaifu Cloud:</strong> Cloud Based App to run All AnimeWaifu Versions.
+                </div>
+                <button class="download-btn" onclick="toggleDownload(this, 'cloud')">
+                    <i class="fas fa-download"></i>
+                </button>
+                <div class="download-options" id="cloud">
+                    <button class="platform-btn" onclick="downloadApp('cloud', 'windows')">
+                        <i class="fab fa-windows"></i> Windows
+                    </button>
+                    <button class="platform-btn" onclick="downloadApp('cloud', 'android')">
+                        <i class="fab fa-android"></i> Android
+                    </button>
+                    <button class="close-btn" onclick="closeDownload('cloud')">✕</button>
+                </div>
+            </li>
+            <li>
+                <div class="app-info">
+                    <strong>AnimeWaifu QuickChat:</strong> A dedicated quick chat app from main App.
+                </div>
+                <button class="download-btn" onclick="toggleDownload(this, 'quickchat')">
+                    <i class="fas fa-download"></i>
+                </button>
+                <div class="download-options" id="quickchat">
+                    <button class="platform-btn" onclick="downloadApp('quickchat', 'windows')">
+                        <i class="fab fa-windows"></i> Windows
+                    </button>
+                    <button class="platform-btn" onclick="downloadApp('quickchat', 'android')">
+                        <i class="fab fa-android"></i> Android
+                    </button>
+                    <button class="close-btn" onclick="closeDownload('quickchat')">✕</button>
+                </div>
+            </li>
+        </ul>
 
+        <h2>Alternative Download Options</h2>
+        <p>Download from these platforms:</p>
+        <div class="alt-download-section">
+            <a href="https://github.com/iamovi/AnimeWaifu" target="_blank" class="platform-btn" style="text-decoration: none;">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://iamovi.itch.io/animewaifu" target="_blank" class="platform-btn" style="text-decoration: none;">
+                <i class="fab fa-itch-io"></i> itch.io
+            </a>
+            <a href="https://animewaifu.en.uptodown.com/windows" target="_blank" class="platform-btn" style="text-decoration: none;">
+                <i class="fas fa-cloud-download-alt"></i> Uptodown
+            </a>
+        </div>
+    </div>
 
-    <!-- <br /><br>
-    <p>Or, Download Other Versions:</p>
-    <div class="icon-links">
-      <a href="https://mega.nz/folder/QRQ2xBRA#lcXOTHG7x-9I90B-9JmDfg" target="_blank" class="icon-link">
-        <img src="./icons/mega.png" alt="Mega Drive" class="icon" />
-      </a>
+    <!-- Side Projects Page -->
+    <div class="page" id="projects">
+        <h1><span class="highlight">Side Projects</span></h1>
+        <p>Explore related projects and tools built around the AnimeWaifu.</p>
+        
+        <h2>Projects</h2>
+        
+        <div class="api-section">
+            <h3>AnimeWaifu Pixel Terminal</h3>
+            <p>This is a CLI tool that brings Anime Waifu straight to your terminal! Fetch a new waifu every time you run it and display it in pixel style.</p>
+            
+            <div style="margin: 1.5rem 0;">
+                <img src="https://raw.githubusercontent.com/iamovi/AnimeWaifu/anime/AnimeWaifu_Pixel_Terminal/aw_preview.gif" 
+                     alt="AnimeWaifu Pixel Terminal Demo" 
+                     style="max-width: 45%; border-radius: 8px; border: 2px solid #ff69b4;">
+            </div>
 
-      <a href="https://drive.google.com/drive/folders/12F3T9vRPVNC54iKll9CHdyCCfOyKmsvE?usp=sharing" target="_blank"
-        class="icon-link">
-        <img src="./icons/gdrive.png" alt="Google Drive" class="icon" />
-      </a>
+            <h4 style="color: #ff69b4; margin-top: 1.5rem;">📦 Installation and Usage</h4>
+            <pre style="background: #0a0a0a; padding: 1rem; border-radius: 4px; margin-top: 0.5rem;">npm i -g animewaifu_pixel_terminal <br>
+aw</pre>
+            <p style="margin-top: 0.5rem;">Type <code>aw</code> to view a AnimeWaifu on terminal.</p>
+        </div>
 
-      <a href="https://iamovi.itch.io/animewaifu" target="_blank" class="icon-link">
-        <img src="./icons/itch-io.png" alt="itch.io" class="icon" />
-      </a>
-    </div> -->
-  </div>
+        <h2>Community Contributions</h2>
+        <p>Interested in contributing your own project? Visit our GitHub repository to learn more about how you can get involved.</p>
+    </div>
 
-  <video muted loop autoplay class="waifu-vid">
-    <source src="./waifu-preview.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+    <!-- About Page -->
+    <div class="page" id="about">
+        <h1><span class="highlight">About</span> AnimeWaifu Project</h1>
+        <p>⚠️ Under Development, This page will be updated soon.</p>
+        
+        <!-- <h2>Our Mission</h2>
+        <p>To create a comprehensive platform where anime fans can discover, organize, and share their favorite characters and series. We believe in the power of community-driven content and open collaboration.</p>
+        
+        <h2>Features</h2>
+        <ul class="doc-list">
+            <li><strong>Open Source:</strong> Free and open for everyone to use and contribute</li>
+            <li><strong>Community Driven:</strong> Built by fans, for fans</li>
+            <li><strong>Regular Updates:</strong> Constantly improving with new features</li>
+            <li><strong>API Access:</strong> Integrate with your own projects</li>
+        </ul>
 
-  <!-- notacursor -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/notacursor@0.0.8/notacursor.js"></script> -->
+        <h2>Contributing</h2>
+        <p>We welcome contributions from the community! Check out our GitHub repository to get started:</p>
+        <p><a href="https://github.com/AnimeWaifu" target="_blank" class="repo-link">https://github.com/AnimeWaifu</a></p>
 
-  <!-- bs -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-  <script src="script.js"></script>
+        <h2>Contact</h2>
+        <p>Have questions or suggestions? Feel free to open an issue on GitHub or reach out to the community.</p> -->
+    </div>
+<script src="./main.js"></script>
 </body>
-
 </html>
