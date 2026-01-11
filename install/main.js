@@ -20,11 +20,13 @@ function showPage(pageName) {
 
     // Close mobile menu
     navMenu.classList.remove('active');
+    mobileToggle.classList.remove('active');
 }
 
 // Mobile toggle
 mobileToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
+    mobileToggle.classList.toggle('active');
 });
 
 // Nav link clicks
