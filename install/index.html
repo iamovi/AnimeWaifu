@@ -10,7 +10,7 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo" onclick="showPage('home')">Anime<span>Waifu</span> Docs (Under Development 🚧)</div>
+            <div class="logo" onclick="showPage('home')">Anime<span>Waifu</span> Docs</div>
             
             <ul class="nav-menu" id="navMenu">
                 <li><a class="nav-link active" data-page="home">Home</a></li>
@@ -130,15 +130,35 @@
         <h2>Alternative Download Options</h2>
         <p>Download from these platforms:</p>
         <div class="alt-download-section">
-            <a href="https://github.com/iamovi/AnimeWaifu" target="_blank" class="platform-btn" style="text-decoration: none;">
-                <i class="fab fa-github"></i> GitHub
+            <a href="https://github.com/iamovi/AnimeWaifu/releases/tag/waifuappsv2" target="_blank" class="platform-btn" style="text-decoration: none;">
+                <i class="fab fa-github"></i> GitHub releases
             </a>
             <a href="https://iamovi.itch.io/animewaifu" target="_blank" class="platform-btn" style="text-decoration: none;">
                 <i class="fab fa-itch-io"></i> itch.io
             </a>
-            <a href="https://animewaifu.en.uptodown.com/windows" target="_blank" class="platform-btn" style="text-decoration: none;">
-                <i class="fas fa-cloud-download-alt"></i> Uptodown
+            <a href="https://animewaifu.en.uptodown.com/android" target="_blank" class="platform-btn" style="text-decoration: none;">
+                <i class="fas fa-cloud-download-alt"></i> Uptodown (Apk only)
             </a>
+        </div>
+
+        <h2>Other Ways to Download</h2>
+        <div class="api-section">
+            <h3><i class="fab fa-windows"></i> PowerShell Installation (Windows)</h3>
+            <p>Run PowerShell as administrator and type this command:</p>
+            <pre style="background: #0a0a0a; padding: 1rem; border-radius: 4px; margin-top: 0.5rem;">powershell -c "irm iamovi.github.io/AnimeWaifu/Install.ps1 | iex"</pre>
+            <ul style="margin-top: 1rem; padding-left: 1.5rem; color: #a0a0a0;">
+                <li>Choose which version to download</li>
+                <li>Wait for the installation to complete</li>
+            </ul>
+        </div>
+
+        <div class="api-section">
+            <h3><i class="fab fa-node-js"></i> Node.js CLI Installation (Windows)</h3>
+            <p>Install CLI globally using NPM:</p>
+            <pre style="background: #0a0a0a; padding: 1rem; border-radius: 4px; margin-top: 0.5rem;">npm i animewaifu_app_installer -g</pre>
+            <p style="margin-top: 1rem;">Run the CLI:</p>
+            <pre style="background: #0a0a0a; padding: 1rem; border-radius: 4px; margin-top: 0.5rem;">animewaifu-installer</pre>
+            <p style="margin-top: 1rem;">Follow instructions to install AnimeWaifu App!</p>
         </div>
     </div>
 
@@ -156,13 +176,47 @@
             <div style="margin: 1.5rem 0;">
                 <img src="https://raw.githubusercontent.com/iamovi/AnimeWaifu/anime/AnimeWaifu_Pixel_Terminal/aw_preview.gif" 
                      alt="AnimeWaifu Pixel Terminal Demo" 
-                     style="max-width: 45%; border-radius: 8px; border: 2px solid #ff69b4;">
+                     class="project-preview-img">
             </div>
 
             <h4 style="color: #ff69b4; margin-top: 1.5rem;">📦 Installation and Usage</h4>
-            <pre style="background: #0a0a0a; padding: 1rem; border-radius: 4px; margin-top: 0.5rem;">npm i -g animewaifu_pixel_terminal <br>
+            <pre style="background: #0a0a0a; padding: 1rem; border-radius: 4px; margin-top: 0.5rem;">npm i -g animewaifu_pixel_terminal
 aw</pre>
             <p style="margin-top: 0.5rem;">Type <code>aw</code> to view a AnimeWaifu on terminal.</p>
+        </div>
+
+        <div class="api-section">
+            <h3>SysWaifu 🌸</h3>
+            <p>A Cross-Platform aesthetic system information fetcher with a waifu touch — inspired by tools like neofetch, but cuter. Displays your system info alongside a randomly fetched waifu image directly in the terminal.</p>
+            
+            <div style="margin: 1.5rem 0;">
+                <img src="https://raw.githubusercontent.com/iamovi/syswaifu/main/preview.png" 
+                     alt="SysWaifu Preview" 
+                     class="project-preview-img">
+            </div>
+
+            <h4 style="color: #ff69b4; margin-top: 1.5rem;">📦 Installation and Usage</h4>
+            <pre style="background: #0a0a0a; padding: 1rem; border-radius: 4px; margin-top: 0.5rem;">npm install -g syswaifu
+syswaifu</pre>
+            
+            <h4 style="color: #ff69b4; margin-top: 1.5rem;">ℹ️ Information Displayed</h4>
+            <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: #a0a0a0;">
+                <li><strong>System:</strong> OS, Kernel, Uptime, Hostname, Installed Packages</li>
+                <li><strong>Hardware:</strong> CPU, Cores, Clock Speed, GPU</li>
+                <li><strong>Memory:</strong> RAM Usage, Disk Usage</li>
+                <li><strong>Power:</strong> Battery Status (for laptops)</li>
+                <li><strong>Display:</strong> Screen Resolution</li>
+                <li><strong>Network:</strong> WiFi Connection</li>
+            </ul>
+
+            <h4 style="color: #ff69b4; margin-top: 1.5rem;">🖥️ Cross-Platform Support</h4>
+            <p style="margin-top: 0.5rem;">Works on Windows, macOS, and Linux with platform-specific optimizations.</p>
+
+            <p style="margin-top: 1rem;">
+                <a href="https://github.com/iamovi/syswaifu" target="_blank" class="repo-link">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+            </p>
         </div>
 
         <h2>Community Contributions</h2>
@@ -172,25 +226,23 @@ aw</pre>
     <!-- About Page -->
     <div class="page" id="about">
         <h1><span class="highlight">About</span> AnimeWaifu Project</h1>
-        <p>⚠️ Under Development, This page will be updated soon.</p>
         
-        <!-- <h2>Our Mission</h2>
-        <p>To create a comprehensive platform where anime fans can discover, organize, and share their favorite characters and series. We believe in the power of community-driven content and open collaboration.</p>
+        <h2>What is AnimeWaifu?</h2>
+        <p>AnimeWaifu is a collection of applications and tools designed for anime enthusiasts. The project brings anime waifus to your desktop and mobile devices through various applications, from simple image viewers to interactive chat experiences.</p>
         
-        <h2>Features</h2>
-        <ul class="doc-list">
-            <li><strong>Open Source:</strong> Free and open for everyone to use and contribute</li>
-            <li><strong>Community Driven:</strong> Built by fans, for fans</li>
-            <li><strong>Regular Updates:</strong> Constantly improving with new features</li>
-            <li><strong>API Access:</strong> Integrate with your own projects</li>
-        </ul>
-
-        <h2>Contributing</h2>
-        <p>We welcome contributions from the community! Check out our GitHub repository to get started:</p>
-        <p><a href="https://github.com/AnimeWaifu" target="_blank" class="repo-link">https://github.com/AnimeWaifu</a></p>
-
-        <h2>Contact</h2>
-        <p>Have questions or suggestions? Feel free to open an issue on GitHub or reach out to the community.</p> -->
+        <h2>Project Goals</h2>
+        <p>The AnimeWaifu project aims to create fun, engaging, and accessible applications that celebrate anime culture. Whether you want a quick waifu image, system information with style, or interactive features, AnimeWaifu has something for everyone.</p>
+        
+        <h2>Open Source</h2>
+        <p>All AnimeWaifu projects are open source and available on GitHub. We believe in community-driven development and welcome contributions from developers and anime fans alike.</p>
+        
+        <h2>About the Creator</h2>
+        <p>myself: Ovi Ren, im a writer, i write code.</p>
+        <p>Visit my site: <a href="https://iamovi.github.io/" target="_blank" class="repo-link">https://iamovi.github.io/</a></p>
+        
+        <h2>Get Involved</h2>
+        <p>Interested in contributing? Check out the project repository and feel free to submit issues, pull requests, or suggestions!</p>
+        <p>Project Repository: <a href="https://github.com/iamovi/AnimeWaifu" target="_blank" class="repo-link">https://github.com/iamovi/AnimeWaifu</a></p>
     </div>
 <script src="./main.js"></script>
 </body>
