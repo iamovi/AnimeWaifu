@@ -1,6 +1,6 @@
 // AnimeWaifu Talks
 
-const animeWaifuURL = "https://awtalksserver.vercel.app";
+const animeWaifuURL = "https://animewaifutalks.netlify.app";
 
 document
   .getElementById("animewaifu-talks")
