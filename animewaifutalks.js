@@ -1,6 +1,6 @@
 // AnimeWaifu Talks
 
-const animeWaifuURL = "https://animewaifu-talks.onrender.com";
+const animeWaifuURL = "https://awtalksserver.vercel.app";
 
 document
   .getElementById("animewaifu-talks")
