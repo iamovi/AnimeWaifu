@@ -1,6 +1,6 @@
 // AnimeWaifu Talks
 
-const animeWaifuURL = "https://animewaifutalks.netlify.app";
+const animeWaifuURL = "https://aniwifetalks.pages.dev";
 
 document
   .getElementById("animewaifu-talks")
