@@ -134,7 +134,7 @@ const Projects = () => {
               <ArrowRight className="w-6 h-6" />
               PowerShell Installation
             </h3>
-            <p className="mb-4 font-mono bg-background p-4 border-2 border-foreground shadow-brutal-sm text-sm">
+            <p className="mb-4 font-mono bg-background p-4 border-2 border-foreground shadow-brutal-sm text-sm break-all overflow-x-auto">
               powershell -c "irm iamovi.github.io/AnimeWaifu/Install.ps1 | iex"
             </p>
             <p className="text-sm font-bold">

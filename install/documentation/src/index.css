@@ -103,16 +103,26 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply bg-background text-foreground antialiased overflow-x-hidden;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  html {
+    @apply overflow-x-hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-black tracking-tight;
   }
 }
 
 @layer components {
+
   /* Gumroad brutalist card */
   .gum-card {
     @apply bg-card border-2 border-foreground rounded-sm;
@@ -144,6 +154,7 @@
 }
 
 @layer utilities {
+
   /* Hard shadow utilities */
   .shadow-brutal {
     box-shadow: 4px 4px 0 0 hsl(var(--foreground));

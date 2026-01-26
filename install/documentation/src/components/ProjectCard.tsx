@@ -40,7 +40,7 @@ const ProjectCard = ({ title, category, description, color, links, index }: Proj
           </span>
         </div>
 
-        <p className="font-medium leading-snug">
+        <p className="font-medium leading-snug break-words">
           {description}
         </p>
 
