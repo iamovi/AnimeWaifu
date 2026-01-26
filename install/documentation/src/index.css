@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Gumroad Neo-Brutalist Design System */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@layer base {
+  :root {
+    /* Gumroad's actual color palette */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    /* Gumroad signature pink */
+    --primary: 316 100% 77%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 54 100% 70%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 169 100% 70%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 0%;
+    --input: 0 0% 0%;
+    --ring: 316 100% 77%;
+
+    --radius: 0.25rem;
+
+    /* Gumroad accent colors */
+    --gum-pink: 316 100% 77%;
+    --gum-yellow: 54 100% 70%;
+    --gum-blue: 210 100% 70%;
+    --gum-green: 169 100% 70%;
+    --gum-purple: 270 100% 80%;
+    --gum-orange: 25 100% 65%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 0%;
+    --sidebar-primary: 0 0% 0%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 96%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 0%;
+    --sidebar-ring: 316 100% 77%;
+  }
+
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 100%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 316 100% 77%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 54 100% 70%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 169 100% 70%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 100%;
+    --input: 0 0% 100%;
+    --ring: 316 100% 77%;
+
+    --sidebar-background: 0 0% 5%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 316 100% 77%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 15%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 0 0% 100%;
+    --sidebar-ring: 316 100% 77%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-black tracking-tight;
+  }
+}
+
+@layer components {
+  /* Gumroad brutalist card */
+  .gum-card {
+    @apply bg-card border-2 border-foreground rounded-sm;
+    box-shadow: 4px 4px 0 0 hsl(var(--foreground));
+  }
+
+  .gum-card:hover {
+    box-shadow: 6px 6px 0 0 hsl(var(--foreground));
+    transform: translate(-2px, -2px);
+  }
+
+  /* Pink card variant */
+  .gum-card-pink {
+    @apply bg-primary border-2 border-foreground rounded-sm;
+    box-shadow: 4px 4px 0 0 hsl(var(--foreground));
+  }
+
+  /* Yellow card variant */
+  .gum-card-yellow {
+    @apply bg-secondary border-2 border-foreground rounded-sm;
+    box-shadow: 4px 4px 0 0 hsl(var(--foreground));
+  }
+
+  /* Accent card variant */
+  .gum-card-accent {
+    @apply bg-accent border-2 border-foreground rounded-sm;
+    box-shadow: 4px 4px 0 0 hsl(var(--foreground));
+  }
+}
+
+@layer utilities {
+  /* Hard shadow utilities */
+  .shadow-brutal {
+    box-shadow: 4px 4px 0 0 hsl(var(--foreground));
+  }
+
+  .shadow-brutal-sm {
+    box-shadow: 2px 2px 0 0 hsl(var(--foreground));
+  }
+
+  .shadow-brutal-lg {
+    box-shadow: 6px 6px 0 0 hsl(var(--foreground));
+  }
+
+  .shadow-brutal-xl {
+    box-shadow: 8px 8px 0 0 hsl(var(--foreground));
+  }
+
+  /* Hover lift effect */
+  .hover-brutal {
+    @apply transition-all duration-150;
+  }
+
+  .hover-brutal:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 0 hsl(var(--foreground));
+  }
+
+  .hover-brutal:active {
+    transform: translate(0, 0);
+    box-shadow: 2px 2px 0 0 hsl(var(--foreground));
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color - Gumroad pink */
+::selection {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+  border-left: 2px solid hsl(var(--foreground));
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--primary));
+  border: 2px solid hsl(var(--foreground));
+  box-shadow: 4px 4px 0 0 hsl(var(--foreground));
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--primary));
+  box-shadow: 2px 2px 0 0 hsl(var(--foreground));
+  transform: translate(2px, 2px);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--primary)) hsl(var(--background));
+}

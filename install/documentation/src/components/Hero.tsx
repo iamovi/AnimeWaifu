@@ -1,0 +1,75 @@
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Sparkles } from "lucide-react";
+
+const Hero = () => {
+  return (
+    <section className="min-h-screen flex items-center pt-16 pb-20 relative overflow-hidden">
+      {/* Decorative elements - Gumroad style */}
+      <div className="absolute top-32 right-20 w-24 h-24 bg-primary border-2 border-foreground shadow-brutal rotate-12 hidden lg:block" />
+      <div className="absolute bottom-40 left-16 w-16 h-16 bg-secondary border-2 border-foreground shadow-brutal -rotate-6 hidden lg:block" />
+      <div className="absolute top-1/2 right-40 w-12 h-12 bg-accent border-2 border-foreground shadow-brutal rotate-45 hidden lg:block" />
+
+      <div className="container mx-auto px-6">
+        <div className="max-w-4xl">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-secondary border-2 border-foreground px-4 py-2 mb-8 shadow-brutal-sm animate-fade-in">
+            <Sparkles className="w-4 h-4 fill-current" />
+            <span className="text-sm font-bold uppercase tracking-wide">Docs</span>
+          </div>
+
+          {/* Headline */}
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.95] mb-6 animate-slide-up">
+            AnimeWaifu
+            <br />
+            <span className="bg-primary px-2">Docs + Apps</span>
+            <br />
+            Explore Now.
+          </h1>
+
+          {/* Subheadline */}
+          <p className="text-xl md:text-2xl max-w-xl mb-10 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+            The right place to know about AnimeWaifu Project and it's Apps,
+            tools and other ecosystem components.
+          </p>
+
+          {/* CTAs */}
+          <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+            <Button size="lg" variant="black" className="group" asChild>
+              <a href="#apps">
+                Explore Apps
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </Button>
+            <Button variant="outline" size="lg" asChild>
+              <a href="https://github.com/iamovi/AnimeWaifu" target="_blank" rel="noopener noreferrer">
+                GitHub Repo
+              </a>
+            </Button>
+          </div>
+
+          {/* Highlights */}
+          <div className="flex flex-wrap gap-3 mt-16 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+            <div className="gum-card px-4 py-3">
+              <div className="text-lg font-black">Open Source</div>
+              <div className="text-xs font-semibold text-muted-foreground">GitHub Project</div>
+            </div>
+            <div className="gum-card-pink px-4 py-3 text-black">
+              <div className="text-lg font-black">Free</div>
+              <div className="text-xs font-semibold">Forever & Always</div>
+            </div>
+            <div className="gum-card-yellow px-4 py-3 text-black">
+              <div className="text-lg font-black">Multi-Platform</div>
+              <div className="text-xs font-semibold">Windows & Android</div>
+            </div>
+            <div className="gum-card-accent px-4 py-3 text-black">
+              <div className="text-lg font-black">Kawaii CLI</div>
+              <div className="text-xs font-semibold">Terminal Tools</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
