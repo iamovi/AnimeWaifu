@@ -45,14 +45,23 @@ const About = () => {
             </div>
 
             <div className="pt-8 border-t-2 border-foreground/10">
-              <h3 className="text-xl font-bold mb-2">About the Creator</h3>
-              <p className="mb-4">Hey, myself Ovi Ren, I'm a writer, I write code.</p>
-              <Button size="lg" className="group" asChild>
-                <a href="https://iamovi.github.io/" target="_blank" rel="noopener noreferrer">
-                  Visit my site
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </a>
-              </Button>
+              <div className="flex flex-col md:flex-row gap-8 items-start md:items-center">
+                <img
+                  src="https://raw.githubusercontent.com/iamovi/iamovi/refs/heads/main/assets/init_ovi.jpg"
+                  alt="Ovi Ren"
+                  className="w-32 h-32 md:w-40 md:h-40 object-cover border-4 border-foreground shadow-brutal rotate-3 hover:rotate-0 transition-transform duration-200 bg-muted"
+                />
+                <div>
+                  <h3 className="text-xl font-bold mb-2">About the Creator</h3>
+                  <p className="mb-4">hey, myself Ovi ren, i'm a writer, i write scripts.</p>
+                  <Button size="lg" className="group" asChild>
+                    <a href="https://iamovi.github.io/" target="_blank" rel="noopener noreferrer">
+                      Visit my site
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </a>
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

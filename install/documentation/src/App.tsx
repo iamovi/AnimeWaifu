@@ -7,6 +7,8 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
 import { ThemeProvider } from "@/components/ThemeProvider";
+import CursorFollower from "./components/CursorFollower";
+import SakuraBackground from "./components/SakuraBackground";
 
 const queryClient = new QueryClient();
 
@@ -14,6 +16,8 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider attribute="class" defaultTheme="light" storageKey="vite-ui-theme">
       <TooltipProvider>
+        <SakuraBackground />
+        <CursorFollower />
         <Toaster />
         <Sonner />
         <BrowserRouter>

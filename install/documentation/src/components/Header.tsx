@@ -6,11 +6,29 @@ import { ThemeToggle } from "./ThemeToggle";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    if (id === "top") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    setIsMenuOpen(false);
+  };
+
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b-2 border-foreground">
       <div className="container mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="text-2xl font-black flex items-center gap-1">
+        <a
+          href="#"
+          onClick={(e) => scrollToSection(e, "top")}
+          className="text-2xl font-black flex items-center gap-1"
+        >
           <span className="w-8 h-8 bg-primary border-2 border-foreground flex items-center justify-center text-sm shadow-brutal-sm">
             A
           </span>
@@ -19,16 +37,16 @@ const Header = () => {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-1">
-          <a href="#apps" className="px-4 py-2 font-semibold hover:bg-muted transition-colors">
+          <a href="#apps" onClick={(e) => scrollToSection(e, "apps")} className="px-4 py-2 font-semibold hover:bg-muted transition-colors">
             Apps
           </a>
-          <a href="#side-projects" className="px-4 py-2 font-semibold hover:bg-muted transition-colors">
+          <a href="#side-projects" onClick={(e) => scrollToSection(e, "side-projects")} className="px-4 py-2 font-semibold hover:bg-muted transition-colors">
             Side Projects
           </a>
-          <a href="#screenshots" className="px-4 py-2 font-semibold hover:bg-muted transition-colors">
+          <a href="#screenshots" onClick={(e) => scrollToSection(e, "screenshots")} className="px-4 py-2 font-semibold hover:bg-muted transition-colors">
             Screenshots
           </a>
-          <a href="#about" className="px-4 py-2 font-semibold hover:bg-muted transition-colors">
+          <a href="#about" onClick={(e) => scrollToSection(e, "about")} className="px-4 py-2 font-semibold hover:bg-muted transition-colors">
             About
           </a>
         </nav>
@@ -54,10 +72,10 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-background border-b-2 border-foreground animate-fade-in">
           <nav className="container mx-auto px-6 py-4 flex flex-col gap-2">
-            <a href="#apps" className="py-3 font-bold border-b border-muted">Apps</a>
-            <a href="#side-projects" className="py-3 font-bold border-b border-muted">Side Projects</a>
-            <a href="#screenshots" className="py-3 font-bold border-b border-muted">Screenshots</a>
-            <a href="#about" className="py-3 font-bold border-b border-muted">About</a>
+            <a href="#apps" onClick={(e) => scrollToSection(e, "apps")} className="py-3 font-bold border-b border-muted">Apps</a>
+            <a href="#side-projects" onClick={(e) => scrollToSection(e, "side-projects")} className="py-3 font-bold border-b border-muted">Side Projects</a>
+            <a href="#screenshots" onClick={(e) => scrollToSection(e, "screenshots")} className="py-3 font-bold border-b border-muted">Screenshots</a>
+            <a href="#about" onClick={(e) => scrollToSection(e, "about")} className="py-3 font-bold border-b border-muted">About</a>
             <div className="flex items-center justify-between py-3 border-b border-muted">
               <span className="font-bold">Theme</span>
               <ThemeToggle />

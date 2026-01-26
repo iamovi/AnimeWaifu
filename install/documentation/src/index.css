@@ -186,6 +186,11 @@
     transform: translate(0, 0);
     box-shadow: 2px 2px 0 0 hsl(var(--foreground));
   }
+
+  /* Reveal animations */
+  .reveal-bounce {
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
 }
 
 /* Smooth scrolling */
